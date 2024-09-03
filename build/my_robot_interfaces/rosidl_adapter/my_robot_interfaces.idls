@@ -1,0 +1,3 @@
+/home/fouadroboticist/ros2_ws/build/my_robot_interfaces/rosidl_adapter/my_robot_interfaces:action/CountUntil.idl
+/home/fouadroboticist/ros2_ws/build/my_robot_interfaces/rosidl_adapter/my_robot_interfaces:msg/TargetCoordinates.idl
+/home/fouadroboticist/ros2_ws/build/my_robot_interfaces/rosidl_adapter/my_robot_interfaces:srv/SetLed.idl

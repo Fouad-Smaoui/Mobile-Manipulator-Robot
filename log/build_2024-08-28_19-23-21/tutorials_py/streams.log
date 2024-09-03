@@ -1,0 +1,26 @@
+[5.905s] Invoking command in '/home/fouadroboticist/ros2_ws/src/tutorials_py': PYTHONPATH=/home/fouadroboticist/ros2_ws/build/tutorials_py/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/fouadroboticist/ros2_ws/install/tutorials_py/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/tutorials_py build --build-base /home/fouadroboticist/ros2_ws/build/tutorials_py/build install --record /home/fouadroboticist/ros2_ws/build/tutorials_py/install.log --single-version-externally-managed install_data
+[7.187s] running egg_info
+[7.190s] writing ../../build/tutorials_py/tutorials_py.egg-info/PKG-INFO
+[7.193s] writing dependency_links to ../../build/tutorials_py/tutorials_py.egg-info/dependency_links.txt
+[7.202s] writing entry points to ../../build/tutorials_py/tutorials_py.egg-info/entry_points.txt
+[7.203s] writing requirements to ../../build/tutorials_py/tutorials_py.egg-info/requires.txt
+[7.203s] writing top-level names to ../../build/tutorials_py/tutorials_py.egg-info/top_level.txt
+[7.211s] reading manifest file '../../build/tutorials_py/tutorials_py.egg-info/SOURCES.txt'
+[7.360s] writing manifest file '../../build/tutorials_py/tutorials_py.egg-info/SOURCES.txt'
+[7.365s] running build
+[7.365s] running build_py
+[7.368s] copying tutorials_py/node3.py -> /home/fouadroboticist/ros2_ws/build/tutorials_py/build/lib/tutorials_py
+[7.659s] running install
+[7.667s] running install_lib
+[7.804s] copying /home/fouadroboticist/ros2_ws/build/tutorials_py/build/lib/tutorials_py/node3.py -> /home/fouadroboticist/ros2_ws/install/tutorials_py/lib/python3.10/site-packages/tutorials_py
+[7.811s] byte-compiling /home/fouadroboticist/ros2_ws/install/tutorials_py/lib/python3.10/site-packages/tutorials_py/node3.py to node3.cpython-310.pyc
+[7.816s] running install_data
+[7.817s] running install_egg_info
+[7.823s] removing '/home/fouadroboticist/ros2_ws/install/tutorials_py/lib/python3.10/site-packages/tutorials_py-0.0.0-py3.10.egg-info' (and everything under it)
+[7.830s] Copying ../../build/tutorials_py/tutorials_py.egg-info to /home/fouadroboticist/ros2_ws/install/tutorials_py/lib/python3.10/site-packages/tutorials_py-0.0.0-py3.10.egg-info
+[7.850s] running install_scripts
+[7.976s] Installing node1 script to /home/fouadroboticist/ros2_ws/install/tutorials_py/lib/tutorials_py
+[7.977s] Installing node2 script to /home/fouadroboticist/ros2_ws/install/tutorials_py/lib/tutorials_py
+[7.977s] Installing node3 script to /home/fouadroboticist/ros2_ws/install/tutorials_py/lib/tutorials_py
+[7.978s] writing list of installed files to '/home/fouadroboticist/ros2_ws/build/tutorials_py/install.log'
+[8.654s] Invoked command in '/home/fouadroboticist/ros2_ws/src/tutorials_py' returned '0': PYTHONPATH=/home/fouadroboticist/ros2_ws/build/tutorials_py/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/fouadroboticist/ros2_ws/install/tutorials_py/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/tutorials_py build --build-base /home/fouadroboticist/ros2_ws/build/tutorials_py/build install --record /home/fouadroboticist/ros2_ws/build/tutorials_py/install.log --single-version-externally-managed install_data

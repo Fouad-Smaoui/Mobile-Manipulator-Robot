@@ -1,0 +1,22 @@
+[17.367s] Invoking command in '/home/fouadroboticist/ros2_ws/src/actions_py': AMENT_PREFIX_PATH=/home/fouadroboticist/ros2_ws/install/my_robot_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fouadroboticist/ros2_ws/install/my_robot_interfaces LD_LIBRARY_PATH=/home/fouadroboticist/ros2_ws/install/my_robot_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fouadroboticist/ros2_ws/build/actions_py/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/fouadroboticist/ros2_ws/install/actions_py/lib/python3.10/site-packages:/home/fouadroboticist/ros2_ws/install/my_robot_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/actions_py build --build-base /home/fouadroboticist/ros2_ws/build/actions_py/build install --record /home/fouadroboticist/ros2_ws/build/actions_py/install.log --single-version-externally-managed install_data
+[17.933s] running egg_info
+[17.938s] writing ../../build/actions_py/actions_py.egg-info/PKG-INFO
+[17.948s] writing dependency_links to ../../build/actions_py/actions_py.egg-info/dependency_links.txt
+[17.949s] writing entry points to ../../build/actions_py/actions_py.egg-info/entry_points.txt
+[17.950s] writing requirements to ../../build/actions_py/actions_py.egg-info/requires.txt
+[17.950s] writing top-level names to ../../build/actions_py/actions_py.egg-info/top_level.txt
+[17.954s] reading manifest file '../../build/actions_py/actions_py.egg-info/SOURCES.txt'
+[18.015s] writing manifest file '../../build/actions_py/actions_py.egg-info/SOURCES.txt'
+[18.015s] running build
+[18.015s] running build_py
+[18.092s] running install
+[18.093s] running install_lib
+[18.321s] running install_data
+[18.386s] running install_egg_info
+[18.390s] removing '/home/fouadroboticist/ros2_ws/install/actions_py/lib/python3.10/site-packages/actions_py-0.0.0-py3.10.egg-info' (and everything under it)
+[18.412s] Copying ../../build/actions_py/actions_py.egg-info to /home/fouadroboticist/ros2_ws/install/actions_py/lib/python3.10/site-packages/actions_py-0.0.0-py3.10.egg-info
+[18.416s] running install_scripts
+[18.461s] Installing count_until_client script to /home/fouadroboticist/ros2_ws/install/actions_py/lib/actions_py
+[18.463s] Installing count_until_server script to /home/fouadroboticist/ros2_ws/install/actions_py/lib/actions_py
+[18.465s] writing list of installed files to '/home/fouadroboticist/ros2_ws/build/actions_py/install.log'
+[18.528s] Invoked command in '/home/fouadroboticist/ros2_ws/src/actions_py' returned '0': AMENT_PREFIX_PATH=/home/fouadroboticist/ros2_ws/install/my_robot_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fouadroboticist/ros2_ws/install/my_robot_interfaces LD_LIBRARY_PATH=/home/fouadroboticist/ros2_ws/install/my_robot_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fouadroboticist/ros2_ws/build/actions_py/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/fouadroboticist/ros2_ws/install/actions_py/lib/python3.10/site-packages:/home/fouadroboticist/ros2_ws/install/my_robot_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/actions_py build --build-base /home/fouadroboticist/ros2_ws/build/actions_py/build install --record /home/fouadroboticist/ros2_ws/build/actions_py/install.log --single-version-externally-managed install_data

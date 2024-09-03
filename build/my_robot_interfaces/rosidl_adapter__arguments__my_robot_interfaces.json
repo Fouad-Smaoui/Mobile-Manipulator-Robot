@@ -1,0 +1,8 @@
+{
+  "package_name": "my_robot_interfaces",
+  "non_idl_tuples": [
+    "/home/fouadroboticist/ros2_ws/src/my_robot_interfaces:action/CountUntil.action",
+    "/home/fouadroboticist/ros2_ws/src/my_robot_interfaces:msg/TargetCoordinates.msg",
+    "/home/fouadroboticist/ros2_ws/src/my_robot_interfaces:srv/SetLed.srv"
+  ]
+}

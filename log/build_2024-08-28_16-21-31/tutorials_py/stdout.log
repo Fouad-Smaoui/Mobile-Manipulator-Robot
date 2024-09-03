@@ -1,0 +1,24 @@
+running egg_info
+writing ../../build/tutorials_py/tutorials_py.egg-info/PKG-INFO
+writing dependency_links to ../../build/tutorials_py/tutorials_py.egg-info/dependency_links.txt
+writing entry points to ../../build/tutorials_py/tutorials_py.egg-info/entry_points.txt
+writing requirements to ../../build/tutorials_py/tutorials_py.egg-info/requires.txt
+writing top-level names to ../../build/tutorials_py/tutorials_py.egg-info/top_level.txt
+reading manifest file '../../build/tutorials_py/tutorials_py.egg-info/SOURCES.txt'
+writing manifest file '../../build/tutorials_py/tutorials_py.egg-info/SOURCES.txt'
+running build
+running build_py
+copying tutorials_py/node3.py -> /home/fouadroboticist/ros2_ws/build/tutorials_py/build/lib/tutorials_py
+running install
+running install_lib
+copying /home/fouadroboticist/ros2_ws/build/tutorials_py/build/lib/tutorials_py/node3.py -> /home/fouadroboticist/ros2_ws/install/tutorials_py/lib/python3.10/site-packages/tutorials_py
+byte-compiling /home/fouadroboticist/ros2_ws/install/tutorials_py/lib/python3.10/site-packages/tutorials_py/node3.py to node3.cpython-310.pyc
+running install_data
+running install_egg_info
+removing '/home/fouadroboticist/ros2_ws/install/tutorials_py/lib/python3.10/site-packages/tutorials_py-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/tutorials_py/tutorials_py.egg-info to /home/fouadroboticist/ros2_ws/install/tutorials_py/lib/python3.10/site-packages/tutorials_py-0.0.0-py3.10.egg-info
+running install_scripts
+Installing node1 script to /home/fouadroboticist/ros2_ws/install/tutorials_py/lib/tutorials_py
+Installing node2 script to /home/fouadroboticist/ros2_ws/install/tutorials_py/lib/tutorials_py
+Installing node3 script to /home/fouadroboticist/ros2_ws/install/tutorials_py/lib/tutorials_py
+writing list of installed files to '/home/fouadroboticist/ros2_ws/build/tutorials_py/install.log'

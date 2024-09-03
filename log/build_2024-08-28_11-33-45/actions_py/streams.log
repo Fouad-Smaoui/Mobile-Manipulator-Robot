@@ -1,0 +1,22 @@
+[3.658s] Invoking command in '/home/fouadroboticist/ros2_ws/src/actions_py': CMAKE_PREFIX_PATH=/home/fouadroboticist/ros2_ws/install/my_robot_interfaces:/home/fouadroboticist/ros2_ws/install/my_robot_bringup PYTHONPATH=/home/fouadroboticist/ros2_ws/build/actions_py/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/fouadroboticist/ros2_ws/install/actions_py/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/actions_py build --build-base /home/fouadroboticist/ros2_ws/build/actions_py/build install --record /home/fouadroboticist/ros2_ws/build/actions_py/install.log --single-version-externally-managed install_data
+[4.289s] running egg_info
+[4.291s] writing ../../build/actions_py/actions_py.egg-info/PKG-INFO
+[4.293s] writing dependency_links to ../../build/actions_py/actions_py.egg-info/dependency_links.txt
+[4.297s] writing entry points to ../../build/actions_py/actions_py.egg-info/entry_points.txt
+[4.303s] writing requirements to ../../build/actions_py/actions_py.egg-info/requires.txt
+[4.303s] writing top-level names to ../../build/actions_py/actions_py.egg-info/top_level.txt
+[4.308s] reading manifest file '../../build/actions_py/actions_py.egg-info/SOURCES.txt'
+[4.313s] writing manifest file '../../build/actions_py/actions_py.egg-info/SOURCES.txt'
+[4.313s] running build
+[4.314s] running build_py
+[4.314s] running install
+[4.315s] running install_lib
+[4.323s] running install_data
+[4.324s] running install_egg_info
+[4.333s] removing '/home/fouadroboticist/ros2_ws/install/actions_py/lib/python3.10/site-packages/actions_py-0.0.0-py3.10.egg-info' (and everything under it)
+[4.335s] Copying ../../build/actions_py/actions_py.egg-info to /home/fouadroboticist/ros2_ws/install/actions_py/lib/python3.10/site-packages/actions_py-0.0.0-py3.10.egg-info
+[4.339s] running install_scripts
+[4.388s] Installing count_until_client script to /home/fouadroboticist/ros2_ws/install/actions_py/lib/actions_py
+[4.388s] Installing count_until_server script to /home/fouadroboticist/ros2_ws/install/actions_py/lib/actions_py
+[4.391s] writing list of installed files to '/home/fouadroboticist/ros2_ws/build/actions_py/install.log'
+[4.446s] Invoked command in '/home/fouadroboticist/ros2_ws/src/actions_py' returned '0': CMAKE_PREFIX_PATH=/home/fouadroboticist/ros2_ws/install/my_robot_interfaces:/home/fouadroboticist/ros2_ws/install/my_robot_bringup PYTHONPATH=/home/fouadroboticist/ros2_ws/build/actions_py/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/fouadroboticist/ros2_ws/install/actions_py/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/actions_py build --build-base /home/fouadroboticist/ros2_ws/build/actions_py/build install --record /home/fouadroboticist/ros2_ws/build/actions_py/install.log --single-version-externally-managed install_data

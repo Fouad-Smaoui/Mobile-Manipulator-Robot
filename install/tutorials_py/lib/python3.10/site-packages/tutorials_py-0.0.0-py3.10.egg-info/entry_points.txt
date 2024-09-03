@@ -1,0 +1,5 @@
+[console_scripts]
+node1 = tutorials_py.node1:main
+node2 = tutorials_py.node2:main
+node3 = tutorials_py.node3:main
+

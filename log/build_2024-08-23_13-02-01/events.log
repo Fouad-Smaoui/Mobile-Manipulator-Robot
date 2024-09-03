@@ -1,0 +1,199 @@
+[0.000000] (-) TimerEvent: {}
+[0.001056] (-) JobUnselected: {'identifier': 'my_robot_controller'}
+[0.001226] (my_robot_interfaces) JobQueued: {'identifier': 'my_robot_interfaces', 'dependencies': OrderedDict()}
+[0.001415] (my_robot_interfaces) JobStarted: {'identifier': 'my_robot_interfaces'}
+[0.047832] (my_robot_interfaces) JobProgress: {'identifier': 'my_robot_interfaces', 'progress': 'cmake'}
+[0.048749] (my_robot_interfaces) Command: {'cmd': ['/usr/bin/cmake', '/home/fouadroboticist/ros2_ws/src/my_robot_interfaces', '-DCMAKE_INSTALL_PREFIX=/home/fouadroboticist/ros2_ws/install/my_robot_interfaces'], 'cwd': '/home/fouadroboticist/ros2_ws/build/my_robot_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'fouadroboticist'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{51855cb2-8cce-5362-8f54-464b92b32386}'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/fouadroboticist'), ('OLDPWD', '/home/fouadroboticist/ros2_ws/src'), ('ROS_PYTHON_VERSION', '3'), ('WSL_DISTRO_NAME', 'Ubuntu'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/fouadroboticist/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fouadroboticist'), ('NAME', 'foufou'), ('WSL_INTEROP', '/run/WSL/10_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/VMware/VMware Player/bin/:/mnt/c/Program Files (x86)/ARM/ADSv1_2/bin:/mnt/c/Program Files (x86)/SIEMENS/S7-PCT/bin:/mnt/c/Program Files (x86)/Common Files/Siemens/Sqlany:/mnt/c/Program Files (x86)/Siemens/Step7/S7bin:/mnt/c/Program Files/Common Files/Siemens/Automation/Simatic OAM/bin:/mnt/c/Program Files (x86)/Intel/iCLS Client/:/mnt/c/Program Files/Intel/iCLS Client/:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/IPT:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/IPT:/mnt/c/Users/fouad.LAPTOP-9R9TR6SR/AppData/Local/Programs/Python/Python36-32:/mnt/c/MATLAB7/bin/win32:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/PKWARE/pkzipc:/mnt/c/MinGW/mingw32/bin:/mnt/c/Program Files/Microchip/xc8/v2.20/bin:/mnt/c/Program Files (x86)/Mitov/Visuino:/mnt/c/Program Files (x86)/ZED SDK/dependencies/freeglut_2.8/x64:/mnt/c/Program Files (x86)/ZED SDK/dependencies/glew-1.12.0/x64:/mnt/c/Program Files (x86)/ZED SDK/dependencies/opencv_3.1.0/x64:/mnt/c/Program Files (x86)/ZED SDK/bin:/mnt/c/Program Files (x86)/dotnet/:/mnt/c/Program Files/nodejs/:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/CMake/bin:/mnt/c/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.30.30705/bin/Hostx64/x64:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/fouad.LAPTOP-9R9TR6SR/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/fouad.LAPTOP-9R9TR6SR/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/fouad.LAPTOP-9R9TR6SR/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/JetBrains/PyCharm Community Edition 2022.3.2/bin:/mnt/c/Users/fouad.LAPTOP-9R9TR6SR/AppData/Roaming/npm:/mnt/c/Users/fouad.LAPTOP-9R9TR6SR/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Program Files/JetBrains/PyCharm Community Edition 2024.1.1/bin:/snap/bin'), ('WT_SESSION', 'c2fba321-ea3f-4e24-b819-4404316dd419'), ('XDG_RUNTIME_DIR', '/mnt/wslg/runtime-dir'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/fouadroboticist/ros2_ws/install/my_robot_controller:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/fouadroboticist/ros2_ws/build/my_robot_interfaces'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/fouadroboticist/ros2_ws/build/my_robot_controller:/home/fouadroboticist/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:')]), 'shell': False}
+[0.096191] (-) TimerEvent: {}
+[0.196758] (-) TimerEvent: {}
+[0.297240] (-) TimerEvent: {}
+[0.397982] (-) TimerEvent: {}
+[0.498673] (-) TimerEvent: {}
+[0.599431] (-) TimerEvent: {}
+[0.699989] (-) TimerEvent: {}
+[0.800583] (-) TimerEvent: {}
+[0.902032] (-) TimerEvent: {}
+[1.002713] (-) TimerEvent: {}
+[1.103283] (-) TimerEvent: {}
+[1.203881] (-) TimerEvent: {}
+[1.304743] (-) TimerEvent: {}
+[1.405515] (-) TimerEvent: {}
+[1.506112] (-) TimerEvent: {}
+[1.606651] (-) TimerEvent: {}
+[1.707343] (-) TimerEvent: {}
+[1.808250] (-) TimerEvent: {}
+[1.909405] (-) TimerEvent: {}
+[2.010033] (-) TimerEvent: {}
+[2.110820] (-) TimerEvent: {}
+[2.211967] (-) TimerEvent: {}
+[2.313319] (-) TimerEvent: {}
+[2.413954] (-) TimerEvent: {}
+[2.514534] (-) TimerEvent: {}
+[2.615274] (-) TimerEvent: {}
+[2.716090] (-) TimerEvent: {}
+[2.845360] (-) TimerEvent: {}
+[2.947167] (-) TimerEvent: {}
+[3.024317] (my_robot_interfaces) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[3.047387] (-) TimerEvent: {}
+[3.148059] (-) TimerEvent: {}
+[3.248852] (-) TimerEvent: {}
+[3.349576] (-) TimerEvent: {}
+[3.450332] (-) TimerEvent: {}
+[3.550961] (-) TimerEvent: {}
+[3.651710] (-) TimerEvent: {}
+[3.752560] (-) TimerEvent: {}
+[3.853230] (-) TimerEvent: {}
+[3.954164] (-) TimerEvent: {}
+[4.054903] (-) TimerEvent: {}
+[4.155783] (-) TimerEvent: {}
+[4.256947] (-) TimerEvent: {}
+[4.357719] (-) TimerEvent: {}
+[4.478157] (-) TimerEvent: {}
+[4.578763] (-) TimerEvent: {}
+[4.679444] (-) TimerEvent: {}
+[4.780135] (-) TimerEvent: {}
+[4.880860] (-) TimerEvent: {}
+[4.981484] (-) TimerEvent: {}
+[5.082052] (-) TimerEvent: {}
+[5.182732] (-) TimerEvent: {}
+[5.283428] (-) TimerEvent: {}
+[5.384046] (-) TimerEvent: {}
+[5.484491] (-) TimerEvent: {}
+[5.585049] (-) TimerEvent: {}
+[5.685594] (-) TimerEvent: {}
+[5.786210] (-) TimerEvent: {}
+[5.886805] (-) TimerEvent: {}
+[5.987468] (-) TimerEvent: {}
+[6.088339] (-) TimerEvent: {}
+[6.189032] (-) TimerEvent: {}
+[6.272074] (my_robot_interfaces) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[6.289288] (-) TimerEvent: {}
+[6.389999] (-) TimerEvent: {}
+[6.490857] (-) TimerEvent: {}
+[6.591480] (-) TimerEvent: {}
+[6.692015] (-) TimerEvent: {}
+[6.792636] (-) TimerEvent: {}
+[6.893278] (-) TimerEvent: {}
+[6.993876] (-) TimerEvent: {}
+[7.094429] (-) TimerEvent: {}
+[7.195030] (-) TimerEvent: {}
+[7.257734] (my_robot_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[7.295305] (-) TimerEvent: {}
+[7.396050] (-) TimerEvent: {}
+[7.496534] (-) TimerEvent: {}
+[7.596995] (-) TimerEvent: {}
+[7.697610] (-) TimerEvent: {}
+[7.798418] (-) TimerEvent: {}
+[7.899102] (-) TimerEvent: {}
+[7.999786] (-) TimerEvent: {}
+[8.034131] (my_robot_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[8.049090] (my_robot_interfaces) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[8.051599] (my_robot_interfaces) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[8.060086] (my_robot_interfaces) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[8.075174] (my_robot_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[8.099942] (-) TimerEvent: {}
+[8.200508] (-) TimerEvent: {}
+[8.301105] (-) TimerEvent: {}
+[8.401809] (-) TimerEvent: {}
+[8.502493] (-) TimerEvent: {}
+[8.603422] (-) TimerEvent: {}
+[8.704978] (-) TimerEvent: {}
+[8.711646] (my_robot_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[8.743398] (my_robot_interfaces) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[8.744769] (my_robot_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[8.746610] (my_robot_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[8.805240] (-) TimerEvent: {}
+[8.881621] (my_robot_interfaces) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[8.905385] (-) TimerEvent: {}
+[9.005890] (-) TimerEvent: {}
+[9.106338] (-) TimerEvent: {}
+[9.206813] (-) TimerEvent: {}
+[9.307442] (-) TimerEvent: {}
+[9.345697] (my_robot_interfaces) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[9.407595] (-) TimerEvent: {}
+[9.508044] (-) TimerEvent: {}
+[9.608581] (-) TimerEvent: {}
+[9.709119] (-) TimerEvent: {}
+[9.802382] (my_robot_interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[9.809331] (-) TimerEvent: {}
+[9.842200] (my_robot_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[9.902068] (my_robot_interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[9.909536] (-) TimerEvent: {}
+[10.010162] (-) TimerEvent: {}
+[10.110690] (-) TimerEvent: {}
+[10.211233] (-) TimerEvent: {}
+[10.311817] (-) TimerEvent: {}
+[10.412404] (-) TimerEvent: {}
+[10.513128] (-) TimerEvent: {}
+[10.613949] (-) TimerEvent: {}
+[10.714641] (-) TimerEvent: {}
+[10.815150] (-) TimerEvent: {}
+[10.915769] (-) TimerEvent: {}
+[11.016761] (-) TimerEvent: {}
+[11.117626] (-) TimerEvent: {}
+[11.218420] (-) TimerEvent: {}
+[11.319235] (-) TimerEvent: {}
+[11.420103] (-) TimerEvent: {}
+[11.521866] (-) TimerEvent: {}
+[11.622671] (-) TimerEvent: {}
+[11.723407] (-) TimerEvent: {}
+[11.823954] (-) TimerEvent: {}
+[11.924548] (-) TimerEvent: {}
+[12.025044] (-) TimerEvent: {}
+[12.125720] (-) TimerEvent: {}
+[12.226529] (-) TimerEvent: {}
+[12.327145] (-) TimerEvent: {}
+[12.427767] (-) TimerEvent: {}
+[12.528440] (-) TimerEvent: {}
+[12.601263] (my_robot_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[12.628697] (-) TimerEvent: {}
+[12.729324] (-) TimerEvent: {}
+[12.829784] (-) TimerEvent: {}
+[12.931482] (-) TimerEvent: {}
+[13.032095] (-) TimerEvent: {}
+[13.132732] (-) TimerEvent: {}
+[13.233777] (-) TimerEvent: {}
+[13.334678] (-) TimerEvent: {}
+[13.435972] (-) TimerEvent: {}
+[13.536613] (-) TimerEvent: {}
+[13.637725] (-) TimerEvent: {}
+[13.658794] (my_robot_interfaces) StderrLine: {'line': b'\x1b[31mCMake Error at /opt/ros/humble/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:59 (message):\n'}
+[13.659364] (my_robot_interfaces) StderrLine: {'line': b'  execute_process(/usr/bin/python3 -m rosidl_adapter --package-name\n'}
+[13.659491] (my_robot_interfaces) StderrLine: {'line': b'  my_robot_interfaces --arguments-file\n'}
+[13.659784] (my_robot_interfaces) StderrLine: {'line': b'  /home/fouadroboticist/ros2_ws/build/my_robot_interfaces/rosidl_adapter__arguments__my_robot_interfaces.json\n'}
+[13.660138] (my_robot_interfaces) StderrLine: {'line': b'  --output-dir\n'}
+[13.660451] (my_robot_interfaces) StderrLine: {'line': b'  /home/fouadroboticist/ros2_ws/build/my_robot_interfaces/rosidl_adapter/my_robot_interfaces\n'}
+[13.660754] (my_robot_interfaces) StderrLine: {'line': b'  --output-file\n'}
+[13.661052] (my_robot_interfaces) StderrLine: {'line': b'  /home/fouadroboticist/ros2_ws/build/my_robot_interfaces/rosidl_adapter/my_robot_interfaces.idls)\n'}
+[13.661349] (my_robot_interfaces) StderrLine: {'line': b'  returned error code 1:\n'}
+[13.661643] (my_robot_interfaces) StderrLine: {'line': b'\n'}
+[13.661935] (my_robot_interfaces) StderrLine: {'line': b'  Traceback (most recent call last):\n'}
+[13.662228] (my_robot_interfaces) StderrLine: {'line': b'\n'}
+[13.662568] (my_robot_interfaces) StderrLine: {'line': b'    File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main\n'}
+[13.662985] (my_robot_interfaces) StderrLine: {'line': b'      return _run_code(code, main_globals, None,\n'}
+[13.663269] (my_robot_interfaces) StderrLine: {'line': b'    File "/usr/lib/python3.10/runpy.py", line 86, in _run_code\n'}
+[13.663554] (my_robot_interfaces) StderrLine: {'line': b'      exec(code, run_globals)\n'}
+[13.663799] (my_robot_interfaces) StderrLine: {'line': b'    File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/__main__.py", line 19, in <module>\n'}
+[13.664018] (my_robot_interfaces) StderrLine: {'line': b'      sys.exit(main())\n'}
+[13.664254] (my_robot_interfaces) StderrLine: {'line': b'    File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/main.py", line 53, in main\n'}
+[13.664503] (my_robot_interfaces) StderrLine: {'line': b'      abs_idl_file = convert_to_idl(\n'}
+[13.664739] (my_robot_interfaces) StderrLine: {'line': b'    File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/__init__.py", line 29, in convert_to_idl\n'}
+[13.665004] (my_robot_interfaces) StderrLine: {'line': b'      return convert_action_to_idl(\n'}
+[13.665273] (my_robot_interfaces) StderrLine: {'line': b'    File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/action/__init__.py", line 28, in convert_action_to_idl\n'}
+[13.665517] (my_robot_interfaces) StderrLine: {'line': b'      action = parse_action_string(package_name, input_file.stem, content)\n'}
+[13.665751] (my_robot_interfaces) StderrLine: {'line': b'    File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/parser.py", line 894, in parse_action_string\n'}
+[13.666856] (my_robot_interfaces) StderrLine: {'line': b'      raise InvalidActionSpecification(\n'}
+[13.667641] (my_robot_interfaces) StderrLine: {'line': b'\n'}
+[13.669192] (my_robot_interfaces) StderrLine: {'line': b"  rosidl_adapter.parser.InvalidActionSpecification: Number of '---'\n"}
+[13.674208] (my_robot_interfaces) StderrLine: {'line': b'  separators nonconformant with action definition\n'}
+[13.674496] (my_robot_interfaces) StderrLine: {'line': b'\n'}
+[13.674740] (my_robot_interfaces) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[13.674966] (my_robot_interfaces) StderrLine: {'line': b'  /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)\n'}
+[13.675602] (my_robot_interfaces) StderrLine: {'line': b'  CMakeLists.txt:12 (rosidl_generate_interfaces)\n'}
+[13.675886] (my_robot_interfaces) StderrLine: {'line': b'\n'}
+[13.676239] (my_robot_interfaces) StderrLine: {'line': b'\x1b[0m\n'}
+[13.676458] (my_robot_interfaces) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[13.676643] (my_robot_interfaces) StdoutLine: {'line': b'See also "/home/fouadroboticist/ros2_ws/build/my_robot_interfaces/CMakeFiles/CMakeOutput.log".\n'}
+[13.693099] (my_robot_interfaces) CommandEnded: {'returncode': 1}
+[13.695389] (my_robot_interfaces) JobEnded: {'identifier': 'my_robot_interfaces', 'rc': 1}
+[13.706855] (-) EventReactorShutdown: {}

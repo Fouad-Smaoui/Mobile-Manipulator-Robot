@@ -1,0 +1,37 @@
+[0.073s] Invoking command in '/home/fouadroboticist/ros2_ws/build/my_custom_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fouadroboticist/ros2_ws/install/tutorials_py:/home/fouadroboticist/ros2_ws/install/my_robot_controller:/home/fouadroboticist/ros2_ws/install/actions_py:/opt/ros/humble /usr/bin/cmake /home/fouadroboticist/ros2_ws/src/my_custom_pkg -DCMAKE_INSTALL_PREFIX=/home/fouadroboticist/ros2_ws/install/my_custom_pkg
+[1.853s] -- The C compiler identification is GNU 11.4.0
+[3.841s] -- The CXX compiler identification is GNU 11.4.0
+[6.254s] -- Detecting C compiler ABI info
+[6.766s] -- Detecting C compiler ABI info - done
+[6.782s] -- Check for working C compiler: /usr/bin/cc - skipped
+[6.785s] -- Detecting C compile features
+[6.791s] -- Detecting C compile features - done
+[6.804s] -- Detecting CXX compiler ABI info
+[7.261s] -- Detecting CXX compiler ABI info - done
+[7.276s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[7.276s] -- Detecting CXX compile features
+[7.277s] -- Detecting CXX compile features - done
+[7.377s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[7.791s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[8.238s] -- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)
+[10.509s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[10.544s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[10.618s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[10.800s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[10.905s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[11.243s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[11.268s] -- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)
+[11.735s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[11.798s] -- Looking for pthread.h
+[12.267s] -- Looking for pthread.h - found
+[12.268s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[12.637s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[12.639s] -- Found Threads: TRUE  
+[12.902s] -- Found rclpy: 3.3.14 (/opt/ros/humble/share/rclpy/cmake)
+[12.910s] [31mCMake Error at CMakeLists.txt:28 (ament_python_install_packages):
+[12.911s]   Unknown CMake command "ament_python_install_packages".
+[12.911s] 
+[12.911s] [0m
+[12.912s] -- Configuring incomplete, errors occurred!
+[12.912s] See also "/home/fouadroboticist/ros2_ws/build/my_custom_pkg/CMakeFiles/CMakeOutput.log".
+[12.933s] Invoked command in '/home/fouadroboticist/ros2_ws/build/my_custom_pkg' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fouadroboticist/ros2_ws/install/tutorials_py:/home/fouadroboticist/ros2_ws/install/my_robot_controller:/home/fouadroboticist/ros2_ws/install/actions_py:/opt/ros/humble /usr/bin/cmake /home/fouadroboticist/ros2_ws/src/my_custom_pkg -DCMAKE_INSTALL_PREFIX=/home/fouadroboticist/ros2_ws/install/my_custom_pkg

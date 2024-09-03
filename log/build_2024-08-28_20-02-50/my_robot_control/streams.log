@@ -1,0 +1,26 @@
+[0.142s] Invoking command in '/home/fouadroboticist/ros2_ws/build/my_robot_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fouadroboticist/ros2_ws/install/tutorials_py:/home/fouadroboticist/ros2_ws/install/my_robot_controller:/home/fouadroboticist/ros2_ws/install/actions_py:/opt/ros/humble /usr/bin/cmake --build /home/fouadroboticist/ros2_ws/build/my_robot_control -- -j4 -l4
+[3.378s] [35m[1mConsolidate compiler generated dependencies of target params_callback[0m
+[4.027s] [ 50%] [32mBuilding CXX object CMakeFiles/params_callback.dir/src/params_callback.cpp.o[0m
+[51.373s] [100%] [32m[1mLinking CXX executable params_callback[0m
+[52.352s] [100%] Built target params_callback
+[52.401s] Invoked command in '/home/fouadroboticist/ros2_ws/build/my_robot_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fouadroboticist/ros2_ws/install/tutorials_py:/home/fouadroboticist/ros2_ws/install/my_robot_controller:/home/fouadroboticist/ros2_ws/install/actions_py:/opt/ros/humble /usr/bin/cmake --build /home/fouadroboticist/ros2_ws/build/my_robot_control -- -j4 -l4
+[52.536s] Invoking command in '/home/fouadroboticist/ros2_ws/build/my_robot_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fouadroboticist/ros2_ws/install/tutorials_py:/home/fouadroboticist/ros2_ws/install/my_robot_controller:/home/fouadroboticist/ros2_ws/install/actions_py:/opt/ros/humble /usr/bin/cmake --install /home/fouadroboticist/ros2_ws/build/my_robot_control
+[52.560s] -- Install configuration: ""
+[52.569s] -- Installing: /home/fouadroboticist/ros2_ws/install/my_robot_control/lib/my_robot_control/params_callback
+[52.572s] -- Set runtime path of "/home/fouadroboticist/ros2_ws/install/my_robot_control/lib/my_robot_control/params_callback" to ""
+[52.573s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/my_robot_control/share/ament_index/resource_index/package_run_dependencies/my_robot_control
+[52.574s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/my_robot_control/share/ament_index/resource_index/parent_prefix_path/my_robot_control
+[52.579s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/my_robot_control/share/my_robot_control/environment/ament_prefix_path.sh
+[52.579s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/my_robot_control/share/my_robot_control/environment/ament_prefix_path.dsv
+[52.579s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/my_robot_control/share/my_robot_control/environment/path.sh
+[52.580s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/my_robot_control/share/my_robot_control/environment/path.dsv
+[52.580s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/my_robot_control/share/my_robot_control/local_setup.bash
+[52.581s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/my_robot_control/share/my_robot_control/local_setup.sh
+[52.581s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/my_robot_control/share/my_robot_control/local_setup.zsh
+[52.582s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/my_robot_control/share/my_robot_control/local_setup.dsv
+[52.582s] -- Installing: /home/fouadroboticist/ros2_ws/install/my_robot_control/share/my_robot_control/package.dsv
+[52.585s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/my_robot_control/share/ament_index/resource_index/packages/my_robot_control
+[52.586s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/my_robot_control/share/my_robot_control/cmake/my_robot_controlConfig.cmake
+[52.586s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/my_robot_control/share/my_robot_control/cmake/my_robot_controlConfig-version.cmake
+[52.587s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/my_robot_control/share/my_robot_control/package.xml
+[52.591s] Invoked command in '/home/fouadroboticist/ros2_ws/build/my_robot_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fouadroboticist/ros2_ws/install/tutorials_py:/home/fouadroboticist/ros2_ws/install/my_robot_controller:/home/fouadroboticist/ros2_ws/install/actions_py:/opt/ros/humble /usr/bin/cmake --install /home/fouadroboticist/ros2_ws/build/my_robot_control

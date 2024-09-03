@@ -1,0 +1,13 @@
+/home/fouadroboticist/ros2_ws/build/my_custom_pkg/CMakeFiles/uninstall.dir
+/home/fouadroboticist/ros2_ws/build/my_custom_pkg/CMakeFiles/my_custom_pkg_uninstall.dir
+/home/fouadroboticist/ros2_ws/build/my_custom_pkg/CMakeFiles/motor_controller_component.dir
+/home/fouadroboticist/ros2_ws/build/my_custom_pkg/CMakeFiles/cpp_exe.dir
+/home/fouadroboticist/ros2_ws/build/my_custom_pkg/CMakeFiles/ament_cmake_python_copy_my_custom_pkg.dir
+/home/fouadroboticist/ros2_ws/build/my_custom_pkg/CMakeFiles/ament_cmake_python_build_my_custom_pkg_egg.dir
+/home/fouadroboticist/ros2_ws/build/my_custom_pkg/CMakeFiles/test.dir
+/home/fouadroboticist/ros2_ws/build/my_custom_pkg/CMakeFiles/edit_cache.dir
+/home/fouadroboticist/ros2_ws/build/my_custom_pkg/CMakeFiles/rebuild_cache.dir
+/home/fouadroboticist/ros2_ws/build/my_custom_pkg/CMakeFiles/list_install_components.dir
+/home/fouadroboticist/ros2_ws/build/my_custom_pkg/CMakeFiles/install.dir
+/home/fouadroboticist/ros2_ws/build/my_custom_pkg/CMakeFiles/install/local.dir
+/home/fouadroboticist/ros2_ws/build/my_custom_pkg/CMakeFiles/install/strip.dir

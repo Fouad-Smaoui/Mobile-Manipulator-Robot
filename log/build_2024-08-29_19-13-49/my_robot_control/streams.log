@@ -1,0 +1,22 @@
+[0.137s] Invoking command in '/home/fouadroboticist/ros2_ws/build/my_robot_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fouadroboticist/ros2_ws/install/tutorials_py:/home/fouadroboticist/ros2_ws/install/my_robot_controller:/home/fouadroboticist/ros2_ws/install/actions_py:/opt/ros/humble /usr/bin/cmake --build /home/fouadroboticist/ros2_ws/build/my_robot_control -- -j4 -l4
+[1.341s] [100%] Built target params_callback
+[1.425s] Invoked command in '/home/fouadroboticist/ros2_ws/build/my_robot_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fouadroboticist/ros2_ws/install/tutorials_py:/home/fouadroboticist/ros2_ws/install/my_robot_controller:/home/fouadroboticist/ros2_ws/install/actions_py:/opt/ros/humble /usr/bin/cmake --build /home/fouadroboticist/ros2_ws/build/my_robot_control -- -j4 -l4
+[1.671s] Invoking command in '/home/fouadroboticist/ros2_ws/build/my_robot_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fouadroboticist/ros2_ws/install/tutorials_py:/home/fouadroboticist/ros2_ws/install/my_robot_controller:/home/fouadroboticist/ros2_ws/install/actions_py:/opt/ros/humble /usr/bin/cmake --install /home/fouadroboticist/ros2_ws/build/my_robot_control
+[1.714s] -- Install configuration: ""
+[1.780s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/my_robot_control/lib/my_robot_control/params_callback
+[1.793s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/my_robot_control/share/ament_index/resource_index/package_run_dependencies/my_robot_control
+[1.795s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/my_robot_control/share/ament_index/resource_index/parent_prefix_path/my_robot_control
+[1.799s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/my_robot_control/share/my_robot_control/environment/ament_prefix_path.sh
+[1.800s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/my_robot_control/share/my_robot_control/environment/ament_prefix_path.dsv
+[1.800s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/my_robot_control/share/my_robot_control/environment/path.sh
+[1.815s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/my_robot_control/share/my_robot_control/environment/path.dsv
+[1.815s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/my_robot_control/share/my_robot_control/local_setup.bash
+[1.816s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/my_robot_control/share/my_robot_control/local_setup.sh
+[1.816s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/my_robot_control/share/my_robot_control/local_setup.zsh
+[1.816s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/my_robot_control/share/my_robot_control/local_setup.dsv
+[1.816s] -- Installing: /home/fouadroboticist/ros2_ws/install/my_robot_control/share/my_robot_control/package.dsv
+[1.827s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/my_robot_control/share/ament_index/resource_index/packages/my_robot_control
+[1.834s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/my_robot_control/share/my_robot_control/cmake/my_robot_controlConfig.cmake
+[1.835s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/my_robot_control/share/my_robot_control/cmake/my_robot_controlConfig-version.cmake
+[1.843s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/my_robot_control/share/my_robot_control/package.xml
+[3.780s] Invoked command in '/home/fouadroboticist/ros2_ws/build/my_robot_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fouadroboticist/ros2_ws/install/tutorials_py:/home/fouadroboticist/ros2_ws/install/my_robot_controller:/home/fouadroboticist/ros2_ws/install/actions_py:/opt/ros/humble /usr/bin/cmake --install /home/fouadroboticist/ros2_ws/build/my_robot_control

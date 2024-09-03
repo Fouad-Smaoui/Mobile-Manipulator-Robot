@@ -1,0 +1,43 @@
+[0.092s] Invoking command in '/home/fouadroboticist/ros2_ws/build/robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fouadroboticist/ros2_ws/install/tutorials_py:/home/fouadroboticist/ros2_ws/install/my_robot_controller:/home/fouadroboticist/ros2_ws/install/actions_py:/opt/ros/humble /usr/bin/cmake --build /home/fouadroboticist/ros2_ws/build/robot_description -- -j4 -l4
+[0.717s] Invoked command in '/home/fouadroboticist/ros2_ws/build/robot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fouadroboticist/ros2_ws/install/tutorials_py:/home/fouadroboticist/ros2_ws/install/my_robot_controller:/home/fouadroboticist/ros2_ws/install/actions_py:/opt/ros/humble /usr/bin/cmake --build /home/fouadroboticist/ros2_ws/build/robot_description -- -j4 -l4
+[2.228s] Invoking command in '/home/fouadroboticist/ros2_ws/build/robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fouadroboticist/ros2_ws/install/tutorials_py:/home/fouadroboticist/ros2_ws/install/my_robot_controller:/home/fouadroboticist/ros2_ws/install/actions_py:/opt/ros/humble /usr/bin/cmake --install /home/fouadroboticist/ros2_ws/build/robot_description
+[2.256s] -- Install configuration: ""
+[2.257s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/robot_description/share/robot_description/urdf
+[2.257s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/robot_description/share/robot_description/urdf/robot_arm.urdf.xacro
+[2.258s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/robot_description/share/robot_description/urdf/mobile_manipulator.urdf.xacro
+[2.259s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/robot_description/share/robot_description/urdf/robot_arm.urdf
+[2.259s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/robot_description/share/robot_description/urdf/robot_essentials.xacro
+[2.260s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/robot_description/share/robot_description/urdf/robot_base_essentials.xacro
+[2.260s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/robot_description/share/robot_description/urdf/gazebo_essentials.xacro
+[2.261s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/robot_description/share/robot_description/urdf/robot_base.urdf
+[2.261s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/robot_description/share/robot_description/urdf/gazebo_essentials_base.xacro
+[2.262s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/robot_description/share/robot_description/urdf/gazebo_essentials_arm.xacro
+[2.262s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/robot_description/share/robot_description/urdf/mobile_manipulator.urdf
+[2.264s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/robot_description/share/robot_description/urdf/robot_base.urdf.xacro
+[2.264s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/robot_description/share/robot_description/urdf/robot_arm_essentials.xacro
+[2.270s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/robot_description/share/robot_description/meshes
+[2.271s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/robot_description/share/robot_description/meshes/wrist.stl
+[2.274s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/robot_description/share/robot_description/meshes/bicep.stl
+[2.275s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/robot_description/share/robot_description/meshes/robot_base.stl
+[2.275s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/robot_description/share/robot_description/meshes/elbow.stl
+[2.287s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/robot_description/share/robot_description/meshes/wheel.stl
+[2.287s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/robot_description/share/robot_description/meshes/arm_base.stl
+[2.288s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/robot_description/share/robot_description//launch
+[2.288s] -- Installing: /home/fouadroboticist/ros2_ws/install/robot_description/share/robot_description//launch/base_gazebo_control_xacro.launch.py
+[2.288s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/robot_description/share/robot_description//launch/base_gazebo_control_xacro.launch
+[2.289s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/robot_description/share/ament_index/resource_index/package_run_dependencies/robot_description
+[2.290s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/robot_description/share/ament_index/resource_index/parent_prefix_path/robot_description
+[2.290s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/robot_description/share/robot_description/environment/ament_prefix_path.sh
+[2.290s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/robot_description/share/robot_description/environment/ament_prefix_path.dsv
+[2.290s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/robot_description/share/robot_description/environment/path.sh
+[2.291s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/robot_description/share/robot_description/environment/path.dsv
+[2.291s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/robot_description/share/robot_description/local_setup.bash
+[2.291s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/robot_description/share/robot_description/local_setup.sh
+[2.291s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/robot_description/share/robot_description/local_setup.zsh
+[2.292s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/robot_description/share/robot_description/local_setup.dsv
+[2.323s] -- Installing: /home/fouadroboticist/ros2_ws/install/robot_description/share/robot_description/package.dsv
+[2.323s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/robot_description/share/ament_index/resource_index/packages/robot_description
+[2.324s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/robot_description/share/robot_description/cmake/robot_descriptionConfig.cmake
+[2.324s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/robot_description/share/robot_description/cmake/robot_descriptionConfig-version.cmake
+[2.324s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/robot_description/share/robot_description/package.xml
+[2.325s] Invoked command in '/home/fouadroboticist/ros2_ws/build/robot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fouadroboticist/ros2_ws/install/tutorials_py:/home/fouadroboticist/ros2_ws/install/my_robot_controller:/home/fouadroboticist/ros2_ws/install/actions_py:/opt/ros/humble /usr/bin/cmake --install /home/fouadroboticist/ros2_ws/build/robot_description

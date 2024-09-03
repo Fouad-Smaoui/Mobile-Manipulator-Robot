@@ -1,0 +1,53 @@
+<launch>
+    <!-- Start Gazebo server -->
+    <node
+        pkg="gazebo_ros"
+        exec="gzserver"
+        name="gzserver"
+        output="screen"
+        args="-s libgazebo_ros_factory.so"
+    />
+    
+    <!-- Start Gazebo client -->
+    <node
+        pkg="gazebo_ros"
+        exec="gzclient"
+        name="gzclient"
+        output="screen"
+    />
+
+    <!-- Spawn robot entity -->
+    <node
+        pkg="gazebo_ros"
+        exec="spawn_entity.py"
+        name="spawn_entity"
+        output="screen"
+        args="-file $(find robot_description)/urdf/robot_base.urdf.xacro -entity robot_base"
+    />
+
+    <!-- Controller manager node -->
+    <node
+        pkg="controller_manager"
+        exec="ros2_control_node"
+        name="controller_manager"
+        output="screen"
+        parameters="$(find robot_description)/config/ros2_control_params.yaml"
+    />
+
+    <!-- Spawner for joint state publisher and velocity controller -->
+    <node
+        pkg="controller_manager"
+        exec="spawner"
+        name="joint_state_publisher_spawner"
+        output="screen"
+        args="robot_base_joint_publisher --controller-manager /controller_manager"
+    />
+
+    <node
+        pkg="controller_manager"
+        exec="spawner"
+        name="velocity_controller_spawner"
+        output="screen"
+        args="robot_base_velocity_controller --controller-manager /controller_manager"
+    />
+</launch>

@@ -1,0 +1,22 @@
+[2.416s] Invoking command in '/home/fouadroboticist/ros2_ws/build/actions_py': PYTHONPATH=/home/fouadroboticist/ros2_ws/build/actions_py/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/fouadroboticist/ros2_ws/install/actions_py/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/fouadroboticist/ros2_ws/build/actions_py/build --no-deps symlink_data --force
+[2.973s] running develop
+[2.981s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[2.981s]   warnings.warn(
+[3.335s] running egg_info
+[3.336s] writing actions_py.egg-info/PKG-INFO
+[3.336s] writing dependency_links to actions_py.egg-info/dependency_links.txt
+[3.336s] writing entry points to actions_py.egg-info/entry_points.txt
+[3.337s] writing requirements to actions_py.egg-info/requires.txt
+[3.337s] writing top-level names to actions_py.egg-info/top_level.txt
+[3.345s] reading manifest file 'actions_py.egg-info/SOURCES.txt'
+[3.347s] writing manifest file 'actions_py.egg-info/SOURCES.txt'
+[3.351s] running build_ext
+[3.351s] Creating /home/fouadroboticist/ros2_ws/install/actions_py/lib/python3.10/site-packages/actions-py.egg-link (link to .)
+[3.353s] Installing count_until_client script to /home/fouadroboticist/ros2_ws/install/actions_py/lib/actions_py
+[3.354s] Installing count_until_server script to /home/fouadroboticist/ros2_ws/install/actions_py/lib/actions_py
+[3.355s] 
+[3.355s] Installed /home/fouadroboticist/ros2_ws/build/actions_py
+[3.356s] running symlink_data
+[3.356s] symbolically linking /home/fouadroboticist/ros2_ws/build/actions_py/resource/actions_py -> /home/fouadroboticist/ros2_ws/install/actions_py/share/ament_index/resource_index/packages
+[3.357s] symbolically linking /home/fouadroboticist/ros2_ws/build/actions_py/package.xml -> /home/fouadroboticist/ros2_ws/install/actions_py/share/actions_py
+[3.415s] Invoked command in '/home/fouadroboticist/ros2_ws/build/actions_py' returned '0': PYTHONPATH=/home/fouadroboticist/ros2_ws/build/actions_py/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/fouadroboticist/ros2_ws/install/actions_py/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/fouadroboticist/ros2_ws/build/actions_py/build --no-deps symlink_data --force

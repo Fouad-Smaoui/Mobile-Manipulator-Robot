@@ -1,0 +1,22 @@
+[4.603s] Invoking command in '/home/fouadroboticist/ros2_ws/src/actions_py': PYTHONPATH=/home/fouadroboticist/ros2_ws/build/actions_py/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/fouadroboticist/ros2_ws/install/actions_py/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/actions_py build --build-base /home/fouadroboticist/ros2_ws/build/actions_py/build install --record /home/fouadroboticist/ros2_ws/build/actions_py/install.log --single-version-externally-managed install_data
+[5.375s] running egg_info
+[5.378s] writing ../../build/actions_py/actions_py.egg-info/PKG-INFO
+[5.386s] writing dependency_links to ../../build/actions_py/actions_py.egg-info/dependency_links.txt
+[5.390s] writing entry points to ../../build/actions_py/actions_py.egg-info/entry_points.txt
+[5.393s] writing requirements to ../../build/actions_py/actions_py.egg-info/requires.txt
+[5.401s] writing top-level names to ../../build/actions_py/actions_py.egg-info/top_level.txt
+[5.404s] reading manifest file '../../build/actions_py/actions_py.egg-info/SOURCES.txt'
+[5.420s] writing manifest file '../../build/actions_py/actions_py.egg-info/SOURCES.txt'
+[5.421s] running build
+[5.421s] running build_py
+[5.427s] running install
+[5.429s] running install_lib
+[5.438s] running install_data
+[5.439s] running install_egg_info
+[5.444s] removing '/home/fouadroboticist/ros2_ws/install/actions_py/lib/python3.10/site-packages/actions_py-0.0.0-py3.10.egg-info' (and everything under it)
+[5.452s] Copying ../../build/actions_py/actions_py.egg-info to /home/fouadroboticist/ros2_ws/install/actions_py/lib/python3.10/site-packages/actions_py-0.0.0-py3.10.egg-info
+[5.464s] running install_scripts
+[5.519s] Installing count_until_client script to /home/fouadroboticist/ros2_ws/install/actions_py/lib/actions_py
+[5.521s] Installing count_until_server script to /home/fouadroboticist/ros2_ws/install/actions_py/lib/actions_py
+[5.522s] writing list of installed files to '/home/fouadroboticist/ros2_ws/build/actions_py/install.log'
+[5.577s] Invoked command in '/home/fouadroboticist/ros2_ws/src/actions_py' returned '0': PYTHONPATH=/home/fouadroboticist/ros2_ws/build/actions_py/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/fouadroboticist/ros2_ws/install/actions_py/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/actions_py build --build-base /home/fouadroboticist/ros2_ws/build/actions_py/build install --record /home/fouadroboticist/ros2_ws/build/actions_py/install.log --single-version-externally-managed install_data

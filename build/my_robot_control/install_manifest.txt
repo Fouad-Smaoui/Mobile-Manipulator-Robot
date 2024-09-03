@@ -1,0 +1,16 @@
+/home/fouadroboticist/ros2_ws/install/my_robot_control/lib/my_robot_control/params_callback
+/home/fouadroboticist/ros2_ws/install/my_robot_control/share/ament_index/resource_index/package_run_dependencies/my_robot_control
+/home/fouadroboticist/ros2_ws/install/my_robot_control/share/ament_index/resource_index/parent_prefix_path/my_robot_control
+/home/fouadroboticist/ros2_ws/install/my_robot_control/share/my_robot_control/environment/ament_prefix_path.sh
+/home/fouadroboticist/ros2_ws/install/my_robot_control/share/my_robot_control/environment/ament_prefix_path.dsv
+/home/fouadroboticist/ros2_ws/install/my_robot_control/share/my_robot_control/environment/path.sh
+/home/fouadroboticist/ros2_ws/install/my_robot_control/share/my_robot_control/environment/path.dsv
+/home/fouadroboticist/ros2_ws/install/my_robot_control/share/my_robot_control/local_setup.bash
+/home/fouadroboticist/ros2_ws/install/my_robot_control/share/my_robot_control/local_setup.sh
+/home/fouadroboticist/ros2_ws/install/my_robot_control/share/my_robot_control/local_setup.zsh
+/home/fouadroboticist/ros2_ws/install/my_robot_control/share/my_robot_control/local_setup.dsv
+/home/fouadroboticist/ros2_ws/install/my_robot_control/share/my_robot_control/package.dsv
+/home/fouadroboticist/ros2_ws/install/my_robot_control/share/ament_index/resource_index/packages/my_robot_control
+/home/fouadroboticist/ros2_ws/install/my_robot_control/share/my_robot_control/cmake/my_robot_controlConfig.cmake
+/home/fouadroboticist/ros2_ws/install/my_robot_control/share/my_robot_control/cmake/my_robot_controlConfig-version.cmake
+/home/fouadroboticist/ros2_ws/install/my_robot_control/share/my_robot_control/package.xml

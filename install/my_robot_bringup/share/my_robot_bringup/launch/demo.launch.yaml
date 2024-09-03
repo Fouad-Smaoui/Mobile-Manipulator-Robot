@@ -1,0 +1,26 @@
+launch:
+
+- node:
+    pkg: "demo_nodes_cpp"
+    exec: "talker"
+    name: "my_talker"
+    remap:
+    -
+        from: "/chatter"
+        to: "/my_chatter"
+    param:
+    -
+        name: "param_1"
+        value: "test"
+    -
+        name: "param_2"
+        value: 1.0
+        
+- node:
+    pkg: "demo_nodes_py"
+    exec: "listener"
+    name: "my_listener"
+    remap:
+    -
+        from: "/chatter"
+        to: "/my_chatter"

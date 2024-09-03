@@ -1,0 +1,43 @@
+[0.142s] Invoking command in '/home/fouadroboticist/ros2_ws/build/my_custom_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fouadroboticist/ros2_ws/install/tutorials_py:/home/fouadroboticist/ros2_ws/install/my_robot_controller:/home/fouadroboticist/ros2_ws/install/actions_py:/opt/ros/humble /usr/bin/cmake --build /home/fouadroboticist/ros2_ws/build/my_custom_pkg -- -j4 -l4
+[1.334s] [ 50%] Built target cpp_exe
+[1.334s] [ 50%] Built target ament_cmake_python_copy_my_custom_pkg
+[1.415s] [100%] Built target motor_controller_component
+[3.006s] running egg_info
+[3.008s] writing my_custom_pkg.egg-info/PKG-INFO
+[3.011s] writing dependency_links to my_custom_pkg.egg-info/dependency_links.txt
+[3.018s] writing top-level names to my_custom_pkg.egg-info/top_level.txt
+[3.027s] reading manifest file 'my_custom_pkg.egg-info/SOURCES.txt'
+[3.035s] writing manifest file 'my_custom_pkg.egg-info/SOURCES.txt'
+[3.146s] [100%] Built target ament_cmake_python_build_my_custom_pkg_egg
+[3.978s] Invoked command in '/home/fouadroboticist/ros2_ws/build/my_custom_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fouadroboticist/ros2_ws/install/tutorials_py:/home/fouadroboticist/ros2_ws/install/my_robot_controller:/home/fouadroboticist/ros2_ws/install/actions_py:/opt/ros/humble /usr/bin/cmake --build /home/fouadroboticist/ros2_ws/build/my_custom_pkg -- -j4 -l4
+[4.181s] Invoking command in '/home/fouadroboticist/ros2_ws/build/my_custom_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fouadroboticist/ros2_ws/install/tutorials_py:/home/fouadroboticist/ros2_ws/install/my_robot_controller:/home/fouadroboticist/ros2_ws/install/actions_py:/opt/ros/humble /usr/bin/cmake --install /home/fouadroboticist/ros2_ws/build/my_custom_pkg
+[4.246s] -- Install configuration: ""
+[4.247s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/lib/libmotor_controller_component.so
+[4.247s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/share/my_custom_pkg/environment/pythonpath.sh
+[4.251s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/share/my_custom_pkg/environment/pythonpath.dsv
+[4.253s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/local/lib/python3.10/dist-packages/my_custom_pkg-0.0.0-py3.10.egg-info
+[4.253s] -- Installing: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/local/lib/python3.10/dist-packages/my_custom_pkg-0.0.0-py3.10.egg-info/SOURCES.txt
+[4.257s] -- Installing: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/local/lib/python3.10/dist-packages/my_custom_pkg-0.0.0-py3.10.egg-info/dependency_links.txt
+[4.259s] -- Installing: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/local/lib/python3.10/dist-packages/my_custom_pkg-0.0.0-py3.10.egg-info/top_level.txt
+[4.263s] -- Installing: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/local/lib/python3.10/dist-packages/my_custom_pkg-0.0.0-py3.10.egg-info/PKG-INFO
+[4.268s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/local/lib/python3.10/dist-packages/my_custom_pkg
+[4.269s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/local/lib/python3.10/dist-packages/my_custom_pkg/__init__.py
+[4.278s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/local/lib/python3.10/dist-packages/my_custom_pkg/module_to_import.py
+[4.569s] Listing '/home/fouadroboticist/ros2_ws/install/my_custom_pkg/local/lib/python3.10/dist-packages/my_custom_pkg'...
+[4.609s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/lib/my_custom_pkg/composition.py
+[4.626s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/share/ament_index/resource_index/package_run_dependencies/my_custom_pkg
+[4.626s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/share/ament_index/resource_index/parent_prefix_path/my_custom_pkg
+[4.675s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/share/my_custom_pkg/environment/ament_prefix_path.sh
+[4.676s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/share/my_custom_pkg/environment/ament_prefix_path.dsv
+[4.676s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/share/my_custom_pkg/environment/path.sh
+[4.677s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/share/my_custom_pkg/environment/path.dsv
+[4.677s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/share/my_custom_pkg/local_setup.bash
+[4.678s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/share/my_custom_pkg/local_setup.sh
+[4.678s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/share/my_custom_pkg/local_setup.zsh
+[4.678s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/share/my_custom_pkg/local_setup.dsv
+[4.679s] -- Installing: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/share/my_custom_pkg/package.dsv
+[4.717s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/share/ament_index/resource_index/packages/my_custom_pkg
+[4.718s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/share/my_custom_pkg/cmake/my_custom_pkgConfig.cmake
+[4.718s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/share/my_custom_pkg/cmake/my_custom_pkgConfig-version.cmake
+[4.719s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/share/my_custom_pkg/package.xml
+[4.742s] Invoked command in '/home/fouadroboticist/ros2_ws/build/my_custom_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fouadroboticist/ros2_ws/install/tutorials_py:/home/fouadroboticist/ros2_ws/install/my_robot_controller:/home/fouadroboticist/ros2_ws/install/actions_py:/opt/ros/humble /usr/bin/cmake --install /home/fouadroboticist/ros2_ws/build/my_custom_pkg

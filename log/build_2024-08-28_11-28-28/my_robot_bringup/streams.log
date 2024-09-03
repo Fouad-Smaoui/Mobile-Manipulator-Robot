@@ -1,0 +1,41 @@
+[0.210s] Invoking command in '/home/fouadroboticist/ros2_ws/build/my_robot_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fouadroboticist/ros2_ws/install/actions_py:/home/fouadroboticist/ros2_ws/install/my_robot_controller:/opt/ros/humble /usr/bin/cmake /home/fouadroboticist/ros2_ws/src/my_robot_bringup -DCMAKE_INSTALL_PREFIX=/home/fouadroboticist/ros2_ws/install/my_robot_bringup
+[2.758s] -- The C compiler identification is GNU 11.4.0
+[5.951s] -- The CXX compiler identification is GNU 11.4.0
+[7.550s] -- Detecting C compiler ABI info
+[8.811s] -- Detecting C compiler ABI info - done
+[8.888s] -- Check for working C compiler: /usr/bin/cc - skipped
+[8.899s] -- Detecting C compile features
+[8.972s] -- Detecting C compile features - done
+[8.988s] -- Detecting CXX compiler ABI info
+[9.681s] -- Detecting CXX compiler ABI info - done
+[9.718s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[9.721s] -- Detecting CXX compile features
+[9.725s] -- Detecting CXX compile features - done
+[9.768s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[10.614s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[11.957s] -- Configuring done
+[12.321s] -- Generating done
+[12.369s] -- Build files have been written to: /home/fouadroboticist/ros2_ws/build/my_robot_bringup
+[12.453s] Invoked command in '/home/fouadroboticist/ros2_ws/build/my_robot_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fouadroboticist/ros2_ws/install/actions_py:/home/fouadroboticist/ros2_ws/install/my_robot_controller:/opt/ros/humble /usr/bin/cmake /home/fouadroboticist/ros2_ws/src/my_robot_bringup -DCMAKE_INSTALL_PREFIX=/home/fouadroboticist/ros2_ws/install/my_robot_bringup
+[12.455s] Invoking command in '/home/fouadroboticist/ros2_ws/build/my_robot_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fouadroboticist/ros2_ws/install/actions_py:/home/fouadroboticist/ros2_ws/install/my_robot_controller:/opt/ros/humble /usr/bin/cmake --build /home/fouadroboticist/ros2_ws/build/my_robot_bringup -- -j4 -l4
+[12.709s] Invoked command in '/home/fouadroboticist/ros2_ws/build/my_robot_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fouadroboticist/ros2_ws/install/actions_py:/home/fouadroboticist/ros2_ws/install/my_robot_controller:/opt/ros/humble /usr/bin/cmake --build /home/fouadroboticist/ros2_ws/build/my_robot_bringup -- -j4 -l4
+[12.806s] Invoking command in '/home/fouadroboticist/ros2_ws/build/my_robot_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fouadroboticist/ros2_ws/install/actions_py:/home/fouadroboticist/ros2_ws/install/my_robot_controller:/opt/ros/humble /usr/bin/cmake --install /home/fouadroboticist/ros2_ws/build/my_robot_bringup
+[12.902s] -- Install configuration: ""
+[12.904s] -- Installing: /home/fouadroboticist/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/launch
+[12.907s] -- Installing: /home/fouadroboticist/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/launch/demo.launch.py
+[12.911s] -- Installing: /home/fouadroboticist/ros2_ws/install/my_robot_bringup/share/ament_index/resource_index/package_run_dependencies/my_robot_bringup
+[12.913s] -- Installing: /home/fouadroboticist/ros2_ws/install/my_robot_bringup/share/ament_index/resource_index/parent_prefix_path/my_robot_bringup
+[12.916s] -- Installing: /home/fouadroboticist/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/environment/ament_prefix_path.sh
+[12.918s] -- Installing: /home/fouadroboticist/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/environment/ament_prefix_path.dsv
+[12.918s] -- Installing: /home/fouadroboticist/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/environment/path.sh
+[12.919s] -- Installing: /home/fouadroboticist/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/environment/path.dsv
+[12.919s] -- Installing: /home/fouadroboticist/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/local_setup.bash
+[12.922s] -- Installing: /home/fouadroboticist/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/local_setup.sh
+[12.922s] -- Installing: /home/fouadroboticist/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/local_setup.zsh
+[12.925s] -- Installing: /home/fouadroboticist/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/local_setup.dsv
+[12.925s] -- Installing: /home/fouadroboticist/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/package.dsv
+[12.926s] -- Installing: /home/fouadroboticist/ros2_ws/install/my_robot_bringup/share/ament_index/resource_index/packages/my_robot_bringup
+[12.929s] -- Installing: /home/fouadroboticist/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/cmake/my_robot_bringupConfig.cmake
+[12.930s] -- Installing: /home/fouadroboticist/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/cmake/my_robot_bringupConfig-version.cmake
+[12.930s] -- Installing: /home/fouadroboticist/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/package.xml
+[12.943s] Invoked command in '/home/fouadroboticist/ros2_ws/build/my_robot_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fouadroboticist/ros2_ws/install/actions_py:/home/fouadroboticist/ros2_ws/install/my_robot_controller:/opt/ros/humble /usr/bin/cmake --install /home/fouadroboticist/ros2_ws/build/my_robot_bringup

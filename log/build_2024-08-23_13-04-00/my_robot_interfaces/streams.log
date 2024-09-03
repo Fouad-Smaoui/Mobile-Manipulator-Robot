@@ -1,0 +1,44 @@
+[0.038s] Invoking command in '/home/fouadroboticist/ros2_ws/build/my_robot_interfaces': CMAKE_PREFIX_PATH=/home/fouadroboticist/ros2_ws/install/my_robot_controller:/opt/ros/humble /usr/bin/cmake /home/fouadroboticist/ros2_ws/src/my_robot_interfaces -DCMAKE_INSTALL_PREFIX=/home/fouadroboticist/ros2_ws/install/my_robot_interfaces
+[0.066s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.344s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.349s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.358s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.758s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.187s] [31mCMake Error at /opt/ros/humble/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:59 (message):
+[1.191s]   execute_process(/usr/bin/python3 -m rosidl_adapter --package-name
+[1.202s]   my_robot_interfaces --arguments-file
+[1.203s]   /home/fouadroboticist/ros2_ws/build/my_robot_interfaces/rosidl_adapter__arguments__my_robot_interfaces.json
+[1.207s]   --output-dir
+[1.207s]   /home/fouadroboticist/ros2_ws/build/my_robot_interfaces/rosidl_adapter/my_robot_interfaces
+[1.218s]   --output-file
+[1.220s]   /home/fouadroboticist/ros2_ws/build/my_robot_interfaces/rosidl_adapter/my_robot_interfaces.idls)
+[1.221s]   returned error code 1:
+[1.222s] 
+[1.222s]   Traceback (most recent call last):
+[1.222s] 
+[1.222s]     File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[1.223s]       return _run_code(code, main_globals, None,
+[1.223s]     File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+[1.223s]       exec(code, run_globals)
+[1.223s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/__main__.py", line 19, in <module>
+[1.223s]       sys.exit(main())
+[1.223s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/main.py", line 53, in main
+[1.223s]       abs_idl_file = convert_to_idl(
+[1.223s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/__init__.py", line 29, in convert_to_idl
+[1.224s]       return convert_action_to_idl(
+[1.224s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/action/__init__.py", line 28, in convert_action_to_idl
+[1.224s]       action = parse_action_string(package_name, input_file.stem, content)
+[1.224s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/parser.py", line 894, in parse_action_string
+[1.224s]       raise InvalidActionSpecification(
+[1.224s] 
+[1.224s]   rosidl_adapter.parser.InvalidActionSpecification: Number of '---'
+[1.224s]   separators nonconformant with action definition
+[1.224s] 
+[1.224s] Call Stack (most recent call first):
+[1.225s]   /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)
+[1.225s]   CMakeLists.txt:12 (rosidl_generate_interfaces)
+[1.225s] 
+[1.225s] [0m
+[1.225s] -- Configuring incomplete, errors occurred!
+[1.225s] See also "/home/fouadroboticist/ros2_ws/build/my_robot_interfaces/CMakeFiles/CMakeOutput.log".
+[1.225s] Invoked command in '/home/fouadroboticist/ros2_ws/build/my_robot_interfaces' returned '1': CMAKE_PREFIX_PATH=/home/fouadroboticist/ros2_ws/install/my_robot_controller:/opt/ros/humble /usr/bin/cmake /home/fouadroboticist/ros2_ws/src/my_robot_interfaces -DCMAKE_INSTALL_PREFIX=/home/fouadroboticist/ros2_ws/install/my_robot_interfaces

@@ -1,0 +1,10 @@
+/home/fouadroboticist/ros2_ws/build/my_robot_control/CMakeFiles/uninstall.dir
+/home/fouadroboticist/ros2_ws/build/my_robot_control/CMakeFiles/my_robot_control_uninstall.dir
+/home/fouadroboticist/ros2_ws/build/my_robot_control/CMakeFiles/params_callback.dir
+/home/fouadroboticist/ros2_ws/build/my_robot_control/CMakeFiles/test.dir
+/home/fouadroboticist/ros2_ws/build/my_robot_control/CMakeFiles/edit_cache.dir
+/home/fouadroboticist/ros2_ws/build/my_robot_control/CMakeFiles/rebuild_cache.dir
+/home/fouadroboticist/ros2_ws/build/my_robot_control/CMakeFiles/list_install_components.dir
+/home/fouadroboticist/ros2_ws/build/my_robot_control/CMakeFiles/install.dir
+/home/fouadroboticist/ros2_ws/build/my_robot_control/CMakeFiles/install/local.dir
+/home/fouadroboticist/ros2_ws/build/my_robot_control/CMakeFiles/install/strip.dir

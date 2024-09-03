@@ -1,0 +1,6 @@
+[0.000000] (-) TimerEvent: {}
+[0.000239] (-) JobUnselected: {'identifier': 'actions_py'}
+[0.000292] (-) JobUnselected: {'identifier': 'my_robot_bringup'}
+[0.000325] (-) JobUnselected: {'identifier': 'my_robot_controller'}
+[0.000354] (-) JobUnselected: {'identifier': 'my_robot_interfaces'}
+[0.000391] (-) EventReactorShutdown: {}

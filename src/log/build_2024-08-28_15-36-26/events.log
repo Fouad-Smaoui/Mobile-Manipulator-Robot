@@ -1,0 +1,8 @@
+[0.000000] (-) TimerEvent: {}
+[0.000737] (-) JobUnselected: {'identifier': 'actions_py'}
+[0.001285] (-) JobUnselected: {'identifier': 'my_robot_bringup'}
+[0.001476] (-) JobUnselected: {'identifier': 'my_robot_interfaces'}
+[0.001867] (my_robot_controller) JobQueued: {'identifier': 'my_robot_controller', 'dependencies': OrderedDict([('my_robot_interfaces', '/home/fouadroboticist/ros2_ws/src/install/my_robot_interfaces')])}
+[0.002351] (my_robot_controller) JobStarted: {'identifier': 'my_robot_controller'}
+[0.026956] (my_robot_controller) JobEnded: {'identifier': 'my_robot_controller', 'rc': 1}
+[0.038115] (-) EventReactorShutdown: {}

@@ -1,0 +1,178 @@
+[0.000000] (-) TimerEvent: {}
+[0.000409] (-) JobUnselected: {'identifier': 'actions_py'}
+[0.000557] (-) JobUnselected: {'identifier': 'my_robot_bringup'}
+[0.000653] (-) JobUnselected: {'identifier': 'my_robot_control'}
+[0.000734] (-) JobUnselected: {'identifier': 'my_robot_controller'}
+[0.000826] (-) JobUnselected: {'identifier': 'my_robot_interfaces'}
+[0.000947] (-) JobUnselected: {'identifier': 'tutorials_py'}
+[0.001058] (my_custom_pkg) JobQueued: {'identifier': 'my_custom_pkg', 'dependencies': OrderedDict()}
+[0.003471] (my_custom_pkg) JobStarted: {'identifier': 'my_custom_pkg'}
+[0.073409] (my_custom_pkg) JobProgress: {'identifier': 'my_custom_pkg', 'progress': 'cmake'}
+[0.074110] (my_custom_pkg) Command: {'cmd': ['/usr/bin/cmake', '/home/fouadroboticist/ros2_ws/src/my_custom_pkg', '-DCMAKE_INSTALL_PREFIX=/home/fouadroboticist/ros2_ws/install/my_custom_pkg'], 'cwd': '/home/fouadroboticist/ros2_ws/build/my_custom_pkg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'fouadroboticist'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/fouadroboticist/ros2_ws/install/my_robot_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{51855cb2-8cce-5362-8f54-464b92b32386}'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/fouadroboticist'), ('OLDPWD', '/home/fouadroboticist/ros2_ws/src'), ('ROS_PYTHON_VERSION', '3'), ('WSL_DISTRO_NAME', 'Ubuntu'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/fouadroboticist/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fouadroboticist'), ('NAME', 'foufou'), ('WSL_INTEROP', '/run/WSL/10_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/VMware/VMware Player/bin/:/mnt/c/Program Files (x86)/ARM/ADSv1_2/bin:/mnt/c/Program Files (x86)/SIEMENS/S7-PCT/bin:/mnt/c/Program Files (x86)/Common Files/Siemens/Sqlany:/mnt/c/Program Files (x86)/Siemens/Step7/S7bin:/mnt/c/Program Files/Common Files/Siemens/Automation/Simatic OAM/bin:/mnt/c/Program Files (x86)/Intel/iCLS Client/:/mnt/c/Program Files/Intel/iCLS Client/:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/IPT:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/IPT:/mnt/c/Users/fouad.LAPTOP-9R9TR6SR/AppData/Local/Programs/Python/Python36-32:/mnt/c/MATLAB7/bin/win32:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/PKWARE/pkzipc:/mnt/c/MinGW/mingw32/bin:/mnt/c/Program Files/Microchip/xc8/v2.20/bin:/mnt/c/Program Files (x86)/Mitov/Visuino:/mnt/c/Program Files (x86)/ZED SDK/dependencies/freeglut_2.8/x64:/mnt/c/Program Files (x86)/ZED SDK/dependencies/glew-1.12.0/x64:/mnt/c/Program Files (x86)/ZED SDK/dependencies/opencv_3.1.0/x64:/mnt/c/Program Files (x86)/ZED SDK/bin:/mnt/c/Program Files (x86)/dotnet/:/mnt/c/Program Files/nodejs/:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/CMake/bin:/mnt/c/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.30.30705/bin/Hostx64/x64:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/fouad.LAPTOP-9R9TR6SR/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/fouad.LAPTOP-9R9TR6SR/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/fouad.LAPTOP-9R9TR6SR/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/JetBrains/PyCharm Community Edition 2022.3.2/bin:/mnt/c/Users/fouad.LAPTOP-9R9TR6SR/AppData/Roaming/npm:/mnt/c/Users/fouad.LAPTOP-9R9TR6SR/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Program Files/JetBrains/PyCharm Community Edition 2024.1.1/bin:/snap/bin'), ('WT_SESSION', 'c5f9e7ba-234f-4e0a-a5d5-9c9ebc111656'), ('XDG_RUNTIME_DIR', '/mnt/wslg/runtime-dir'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/fouadroboticist/ros2_ws/install/tutorials_py:/home/fouadroboticist/ros2_ws/install/my_robot_controller:/home/fouadroboticist/ros2_ws/install/actions_py:/home/fouadroboticist/ros2_ws/install/my_robot_interfaces:/home/fouadroboticist/ros2_ws/install/my_robot_control:/home/fouadroboticist/ros2_ws/install/my_robot_bringup:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/fouadroboticist/ros2_ws/build/my_custom_pkg'), ('TURTLEBOT3_MODEL', 'waffle'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/fouadroboticist/ros2_ws/install/tutorials_py/lib/python3.10/site-packages:/home/fouadroboticist/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages:/home/fouadroboticist/ros2_ws/install/actions_py/lib/python3.10/site-packages:/home/fouadroboticist/ros2_ws/install/my_robot_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/fouadroboticist/ros2_ws/install/my_robot_interfaces:/home/fouadroboticist/ros2_ws/install/my_robot_control:/home/fouadroboticist/ros2_ws/install/my_robot_bringup:/home/fouadroboticist/ros2_ws/install/tutorials_py:/home/fouadroboticist/ros2_ws/install/my_robot_controller:/home/fouadroboticist/ros2_ws/install/actions_py:/opt/ros/humble'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:')]), 'shell': False}
+[0.099181] (-) TimerEvent: {}
+[0.199870] (-) TimerEvent: {}
+[0.300611] (-) TimerEvent: {}
+[0.401255] (-) TimerEvent: {}
+[0.501971] (-) TimerEvent: {}
+[0.602627] (-) TimerEvent: {}
+[0.703258] (-) TimerEvent: {}
+[0.803895] (-) TimerEvent: {}
+[0.904455] (-) TimerEvent: {}
+[1.005044] (-) TimerEvent: {}
+[1.105638] (-) TimerEvent: {}
+[1.206169] (-) TimerEvent: {}
+[1.306735] (-) TimerEvent: {}
+[1.407497] (-) TimerEvent: {}
+[1.508153] (-) TimerEvent: {}
+[1.608824] (-) TimerEvent: {}
+[1.709301] (-) TimerEvent: {}
+[1.809828] (-) TimerEvent: {}
+[1.854698] (my_custom_pkg) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[1.909985] (-) TimerEvent: {}
+[2.010603] (-) TimerEvent: {}
+[2.111325] (-) TimerEvent: {}
+[2.211828] (-) TimerEvent: {}
+[2.312323] (-) TimerEvent: {}
+[2.412868] (-) TimerEvent: {}
+[2.513482] (-) TimerEvent: {}
+[2.614689] (-) TimerEvent: {}
+[2.715411] (-) TimerEvent: {}
+[2.816047] (-) TimerEvent: {}
+[2.916655] (-) TimerEvent: {}
+[3.017299] (-) TimerEvent: {}
+[3.118130] (-) TimerEvent: {}
+[3.218880] (-) TimerEvent: {}
+[3.319474] (-) TimerEvent: {}
+[3.420119] (-) TimerEvent: {}
+[3.520564] (-) TimerEvent: {}
+[3.621037] (-) TimerEvent: {}
+[3.721662] (-) TimerEvent: {}
+[3.822188] (-) TimerEvent: {}
+[3.844048] (my_custom_pkg) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[3.922364] (-) TimerEvent: {}
+[4.022828] (-) TimerEvent: {}
+[4.123262] (-) TimerEvent: {}
+[4.223753] (-) TimerEvent: {}
+[4.324241] (-) TimerEvent: {}
+[4.424948] (-) TimerEvent: {}
+[4.525536] (-) TimerEvent: {}
+[4.626209] (-) TimerEvent: {}
+[4.727463] (-) TimerEvent: {}
+[4.828223] (-) TimerEvent: {}
+[4.929111] (-) TimerEvent: {}
+[5.029972] (-) TimerEvent: {}
+[5.130744] (-) TimerEvent: {}
+[5.231440] (-) TimerEvent: {}
+[5.332118] (-) TimerEvent: {}
+[5.432815] (-) TimerEvent: {}
+[5.533506] (-) TimerEvent: {}
+[5.634100] (-) TimerEvent: {}
+[5.734934] (-) TimerEvent: {}
+[5.835724] (-) TimerEvent: {}
+[5.936395] (-) TimerEvent: {}
+[6.037121] (-) TimerEvent: {}
+[6.137857] (-) TimerEvent: {}
+[6.238455] (-) TimerEvent: {}
+[6.257509] (my_custom_pkg) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[6.338664] (-) TimerEvent: {}
+[6.439156] (-) TimerEvent: {}
+[6.539762] (-) TimerEvent: {}
+[6.640301] (-) TimerEvent: {}
+[6.740998] (-) TimerEvent: {}
+[6.769067] (my_custom_pkg) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[6.785559] (my_custom_pkg) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[6.788017] (my_custom_pkg) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[6.794206] (my_custom_pkg) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[6.807001] (my_custom_pkg) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[6.841124] (-) TimerEvent: {}
+[6.941674] (-) TimerEvent: {}
+[7.042197] (-) TimerEvent: {}
+[7.142881] (-) TimerEvent: {}
+[7.243632] (-) TimerEvent: {}
+[7.264070] (my_custom_pkg) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[7.279178] (my_custom_pkg) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[7.279813] (my_custom_pkg) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[7.280754] (my_custom_pkg) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[7.343830] (-) TimerEvent: {}
+[7.380763] (my_custom_pkg) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[7.444044] (-) TimerEvent: {}
+[7.544527] (-) TimerEvent: {}
+[7.645026] (-) TimerEvent: {}
+[7.745613] (-) TimerEvent: {}
+[7.794289] (my_custom_pkg) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[7.845822] (-) TimerEvent: {}
+[7.946374] (-) TimerEvent: {}
+[8.046943] (-) TimerEvent: {}
+[8.147596] (-) TimerEvent: {}
+[8.241634] (my_custom_pkg) StdoutLine: {'line': b'-- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[8.247790] (-) TimerEvent: {}
+[8.348349] (-) TimerEvent: {}
+[8.448974] (-) TimerEvent: {}
+[8.549466] (-) TimerEvent: {}
+[8.649979] (-) TimerEvent: {}
+[8.750622] (-) TimerEvent: {}
+[8.851146] (-) TimerEvent: {}
+[8.951758] (-) TimerEvent: {}
+[9.052287] (-) TimerEvent: {}
+[9.152935] (-) TimerEvent: {}
+[9.253479] (-) TimerEvent: {}
+[9.353945] (-) TimerEvent: {}
+[9.454504] (-) TimerEvent: {}
+[9.555010] (-) TimerEvent: {}
+[9.655593] (-) TimerEvent: {}
+[9.756195] (-) TimerEvent: {}
+[9.856692] (-) TimerEvent: {}
+[9.957466] (-) TimerEvent: {}
+[10.058217] (-) TimerEvent: {}
+[10.158754] (-) TimerEvent: {}
+[10.259335] (-) TimerEvent: {}
+[10.359852] (-) TimerEvent: {}
+[10.460319] (-) TimerEvent: {}
+[10.512800] (my_custom_pkg) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[10.546823] (my_custom_pkg) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[10.560615] (-) TimerEvent: {}
+[10.621036] (my_custom_pkg) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[10.660909] (-) TimerEvent: {}
+[10.761485] (-) TimerEvent: {}
+[10.802222] (my_custom_pkg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[10.861721] (-) TimerEvent: {}
+[10.908547] (my_custom_pkg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[10.961907] (-) TimerEvent: {}
+[11.062540] (-) TimerEvent: {}
+[11.163081] (-) TimerEvent: {}
+[11.245973] (my_custom_pkg) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[11.263300] (-) TimerEvent: {}
+[11.271590] (my_custom_pkg) StdoutLine: {'line': b'-- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)\n'}
+[11.363545] (-) TimerEvent: {}
+[11.464264] (-) TimerEvent: {}
+[11.564866] (-) TimerEvent: {}
+[11.665567] (-) TimerEvent: {}
+[11.738499] (my_custom_pkg) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_cyclonedds_cpp' as default\n"}
+[11.765762] (-) TimerEvent: {}
+[11.801009] (my_custom_pkg) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[11.865969] (-) TimerEvent: {}
+[11.966571] (-) TimerEvent: {}
+[12.067087] (-) TimerEvent: {}
+[12.168011] (-) TimerEvent: {}
+[12.268714] (-) TimerEvent: {}
+[12.270561] (my_custom_pkg) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[12.271041] (my_custom_pkg) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[12.368974] (-) TimerEvent: {}
+[12.469579] (-) TimerEvent: {}
+[12.570152] (-) TimerEvent: {}
+[12.639835] (my_custom_pkg) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[12.642042] (my_custom_pkg) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[12.670281] (-) TimerEvent: {}
+[12.770980] (-) TimerEvent: {}
+[12.873447] (-) TimerEvent: {}
+[12.905613] (my_custom_pkg) StdoutLine: {'line': b'-- Found rclpy: 3.3.14 (/opt/ros/humble/share/rclpy/cmake)\n'}
+[12.913112] (my_custom_pkg) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:28 (ament_python_install_packages):\n'}
+[12.914173] (my_custom_pkg) StderrLine: {'line': b'  Unknown CMake command "ament_python_install_packages".\n'}
+[12.914691] (my_custom_pkg) StderrLine: {'line': b'\n'}
+[12.914887] (my_custom_pkg) StderrLine: {'line': b'\x1b[0m\n'}
+[12.915040] (my_custom_pkg) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[12.915167] (my_custom_pkg) StdoutLine: {'line': b'See also "/home/fouadroboticist/ros2_ws/build/my_custom_pkg/CMakeFiles/CMakeOutput.log".\n'}
+[12.936184] (my_custom_pkg) CommandEnded: {'returncode': 1}
+[12.973696] (-) TimerEvent: {}
+[13.028053] (my_custom_pkg) JobEnded: {'identifier': 'my_custom_pkg', 'rc': 1}
+[13.039032] (-) EventReactorShutdown: {}

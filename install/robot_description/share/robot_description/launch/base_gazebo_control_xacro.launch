@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Use a parameter file or inline parameters -->
+  <param name="robot_description" value="$(find xacro)/xacro --inorder $(find robot_description)/urdf/robot_base.urdf.xacro"/>
+
+  <!-- Include the Gazebo empty world launch file -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch.xml"/>
+
+  <!-- Node for spawning the URDF model in Gazebo -->
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-param robot_description -urdf -model robot_base" output="screen"/>
+
+  <!-- Load the configuration parameters -->
+  <rosparam file="$(find robot_description)/config/control.yaml" command="load"/>
+
+  <!-- Node for starting controllers -->
+  <node name="base_controller_spawner" pkg="controller_manager" type="spawner" args="robot_base_joint_publisher robot_base_velocity_controller" output="screen"/>
+</launch>

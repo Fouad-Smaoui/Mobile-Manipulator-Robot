@@ -1,0 +1,6 @@
+[0.158s] Invoking command in '/home/fouadroboticist/ros2_ws/Autonomous-Mobile-Manipulator-Robot/build/my_custom_pkg': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/fouadroboticist/ros2_ws/Autonomous-Mobile-Manipulator-Robot/build/my_custom_pkg -- -j4 -l4
+[0.783s] [0mCMake Error: The current CMakeCache.txt directory /home/fouadroboticist/ros2_ws/Autonomous-Mobile-Manipulator-Robot/build/my_custom_pkg/CMakeCache.txt is different than the directory /home/fouadroboticist/ros2_ws/build/my_custom_pkg where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt[0m
+[1.012s] [0mCMake Error: The source directory "/home/fouadroboticist/ros2_ws/src/my_custom_pkg" does not exist.
+[1.013s] Specify --help for usage, or press the help button on the CMake GUI.[0m
+[1.030s] gmake: *** [Makefile:336: cmake_check_build_system] Error 1
+[1.064s] Invoked command in '/home/fouadroboticist/ros2_ws/Autonomous-Mobile-Manipulator-Robot/build/my_custom_pkg' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/fouadroboticist/ros2_ws/Autonomous-Mobile-Manipulator-Robot/build/my_custom_pkg -- -j4 -l4

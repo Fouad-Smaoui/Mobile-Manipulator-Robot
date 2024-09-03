@@ -1,0 +1,506 @@
+[0.000000] (-) TimerEvent: {}
+[0.001532] (-) JobUnselected: {'identifier': 'actions_py'}
+[0.001721] (-) JobUnselected: {'identifier': 'my_robot_bringup'}
+[0.001876] (-) JobUnselected: {'identifier': 'my_robot_control'}
+[0.002011] (-) JobUnselected: {'identifier': 'my_robot_controller'}
+[0.002132] (-) JobUnselected: {'identifier': 'my_robot_interfaces'}
+[0.002252] (-) JobUnselected: {'identifier': 'tutorials_py'}
+[0.002392] (my_custom_pkg) JobQueued: {'identifier': 'my_custom_pkg', 'dependencies': OrderedDict()}
+[0.002544] (my_custom_pkg) JobStarted: {'identifier': 'my_custom_pkg'}
+[0.050936] (my_custom_pkg) JobProgress: {'identifier': 'my_custom_pkg', 'progress': 'cmake'}
+[0.053201] (my_custom_pkg) Command: {'cmd': ['/usr/bin/cmake', '/home/fouadroboticist/ros2_ws/src/my_custom_pkg', '-DCMAKE_INSTALL_PREFIX=/home/fouadroboticist/ros2_ws/install/my_custom_pkg'], 'cwd': '/home/fouadroboticist/ros2_ws/build/my_custom_pkg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'fouadroboticist'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/fouadroboticist/ros2_ws/install/my_robot_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{51855cb2-8cce-5362-8f54-464b92b32386}'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/fouadroboticist'), ('OLDPWD', '/home/fouadroboticist/ros2_ws/src'), ('ROS_PYTHON_VERSION', '3'), ('WSL_DISTRO_NAME', 'Ubuntu'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/fouadroboticist/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fouadroboticist'), ('NAME', 'foufou'), ('WSL_INTEROP', '/run/WSL/10_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/VMware/VMware Player/bin/:/mnt/c/Program Files (x86)/ARM/ADSv1_2/bin:/mnt/c/Program Files (x86)/SIEMENS/S7-PCT/bin:/mnt/c/Program Files (x86)/Common Files/Siemens/Sqlany:/mnt/c/Program Files (x86)/Siemens/Step7/S7bin:/mnt/c/Program Files/Common Files/Siemens/Automation/Simatic OAM/bin:/mnt/c/Program Files (x86)/Intel/iCLS Client/:/mnt/c/Program Files/Intel/iCLS Client/:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/IPT:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/IPT:/mnt/c/Users/fouad.LAPTOP-9R9TR6SR/AppData/Local/Programs/Python/Python36-32:/mnt/c/MATLAB7/bin/win32:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/PKWARE/pkzipc:/mnt/c/MinGW/mingw32/bin:/mnt/c/Program Files/Microchip/xc8/v2.20/bin:/mnt/c/Program Files (x86)/Mitov/Visuino:/mnt/c/Program Files (x86)/ZED SDK/dependencies/freeglut_2.8/x64:/mnt/c/Program Files (x86)/ZED SDK/dependencies/glew-1.12.0/x64:/mnt/c/Program Files (x86)/ZED SDK/dependencies/opencv_3.1.0/x64:/mnt/c/Program Files (x86)/ZED SDK/bin:/mnt/c/Program Files (x86)/dotnet/:/mnt/c/Program Files/nodejs/:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/CMake/bin:/mnt/c/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.30.30705/bin/Hostx64/x64:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/fouad.LAPTOP-9R9TR6SR/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/fouad.LAPTOP-9R9TR6SR/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/fouad.LAPTOP-9R9TR6SR/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/JetBrains/PyCharm Community Edition 2022.3.2/bin:/mnt/c/Users/fouad.LAPTOP-9R9TR6SR/AppData/Roaming/npm:/mnt/c/Users/fouad.LAPTOP-9R9TR6SR/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Program Files/JetBrains/PyCharm Community Edition 2024.1.1/bin:/snap/bin'), ('WT_SESSION', 'c5f9e7ba-234f-4e0a-a5d5-9c9ebc111656'), ('XDG_RUNTIME_DIR', '/mnt/wslg/runtime-dir'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/fouadroboticist/ros2_ws/install/tutorials_py:/home/fouadroboticist/ros2_ws/install/my_robot_controller:/home/fouadroboticist/ros2_ws/install/actions_py:/home/fouadroboticist/ros2_ws/install/my_robot_interfaces:/home/fouadroboticist/ros2_ws/install/my_robot_control:/home/fouadroboticist/ros2_ws/install/my_robot_bringup:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/fouadroboticist/ros2_ws/build/my_custom_pkg'), ('TURTLEBOT3_MODEL', 'waffle'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/fouadroboticist/ros2_ws/install/tutorials_py/lib/python3.10/site-packages:/home/fouadroboticist/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages:/home/fouadroboticist/ros2_ws/install/actions_py/lib/python3.10/site-packages:/home/fouadroboticist/ros2_ws/install/my_robot_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/fouadroboticist/ros2_ws/install/my_robot_interfaces:/home/fouadroboticist/ros2_ws/install/my_robot_control:/home/fouadroboticist/ros2_ws/install/my_robot_bringup:/home/fouadroboticist/ros2_ws/install/tutorials_py:/home/fouadroboticist/ros2_ws/install/my_robot_controller:/home/fouadroboticist/ros2_ws/install/actions_py:/opt/ros/humble'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:')]), 'shell': False}
+[0.094935] (-) TimerEvent: {}
+[0.116535] (my_custom_pkg) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.195262] (-) TimerEvent: {}
+[0.295908] (-) TimerEvent: {}
+[0.396585] (-) TimerEvent: {}
+[0.497206] (-) TimerEvent: {}
+[0.597936] (-) TimerEvent: {}
+[0.698594] (-) TimerEvent: {}
+[0.799131] (-) TimerEvent: {}
+[0.899760] (-) TimerEvent: {}
+[1.000354] (-) TimerEvent: {}
+[1.003661] (my_custom_pkg) StdoutLine: {'line': b'-- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[1.100555] (-) TimerEvent: {}
+[1.201234] (-) TimerEvent: {}
+[1.301845] (-) TimerEvent: {}
+[1.402536] (-) TimerEvent: {}
+[1.503173] (-) TimerEvent: {}
+[1.519219] (my_custom_pkg) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[1.534974] (my_custom_pkg) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[1.560554] (my_custom_pkg) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[1.603394] (-) TimerEvent: {}
+[1.643586] (my_custom_pkg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.703632] (-) TimerEvent: {}
+[1.748575] (my_custom_pkg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.803900] (-) TimerEvent: {}
+[1.904675] (-) TimerEvent: {}
+[2.005418] (-) TimerEvent: {}
+[2.045054] (my_custom_pkg) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[2.057648] (my_custom_pkg) StdoutLine: {'line': b'-- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)\n'}
+[2.105644] (-) TimerEvent: {}
+[2.204142] (my_custom_pkg) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_cyclonedds_cpp' as default\n"}
+[2.205839] (-) TimerEvent: {}
+[2.306525] (-) TimerEvent: {}
+[2.407173] (-) TimerEvent: {}
+[2.507765] (-) TimerEvent: {}
+[2.608464] (-) TimerEvent: {}
+[2.709170] (-) TimerEvent: {}
+[2.809775] (-) TimerEvent: {}
+[2.811120] (my_custom_pkg) StdoutLine: {'line': b'-- Found rclpy: 3.3.14 (/opt/ros/humble/share/rclpy/cmake)\n'}
+[2.910053] (-) TimerEvent: {}
+[3.010799] (-) TimerEvent: {}
+[3.111495] (-) TimerEvent: {}
+[3.212887] (-) TimerEvent: {}
+[3.313510] (-) TimerEvent: {}
+[3.414226] (-) TimerEvent: {}
+[3.514816] (-) TimerEvent: {}
+[3.615549] (-) TimerEvent: {}
+[3.716116] (-) TimerEvent: {}
+[3.816829] (-) TimerEvent: {}
+[3.917392] (-) TimerEvent: {}
+[4.018156] (-) TimerEvent: {}
+[4.234471] (-) TimerEvent: {}
+[4.396726] (-) TimerEvent: {}
+[4.497360] (-) TimerEvent: {}
+[4.598007] (-) TimerEvent: {}
+[4.698625] (-) TimerEvent: {}
+[4.799201] (-) TimerEvent: {}
+[4.899945] (-) TimerEvent: {}
+[5.000633] (-) TimerEvent: {}
+[5.101312] (-) TimerEvent: {}
+[5.154495] (my_custom_pkg) StdoutLine: {'line': b'-- Configuring done\n'}
+[5.201519] (-) TimerEvent: {}
+[5.255082] (my_custom_pkg) StdoutLine: {'line': b'-- Generating done\n'}
+[5.266089] (my_custom_pkg) StdoutLine: {'line': b'-- Build files have been written to: /home/fouadroboticist/ros2_ws/build/my_custom_pkg\n'}
+[5.295620] (my_custom_pkg) CommandEnded: {'returncode': 0}
+[5.297572] (my_custom_pkg) JobProgress: {'identifier': 'my_custom_pkg', 'progress': 'build'}
+[5.299878] (my_custom_pkg) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/fouadroboticist/ros2_ws/build/my_custom_pkg', '--', '-j4', '-l4'], 'cwd': '/home/fouadroboticist/ros2_ws/build/my_custom_pkg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'fouadroboticist'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/fouadroboticist/ros2_ws/install/my_robot_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{51855cb2-8cce-5362-8f54-464b92b32386}'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/fouadroboticist'), ('OLDPWD', '/home/fouadroboticist/ros2_ws/src'), ('ROS_PYTHON_VERSION', '3'), ('WSL_DISTRO_NAME', 'Ubuntu'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/fouadroboticist/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fouadroboticist'), ('NAME', 'foufou'), ('WSL_INTEROP', '/run/WSL/10_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/VMware/VMware Player/bin/:/mnt/c/Program Files (x86)/ARM/ADSv1_2/bin:/mnt/c/Program Files (x86)/SIEMENS/S7-PCT/bin:/mnt/c/Program Files (x86)/Common Files/Siemens/Sqlany:/mnt/c/Program Files (x86)/Siemens/Step7/S7bin:/mnt/c/Program Files/Common Files/Siemens/Automation/Simatic OAM/bin:/mnt/c/Program Files (x86)/Intel/iCLS Client/:/mnt/c/Program Files/Intel/iCLS Client/:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/IPT:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/IPT:/mnt/c/Users/fouad.LAPTOP-9R9TR6SR/AppData/Local/Programs/Python/Python36-32:/mnt/c/MATLAB7/bin/win32:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/PKWARE/pkzipc:/mnt/c/MinGW/mingw32/bin:/mnt/c/Program Files/Microchip/xc8/v2.20/bin:/mnt/c/Program Files (x86)/Mitov/Visuino:/mnt/c/Program Files (x86)/ZED SDK/dependencies/freeglut_2.8/x64:/mnt/c/Program Files (x86)/ZED SDK/dependencies/glew-1.12.0/x64:/mnt/c/Program Files (x86)/ZED SDK/dependencies/opencv_3.1.0/x64:/mnt/c/Program Files (x86)/ZED SDK/bin:/mnt/c/Program Files (x86)/dotnet/:/mnt/c/Program Files/nodejs/:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/CMake/bin:/mnt/c/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.30.30705/bin/Hostx64/x64:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/fouad.LAPTOP-9R9TR6SR/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/fouad.LAPTOP-9R9TR6SR/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/fouad.LAPTOP-9R9TR6SR/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/JetBrains/PyCharm Community Edition 2022.3.2/bin:/mnt/c/Users/fouad.LAPTOP-9R9TR6SR/AppData/Roaming/npm:/mnt/c/Users/fouad.LAPTOP-9R9TR6SR/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Program Files/JetBrains/PyCharm Community Edition 2024.1.1/bin:/snap/bin'), ('WT_SESSION', 'c5f9e7ba-234f-4e0a-a5d5-9c9ebc111656'), ('XDG_RUNTIME_DIR', '/mnt/wslg/runtime-dir'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/fouadroboticist/ros2_ws/install/tutorials_py:/home/fouadroboticist/ros2_ws/install/my_robot_controller:/home/fouadroboticist/ros2_ws/install/actions_py:/home/fouadroboticist/ros2_ws/install/my_robot_interfaces:/home/fouadroboticist/ros2_ws/install/my_robot_control:/home/fouadroboticist/ros2_ws/install/my_robot_bringup:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/fouadroboticist/ros2_ws/build/my_custom_pkg'), ('TURTLEBOT3_MODEL', 'waffle'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/fouadroboticist/ros2_ws/install/tutorials_py/lib/python3.10/site-packages:/home/fouadroboticist/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages:/home/fouadroboticist/ros2_ws/install/actions_py/lib/python3.10/site-packages:/home/fouadroboticist/ros2_ws/install/my_robot_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/fouadroboticist/ros2_ws/install/my_robot_interfaces:/home/fouadroboticist/ros2_ws/install/my_robot_control:/home/fouadroboticist/ros2_ws/install/my_robot_bringup:/home/fouadroboticist/ros2_ws/install/tutorials_py:/home/fouadroboticist/ros2_ws/install/my_robot_controller:/home/fouadroboticist/ros2_ws/install/actions_py:/opt/ros/humble'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:')]), 'shell': False}
+[5.304468] (-) TimerEvent: {}
+[5.406568] (-) TimerEvent: {}
+[5.447806] (my_custom_pkg) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/cpp_exe.dir/src/cpp_node.cpp.o\x1b[0m\n'}
+[5.507152] (-) TimerEvent: {}
+[5.508147] (my_custom_pkg) StdoutLine: {'line': b'[ 50%] Built target ament_cmake_python_copy_my_custom_pkg\n'}
+[5.607351] (-) TimerEvent: {}
+[5.708018] (-) TimerEvent: {}
+[5.808696] (-) TimerEvent: {}
+[5.924873] (-) TimerEvent: {}
+[6.025495] (-) TimerEvent: {}
+[6.126118] (-) TimerEvent: {}
+[6.226722] (-) TimerEvent: {}
+[6.327296] (-) TimerEvent: {}
+[6.427845] (-) TimerEvent: {}
+[6.533126] (-) TimerEvent: {}
+[6.633719] (-) TimerEvent: {}
+[6.737201] (-) TimerEvent: {}
+[6.837839] (-) TimerEvent: {}
+[6.938548] (-) TimerEvent: {}
+[7.039373] (-) TimerEvent: {}
+[7.140105] (-) TimerEvent: {}
+[7.240770] (-) TimerEvent: {}
+[7.341421] (-) TimerEvent: {}
+[7.418213] (my_custom_pkg) StdoutLine: {'line': b'running egg_info\n'}
+[7.420960] (my_custom_pkg) StdoutLine: {'line': b'creating my_custom_pkg.egg-info\n'}
+[7.423167] (my_custom_pkg) StdoutLine: {'line': b'writing my_custom_pkg.egg-info/PKG-INFO\n'}
+[7.425216] (my_custom_pkg) StdoutLine: {'line': b'writing dependency_links to my_custom_pkg.egg-info/dependency_links.txt\n'}
+[7.429811] (my_custom_pkg) StdoutLine: {'line': b'writing top-level names to my_custom_pkg.egg-info/top_level.txt\n'}
+[7.430892] (my_custom_pkg) StdoutLine: {'line': b"writing manifest file 'my_custom_pkg.egg-info/SOURCES.txt'\n"}
+[7.441595] (-) TimerEvent: {}
+[7.446962] (my_custom_pkg) StdoutLine: {'line': b"reading manifest file 'my_custom_pkg.egg-info/SOURCES.txt'\n"}
+[7.450828] (my_custom_pkg) StdoutLine: {'line': b"writing manifest file 'my_custom_pkg.egg-info/SOURCES.txt'\n"}
+[7.527071] (my_custom_pkg) StdoutLine: {'line': b'[ 50%] Built target ament_cmake_python_build_my_custom_pkg_egg\n'}
+[7.541776] (-) TimerEvent: {}
+[7.643409] (-) TimerEvent: {}
+[7.744369] (-) TimerEvent: {}
+[7.844956] (-) TimerEvent: {}
+[7.945571] (-) TimerEvent: {}
+[8.046167] (-) TimerEvent: {}
+[8.146802] (-) TimerEvent: {}
+[8.247513] (-) TimerEvent: {}
+[8.348378] (-) TimerEvent: {}
+[8.448891] (-) TimerEvent: {}
+[8.549504] (-) TimerEvent: {}
+[8.649987] (-) TimerEvent: {}
+[8.750447] (-) TimerEvent: {}
+[8.851020] (-) TimerEvent: {}
+[8.951622] (-) TimerEvent: {}
+[9.052314] (-) TimerEvent: {}
+[9.152934] (-) TimerEvent: {}
+[9.253914] (-) TimerEvent: {}
+[9.354537] (-) TimerEvent: {}
+[9.455671] (-) TimerEvent: {}
+[9.556228] (-) TimerEvent: {}
+[9.656768] (-) TimerEvent: {}
+[9.757321] (-) TimerEvent: {}
+[9.858353] (-) TimerEvent: {}
+[9.959009] (-) TimerEvent: {}
+[10.059642] (-) TimerEvent: {}
+[10.160321] (-) TimerEvent: {}
+[10.261077] (-) TimerEvent: {}
+[10.455158] (-) TimerEvent: {}
+[10.555987] (-) TimerEvent: {}
+[10.656681] (-) TimerEvent: {}
+[10.757293] (-) TimerEvent: {}
+[10.857897] (-) TimerEvent: {}
+[10.958426] (-) TimerEvent: {}
+[11.059454] (-) TimerEvent: {}
+[11.161578] (-) TimerEvent: {}
+[11.291883] (-) TimerEvent: {}
+[11.392705] (-) TimerEvent: {}
+[11.493288] (-) TimerEvent: {}
+[11.594002] (-) TimerEvent: {}
+[11.694609] (-) TimerEvent: {}
+[11.795214] (-) TimerEvent: {}
+[11.895894] (-) TimerEvent: {}
+[11.996801] (-) TimerEvent: {}
+[12.097646] (-) TimerEvent: {}
+[12.198291] (-) TimerEvent: {}
+[12.298958] (-) TimerEvent: {}
+[12.399560] (-) TimerEvent: {}
+[12.500220] (-) TimerEvent: {}
+[12.600880] (-) TimerEvent: {}
+[12.701581] (-) TimerEvent: {}
+[12.802207] (-) TimerEvent: {}
+[12.936745] (-) TimerEvent: {}
+[13.037405] (-) TimerEvent: {}
+[13.138110] (-) TimerEvent: {}
+[13.239212] (-) TimerEvent: {}
+[13.339780] (-) TimerEvent: {}
+[13.440354] (-) TimerEvent: {}
+[13.540897] (-) TimerEvent: {}
+[13.641780] (-) TimerEvent: {}
+[13.742400] (-) TimerEvent: {}
+[13.843283] (-) TimerEvent: {}
+[13.943973] (-) TimerEvent: {}
+[14.044542] (-) TimerEvent: {}
+[14.145182] (-) TimerEvent: {}
+[14.245829] (-) TimerEvent: {}
+[14.346412] (-) TimerEvent: {}
+[14.447077] (-) TimerEvent: {}
+[14.547777] (-) TimerEvent: {}
+[14.648362] (-) TimerEvent: {}
+[14.749084] (-) TimerEvent: {}
+[14.849705] (-) TimerEvent: {}
+[14.950367] (-) TimerEvent: {}
+[15.050939] (-) TimerEvent: {}
+[15.275748] (-) TimerEvent: {}
+[15.376774] (-) TimerEvent: {}
+[15.477377] (-) TimerEvent: {}
+[15.577962] (-) TimerEvent: {}
+[15.678576] (-) TimerEvent: {}
+[15.779181] (-) TimerEvent: {}
+[15.879791] (-) TimerEvent: {}
+[15.980420] (-) TimerEvent: {}
+[16.081086] (-) TimerEvent: {}
+[16.181730] (-) TimerEvent: {}
+[16.282390] (-) TimerEvent: {}
+[16.382955] (-) TimerEvent: {}
+[16.483462] (-) TimerEvent: {}
+[16.584078] (-) TimerEvent: {}
+[16.684685] (-) TimerEvent: {}
+[16.785373] (-) TimerEvent: {}
+[16.886008] (-) TimerEvent: {}
+[16.986526] (-) TimerEvent: {}
+[17.087163] (-) TimerEvent: {}
+[17.187929] (-) TimerEvent: {}
+[17.288650] (-) TimerEvent: {}
+[17.389335] (-) TimerEvent: {}
+[17.489797] (-) TimerEvent: {}
+[17.590377] (-) TimerEvent: {}
+[17.690950] (-) TimerEvent: {}
+[17.791473] (-) TimerEvent: {}
+[17.892014] (-) TimerEvent: {}
+[17.992581] (-) TimerEvent: {}
+[18.093034] (-) TimerEvent: {}
+[18.193629] (-) TimerEvent: {}
+[18.294510] (-) TimerEvent: {}
+[18.395126] (-) TimerEvent: {}
+[18.495642] (-) TimerEvent: {}
+[18.596304] (-) TimerEvent: {}
+[18.697146] (-) TimerEvent: {}
+[18.798174] (-) TimerEvent: {}
+[18.898804] (-) TimerEvent: {}
+[18.999507] (-) TimerEvent: {}
+[19.100111] (-) TimerEvent: {}
+[19.200725] (-) TimerEvent: {}
+[19.301331] (-) TimerEvent: {}
+[19.401963] (-) TimerEvent: {}
+[19.502630] (-) TimerEvent: {}
+[19.603357] (-) TimerEvent: {}
+[19.704363] (-) TimerEvent: {}
+[19.804932] (-) TimerEvent: {}
+[19.905553] (-) TimerEvent: {}
+[20.006044] (-) TimerEvent: {}
+[20.106545] (-) TimerEvent: {}
+[20.207033] (-) TimerEvent: {}
+[20.307501] (-) TimerEvent: {}
+[20.408228] (-) TimerEvent: {}
+[20.509149] (-) TimerEvent: {}
+[20.609723] (-) TimerEvent: {}
+[20.710303] (-) TimerEvent: {}
+[20.810857] (-) TimerEvent: {}
+[20.911434] (-) TimerEvent: {}
+[21.011951] (-) TimerEvent: {}
+[21.112457] (-) TimerEvent: {}
+[21.212999] (-) TimerEvent: {}
+[21.313647] (-) TimerEvent: {}
+[21.414130] (-) TimerEvent: {}
+[21.514619] (-) TimerEvent: {}
+[21.615546] (-) TimerEvent: {}
+[21.716073] (-) TimerEvent: {}
+[21.816827] (-) TimerEvent: {}
+[21.917668] (-) TimerEvent: {}
+[22.018292] (-) TimerEvent: {}
+[22.118856] (-) TimerEvent: {}
+[22.219513] (-) TimerEvent: {}
+[22.320038] (-) TimerEvent: {}
+[22.420516] (-) TimerEvent: {}
+[22.521120] (-) TimerEvent: {}
+[22.621582] (-) TimerEvent: {}
+[22.722052] (-) TimerEvent: {}
+[22.822562] (-) TimerEvent: {}
+[22.923087] (-) TimerEvent: {}
+[23.023669] (-) TimerEvent: {}
+[23.124233] (-) TimerEvent: {}
+[23.224832] (-) TimerEvent: {}
+[23.325469] (-) TimerEvent: {}
+[23.426026] (-) TimerEvent: {}
+[23.526580] (-) TimerEvent: {}
+[23.627115] (-) TimerEvent: {}
+[23.727612] (-) TimerEvent: {}
+[23.828114] (-) TimerEvent: {}
+[23.928885] (-) TimerEvent: {}
+[24.029637] (-) TimerEvent: {}
+[24.130216] (-) TimerEvent: {}
+[24.230957] (-) TimerEvent: {}
+[24.333803] (-) TimerEvent: {}
+[24.434518] (-) TimerEvent: {}
+[24.535020] (-) TimerEvent: {}
+[24.635486] (-) TimerEvent: {}
+[24.736042] (-) TimerEvent: {}
+[24.836579] (-) TimerEvent: {}
+[24.937139] (-) TimerEvent: {}
+[25.037651] (-) TimerEvent: {}
+[25.138286] (-) TimerEvent: {}
+[25.238875] (-) TimerEvent: {}
+[25.339493] (-) TimerEvent: {}
+[25.439945] (-) TimerEvent: {}
+[25.540450] (-) TimerEvent: {}
+[25.641082] (-) TimerEvent: {}
+[25.741696] (-) TimerEvent: {}
+[25.842307] (-) TimerEvent: {}
+[25.942873] (-) TimerEvent: {}
+[26.043613] (-) TimerEvent: {}
+[26.144267] (-) TimerEvent: {}
+[26.245016] (-) TimerEvent: {}
+[26.345697] (-) TimerEvent: {}
+[26.446383] (-) TimerEvent: {}
+[26.547066] (-) TimerEvent: {}
+[26.647572] (-) TimerEvent: {}
+[26.748225] (-) TimerEvent: {}
+[26.848756] (-) TimerEvent: {}
+[26.949409] (-) TimerEvent: {}
+[27.049963] (-) TimerEvent: {}
+[27.150750] (-) TimerEvent: {}
+[27.251366] (-) TimerEvent: {}
+[27.351824] (-) TimerEvent: {}
+[27.452304] (-) TimerEvent: {}
+[27.552871] (-) TimerEvent: {}
+[27.653568] (-) TimerEvent: {}
+[27.754099] (-) TimerEvent: {}
+[27.854892] (-) TimerEvent: {}
+[27.955347] (-) TimerEvent: {}
+[28.055865] (-) TimerEvent: {}
+[28.156414] (-) TimerEvent: {}
+[28.257112] (-) TimerEvent: {}
+[28.357760] (-) TimerEvent: {}
+[28.458249] (-) TimerEvent: {}
+[28.558958] (-) TimerEvent: {}
+[28.659677] (-) TimerEvent: {}
+[28.760673] (-) TimerEvent: {}
+[28.861380] (-) TimerEvent: {}
+[28.961900] (-) TimerEvent: {}
+[29.062475] (-) TimerEvent: {}
+[29.163079] (-) TimerEvent: {}
+[29.264217] (-) TimerEvent: {}
+[29.364942] (-) TimerEvent: {}
+[29.465559] (-) TimerEvent: {}
+[29.566182] (-) TimerEvent: {}
+[29.666749] (-) TimerEvent: {}
+[29.767372] (-) TimerEvent: {}
+[29.867958] (-) TimerEvent: {}
+[29.968530] (-) TimerEvent: {}
+[30.069073] (-) TimerEvent: {}
+[30.169626] (-) TimerEvent: {}
+[30.270279] (-) TimerEvent: {}
+[30.370785] (-) TimerEvent: {}
+[30.471292] (-) TimerEvent: {}
+[30.571797] (-) TimerEvent: {}
+[30.672384] (-) TimerEvent: {}
+[30.773211] (-) TimerEvent: {}
+[35.966557] (-) TimerEvent: {}
+[36.067137] (-) TimerEvent: {}
+[36.311145] (-) TimerEvent: {}
+[36.411675] (-) TimerEvent: {}
+[36.512155] (-) TimerEvent: {}
+[36.612712] (-) TimerEvent: {}
+[40.369359] (-) TimerEvent: {}
+[42.597661] (-) TimerEvent: {}
+[42.698393] (-) TimerEvent: {}
+[42.799221] (-) TimerEvent: {}
+[43.930574] (-) TimerEvent: {}
+[44.031448] (-) TimerEvent: {}
+[44.131993] (-) TimerEvent: {}
+[44.232616] (-) TimerEvent: {}
+[44.382298] (-) TimerEvent: {}
+[44.483033] (-) TimerEvent: {}
+[44.620590] (-) TimerEvent: {}
+[44.721364] (-) TimerEvent: {}
+[44.821927] (-) TimerEvent: {}
+[44.922494] (-) TimerEvent: {}
+[45.023184] (-) TimerEvent: {}
+[45.157493] (-) TimerEvent: {}
+[45.262774] (-) TimerEvent: {}
+[45.380527] (-) TimerEvent: {}
+[45.485176] (-) TimerEvent: {}
+[45.585849] (-) TimerEvent: {}
+[45.686518] (-) TimerEvent: {}
+[45.787113] (-) TimerEvent: {}
+[45.887771] (-) TimerEvent: {}
+[45.988494] (-) TimerEvent: {}
+[46.089174] (-) TimerEvent: {}
+[46.189695] (-) TimerEvent: {}
+[46.290406] (-) TimerEvent: {}
+[46.391288] (-) TimerEvent: {}
+[46.492289] (-) TimerEvent: {}
+[46.593075] (-) TimerEvent: {}
+[46.693912] (-) TimerEvent: {}
+[46.794730] (-) TimerEvent: {}
+[46.895312] (-) TimerEvent: {}
+[46.995951] (-) TimerEvent: {}
+[47.096721] (-) TimerEvent: {}
+[47.197236] (-) TimerEvent: {}
+[47.297741] (-) TimerEvent: {}
+[47.398600] (-) TimerEvent: {}
+[47.499293] (-) TimerEvent: {}
+[47.599926] (-) TimerEvent: {}
+[47.700532] (-) TimerEvent: {}
+[47.801065] (-) TimerEvent: {}
+[47.901695] (-) TimerEvent: {}
+[48.061056] (-) TimerEvent: {}
+[48.163928] (-) TimerEvent: {}
+[48.264738] (-) TimerEvent: {}
+[48.365382] (-) TimerEvent: {}
+[48.466271] (-) TimerEvent: {}
+[48.566853] (-) TimerEvent: {}
+[48.667736] (-) TimerEvent: {}
+[48.768404] (-) TimerEvent: {}
+[48.868925] (-) TimerEvent: {}
+[48.969805] (-) TimerEvent: {}
+[49.070609] (-) TimerEvent: {}
+[49.171332] (-) TimerEvent: {}
+[49.271848] (-) TimerEvent: {}
+[49.372817] (-) TimerEvent: {}
+[49.473704] (-) TimerEvent: {}
+[49.574328] (-) TimerEvent: {}
+[49.675004] (-) TimerEvent: {}
+[49.775635] (-) TimerEvent: {}
+[49.876356] (-) TimerEvent: {}
+[49.976948] (-) TimerEvent: {}
+[50.080017] (-) TimerEvent: {}
+[50.180826] (-) TimerEvent: {}
+[50.281632] (-) TimerEvent: {}
+[50.382266] (-) TimerEvent: {}
+[50.490758] (-) TimerEvent: {}
+[50.591486] (-) TimerEvent: {}
+[50.691992] (-) TimerEvent: {}
+[50.792813] (-) TimerEvent: {}
+[50.893384] (-) TimerEvent: {}
+[50.993948] (-) TimerEvent: {}
+[51.094703] (-) TimerEvent: {}
+[51.195816] (-) TimerEvent: {}
+[51.296545] (-) TimerEvent: {}
+[51.397305] (-) TimerEvent: {}
+[51.498132] (-) TimerEvent: {}
+[51.598670] (-) TimerEvent: {}
+[51.699276] (-) TimerEvent: {}
+[51.800026] (-) TimerEvent: {}
+[51.900706] (-) TimerEvent: {}
+[52.001412] (-) TimerEvent: {}
+[52.102032] (-) TimerEvent: {}
+[52.202918] (-) TimerEvent: {}
+[52.303768] (-) TimerEvent: {}
+[52.404457] (-) TimerEvent: {}
+[52.505385] (-) TimerEvent: {}
+[52.606014] (-) TimerEvent: {}
+[52.706466] (-) TimerEvent: {}
+[52.807008] (-) TimerEvent: {}
+[52.907628] (-) TimerEvent: {}
+[53.008374] (-) TimerEvent: {}
+[53.109025] (-) TimerEvent: {}
+[53.209515] (-) TimerEvent: {}
+[53.309981] (-) TimerEvent: {}
+[53.410571] (-) TimerEvent: {}
+[53.511026] (-) TimerEvent: {}
+[53.611520] (-) TimerEvent: {}
+[53.711968] (-) TimerEvent: {}
+[53.812541] (-) TimerEvent: {}
+[53.913369] (-) TimerEvent: {}
+[54.014040] (-) TimerEvent: {}
+[54.114564] (-) TimerEvent: {}
+[54.215049] (-) TimerEvent: {}
+[54.246714] (my_custom_pkg) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable cpp_exe\x1b[0m\n'}
+[54.315246] (-) TimerEvent: {}
+[54.415854] (-) TimerEvent: {}
+[54.516518] (-) TimerEvent: {}
+[54.617151] (-) TimerEvent: {}
+[54.717664] (-) TimerEvent: {}
+[54.818363] (-) TimerEvent: {}
+[54.919514] (-) TimerEvent: {}
+[55.020165] (-) TimerEvent: {}
+[55.120767] (-) TimerEvent: {}
+[55.221287] (-) TimerEvent: {}
+[55.266524] (my_custom_pkg) StdoutLine: {'line': b'[100%] Built target cpp_exe\n'}
+[55.297001] (my_custom_pkg) CommandEnded: {'returncode': 0}
+[55.321590] (-) TimerEvent: {}
+[55.395165] (my_custom_pkg) JobProgress: {'identifier': 'my_custom_pkg', 'progress': 'install'}
+[55.423254] (my_custom_pkg) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/fouadroboticist/ros2_ws/build/my_custom_pkg'], 'cwd': '/home/fouadroboticist/ros2_ws/build/my_custom_pkg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'fouadroboticist'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/fouadroboticist/ros2_ws/install/my_robot_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{51855cb2-8cce-5362-8f54-464b92b32386}'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/fouadroboticist'), ('OLDPWD', '/home/fouadroboticist/ros2_ws/src'), ('ROS_PYTHON_VERSION', '3'), ('WSL_DISTRO_NAME', 'Ubuntu'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/fouadroboticist/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fouadroboticist'), ('NAME', 'foufou'), ('WSL_INTEROP', '/run/WSL/10_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/VMware/VMware Player/bin/:/mnt/c/Program Files (x86)/ARM/ADSv1_2/bin:/mnt/c/Program Files (x86)/SIEMENS/S7-PCT/bin:/mnt/c/Program Files (x86)/Common Files/Siemens/Sqlany:/mnt/c/Program Files (x86)/Siemens/Step7/S7bin:/mnt/c/Program Files/Common Files/Siemens/Automation/Simatic OAM/bin:/mnt/c/Program Files (x86)/Intel/iCLS Client/:/mnt/c/Program Files/Intel/iCLS Client/:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/IPT:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/IPT:/mnt/c/Users/fouad.LAPTOP-9R9TR6SR/AppData/Local/Programs/Python/Python36-32:/mnt/c/MATLAB7/bin/win32:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/PKWARE/pkzipc:/mnt/c/MinGW/mingw32/bin:/mnt/c/Program Files/Microchip/xc8/v2.20/bin:/mnt/c/Program Files (x86)/Mitov/Visuino:/mnt/c/Program Files (x86)/ZED SDK/dependencies/freeglut_2.8/x64:/mnt/c/Program Files (x86)/ZED SDK/dependencies/glew-1.12.0/x64:/mnt/c/Program Files (x86)/ZED SDK/dependencies/opencv_3.1.0/x64:/mnt/c/Program Files (x86)/ZED SDK/bin:/mnt/c/Program Files (x86)/dotnet/:/mnt/c/Program Files/nodejs/:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/CMake/bin:/mnt/c/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.30.30705/bin/Hostx64/x64:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/fouad.LAPTOP-9R9TR6SR/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/fouad.LAPTOP-9R9TR6SR/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/fouad.LAPTOP-9R9TR6SR/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/JetBrains/PyCharm Community Edition 2022.3.2/bin:/mnt/c/Users/fouad.LAPTOP-9R9TR6SR/AppData/Roaming/npm:/mnt/c/Users/fouad.LAPTOP-9R9TR6SR/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Program Files/JetBrains/PyCharm Community Edition 2024.1.1/bin:/snap/bin'), ('WT_SESSION', 'c5f9e7ba-234f-4e0a-a5d5-9c9ebc111656'), ('XDG_RUNTIME_DIR', '/mnt/wslg/runtime-dir'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/fouadroboticist/ros2_ws/install/tutorials_py:/home/fouadroboticist/ros2_ws/install/my_robot_controller:/home/fouadroboticist/ros2_ws/install/actions_py:/home/fouadroboticist/ros2_ws/install/my_robot_interfaces:/home/fouadroboticist/ros2_ws/install/my_robot_control:/home/fouadroboticist/ros2_ws/install/my_robot_bringup:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/fouadroboticist/ros2_ws/build/my_custom_pkg'), ('TURTLEBOT3_MODEL', 'waffle'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/fouadroboticist/ros2_ws/install/tutorials_py/lib/python3.10/site-packages:/home/fouadroboticist/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages:/home/fouadroboticist/ros2_ws/install/actions_py/lib/python3.10/site-packages:/home/fouadroboticist/ros2_ws/install/my_robot_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/fouadroboticist/ros2_ws/install/my_robot_interfaces:/home/fouadroboticist/ros2_ws/install/my_robot_control:/home/fouadroboticist/ros2_ws/install/my_robot_bringup:/home/fouadroboticist/ros2_ws/install/tutorials_py:/home/fouadroboticist/ros2_ws/install/my_robot_controller:/home/fouadroboticist/ros2_ws/install/actions_py:/opt/ros/humble'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:')]), 'shell': False}
+[55.426740] (-) TimerEvent: {}
+[55.446272] (my_custom_pkg) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[55.454491] (my_custom_pkg) StdoutLine: {'line': b'-- Installing: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/lib/my_custom_pkg/cpp_exe\n'}
+[55.456676] (my_custom_pkg) StdoutLine: {'line': b'-- Set runtime path of "/home/fouadroboticist/ros2_ws/install/my_custom_pkg/lib/my_custom_pkg/cpp_exe" to ""\n'}
+[55.457249] (my_custom_pkg) StdoutLine: {'line': b'-- Installing: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/share/my_custom_pkg/environment/pythonpath.sh\n'}
+[55.457657] (my_custom_pkg) StdoutLine: {'line': b'-- Installing: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/share/my_custom_pkg/environment/pythonpath.dsv\n'}
+[55.458022] (my_custom_pkg) StdoutLine: {'line': b'-- Installing: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/local/lib/python3.10/dist-packages/my_custom_pkg-0.0.0-py3.10.egg-info\n'}
+[55.461064] (my_custom_pkg) StdoutLine: {'line': b'-- Installing: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/local/lib/python3.10/dist-packages/my_custom_pkg-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[55.461919] (my_custom_pkg) StdoutLine: {'line': b'-- Installing: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/local/lib/python3.10/dist-packages/my_custom_pkg-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[55.462479] (my_custom_pkg) StdoutLine: {'line': b'-- Installing: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/local/lib/python3.10/dist-packages/my_custom_pkg-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[55.462891] (my_custom_pkg) StdoutLine: {'line': b'-- Installing: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/local/lib/python3.10/dist-packages/my_custom_pkg-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[55.464525] (my_custom_pkg) StdoutLine: {'line': b'-- Installing: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/local/lib/python3.10/dist-packages/my_custom_pkg\n'}
+[55.464965] (my_custom_pkg) StdoutLine: {'line': b'-- Installing: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/local/lib/python3.10/dist-packages/my_custom_pkg/__init__.py\n'}
+[55.465405] (my_custom_pkg) StdoutLine: {'line': b'-- Installing: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/local/lib/python3.10/dist-packages/my_custom_pkg/module_to_import.py\n'}
+[55.526956] (-) TimerEvent: {}
+[55.627557] (-) TimerEvent: {}
+[55.628146] (my_custom_pkg) StdoutLine: {'line': b"Listing '/home/fouadroboticist/ros2_ws/install/my_custom_pkg/local/lib/python3.10/dist-packages/my_custom_pkg'...\n"}
+[55.628605] (my_custom_pkg) StdoutLine: {'line': b"Compiling '/home/fouadroboticist/ros2_ws/install/my_custom_pkg/local/lib/python3.10/dist-packages/my_custom_pkg/__init__.py'...\n"}
+[55.628899] (my_custom_pkg) StdoutLine: {'line': b"Compiling '/home/fouadroboticist/ros2_ws/install/my_custom_pkg/local/lib/python3.10/dist-packages/my_custom_pkg/module_to_import.py'...\n"}
+[55.641862] (my_custom_pkg) StdoutLine: {'line': b'-- Installing: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/lib/my_custom_pkg/py_node.py\n'}
+[55.643808] (my_custom_pkg) StdoutLine: {'line': b'-- Installing: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/share/ament_index/resource_index/package_run_dependencies/my_custom_pkg\n'}
+[55.645676] (my_custom_pkg) StdoutLine: {'line': b'-- Installing: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/share/ament_index/resource_index/parent_prefix_path/my_custom_pkg\n'}
+[55.646242] (my_custom_pkg) StdoutLine: {'line': b'-- Installing: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/share/my_custom_pkg/environment/ament_prefix_path.sh\n'}
+[55.646922] (my_custom_pkg) StdoutLine: {'line': b'-- Installing: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/share/my_custom_pkg/environment/ament_prefix_path.dsv\n'}
+[55.647692] (my_custom_pkg) StdoutLine: {'line': b'-- Installing: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/share/my_custom_pkg/environment/path.sh\n'}
+[55.648528] (my_custom_pkg) StdoutLine: {'line': b'-- Installing: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/share/my_custom_pkg/environment/path.dsv\n'}
+[55.649134] (my_custom_pkg) StdoutLine: {'line': b'-- Installing: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/share/my_custom_pkg/local_setup.bash\n'}
+[55.652514] (my_custom_pkg) StdoutLine: {'line': b'-- Installing: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/share/my_custom_pkg/local_setup.sh\n'}
+[55.652886] (my_custom_pkg) StdoutLine: {'line': b'-- Installing: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/share/my_custom_pkg/local_setup.zsh\n'}
+[55.653465] (my_custom_pkg) StdoutLine: {'line': b'-- Installing: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/share/my_custom_pkg/local_setup.dsv\n'}
+[55.654043] (my_custom_pkg) StdoutLine: {'line': b'-- Installing: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/share/my_custom_pkg/package.dsv\n'}
+[55.655127] (my_custom_pkg) StdoutLine: {'line': b'-- Installing: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/share/ament_index/resource_index/packages/my_custom_pkg\n'}
+[55.656729] (my_custom_pkg) StdoutLine: {'line': b'-- Installing: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/share/my_custom_pkg/cmake/my_custom_pkgConfig.cmake\n'}
+[55.658475] (my_custom_pkg) StdoutLine: {'line': b'-- Installing: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/share/my_custom_pkg/cmake/my_custom_pkgConfig-version.cmake\n'}
+[55.659778] (my_custom_pkg) StdoutLine: {'line': b'-- Installing: /home/fouadroboticist/ros2_ws/install/my_custom_pkg/share/my_custom_pkg/package.xml\n'}
+[55.666245] (my_custom_pkg) CommandEnded: {'returncode': 0}
+[55.727723] (-) TimerEvent: {}
+[55.807008] (my_custom_pkg) JobEnded: {'identifier': 'my_custom_pkg', 'rc': 0}
+[55.811275] (-) EventReactorShutdown: {}
