@@ -56,7 +56,6 @@ source ~/ros2_ws/install/setup.bash
 ### Launching the Robot
 To start the mobile manipulator and display the URDF model, use the following command:
 ```bash
-Copy code
 ros2 launch urdf_tutorial display.launch.py model:=/ros2_ws/src/robot_description/urdf/mobile_m
 ```
 
