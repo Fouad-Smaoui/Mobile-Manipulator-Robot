@@ -1,6 +1,6 @@
 # ROS 2 Mobile Manipulator
 
-<img src="/images/mobile_manipulator_urdf_rviz.png" width="300" />
+<img src="/images/mobile_manipulator_urdf_rviz.png"/>
 
 ## Overview
 
