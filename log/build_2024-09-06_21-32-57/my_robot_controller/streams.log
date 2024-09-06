@@ -1,0 +1,41 @@
+[3.756s] Invoking command in '/home/fouadroboticist/ros2_ws/src/my_robot_controller': CMAKE_PREFIX_PATH=/home/fouadroboticist/ros2_ws/install/my_robot_interfaces:/home/fouadroboticist/ros2_ws/install/robot_description:/home/fouadroboticist/ros2_ws/install/my_robot_control:/home/fouadroboticist/ros2_ws/install/my_robot_bringup:/home/fouadroboticist/ros2_ws/install/my_custom_pkg PYTHONPATH=/home/fouadroboticist/ros2_ws/build/my_robot_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/fouadroboticist/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/my_robot_controller build --build-base /home/fouadroboticist/ros2_ws/build/my_robot_controller/build install --record /home/fouadroboticist/ros2_ws/build/my_robot_controller/install.log --single-version-externally-managed install_data
+[4.437s] running egg_info
+[4.440s] writing ../../build/my_robot_controller/my_robot_controller.egg-info/PKG-INFO
+[4.442s] writing dependency_links to ../../build/my_robot_controller/my_robot_controller.egg-info/dependency_links.txt
+[4.442s] writing entry points to ../../build/my_robot_controller/my_robot_controller.egg-info/entry_points.txt
+[4.443s] writing requirements to ../../build/my_robot_controller/my_robot_controller.egg-info/requires.txt
+[4.443s] writing top-level names to ../../build/my_robot_controller/my_robot_controller.egg-info/top_level.txt
+[4.448s] reading manifest file '../../build/my_robot_controller/my_robot_controller.egg-info/SOURCES.txt'
+[4.455s] writing manifest file '../../build/my_robot_controller/my_robot_controller.egg-info/SOURCES.txt'
+[4.455s] running build
+[4.455s] running build_py
+[4.456s] copying my_robot_controller/pose_subscriber.py -> /home/fouadroboticist/ros2_ws/build/my_robot_controller/build/lib/my_robot_controller
+[4.459s] copying my_robot_controller/__init__.py -> /home/fouadroboticist/ros2_ws/build/my_robot_controller/build/lib/my_robot_controller
+[4.460s] copying my_robot_controller/draw_circle.py -> /home/fouadroboticist/ros2_ws/build/my_robot_controller/build/lib/my_robot_controller
+[4.461s] copying my_robot_controller/my_first_node.py -> /home/fouadroboticist/ros2_ws/build/my_robot_controller/build/lib/my_robot_controller
+[4.471s] copying my_robot_controller/turtle_controller.py -> /home/fouadroboticist/ros2_ws/build/my_robot_controller/build/lib/my_robot_controller
+[4.473s] running install
+[4.474s] running install_lib
+[4.476s] copying /home/fouadroboticist/ros2_ws/build/my_robot_controller/build/lib/my_robot_controller/pose_subscriber.py -> /home/fouadroboticist/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages/my_robot_controller
+[4.478s] copying /home/fouadroboticist/ros2_ws/build/my_robot_controller/build/lib/my_robot_controller/__init__.py -> /home/fouadroboticist/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages/my_robot_controller
+[4.478s] copying /home/fouadroboticist/ros2_ws/build/my_robot_controller/build/lib/my_robot_controller/draw_circle.py -> /home/fouadroboticist/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages/my_robot_controller
+[4.479s] copying /home/fouadroboticist/ros2_ws/build/my_robot_controller/build/lib/my_robot_controller/my_first_node.py -> /home/fouadroboticist/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages/my_robot_controller
+[4.480s] copying /home/fouadroboticist/ros2_ws/build/my_robot_controller/build/lib/my_robot_controller/turtle_controller.py -> /home/fouadroboticist/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages/my_robot_controller
+[4.481s] byte-compiling /home/fouadroboticist/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages/my_robot_controller/pose_subscriber.py to pose_subscriber.cpython-310.pyc
+[4.483s] byte-compiling /home/fouadroboticist/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages/my_robot_controller/__init__.py to __init__.cpython-310.pyc
+[4.483s] byte-compiling /home/fouadroboticist/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages/my_robot_controller/draw_circle.py to draw_circle.cpython-310.pyc
+[4.487s] byte-compiling /home/fouadroboticist/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages/my_robot_controller/my_first_node.py to my_first_node.cpython-310.pyc
+[4.489s] byte-compiling /home/fouadroboticist/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages/my_robot_controller/turtle_controller.py to turtle_controller.cpython-310.pyc
+[4.494s] running install_data
+[4.494s] copying resource/my_robot_controller -> /home/fouadroboticist/ros2_ws/install/my_robot_controller/share/ament_index/resource_index/packages
+[4.494s] copying package.xml -> /home/fouadroboticist/ros2_ws/install/my_robot_controller/share/my_robot_controller
+[4.495s] running install_egg_info
+[4.500s] removing '/home/fouadroboticist/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages/my_robot_controller-0.0.0-py3.10.egg-info' (and everything under it)
+[4.506s] Copying ../../build/my_robot_controller/my_robot_controller.egg-info to /home/fouadroboticist/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages/my_robot_controller-0.0.0-py3.10.egg-info
+[4.513s] running install_scripts
+[4.577s] Installing draw_circle script to /home/fouadroboticist/ros2_ws/install/my_robot_controller/lib/my_robot_controller
+[4.578s] Installing pose_subscriber script to /home/fouadroboticist/ros2_ws/install/my_robot_controller/lib/my_robot_controller
+[4.578s] Installing test_node script to /home/fouadroboticist/ros2_ws/install/my_robot_controller/lib/my_robot_controller
+[4.579s] Installing turtle_controller script to /home/fouadroboticist/ros2_ws/install/my_robot_controller/lib/my_robot_controller
+[4.580s] writing list of installed files to '/home/fouadroboticist/ros2_ws/build/my_robot_controller/install.log'
+[4.651s] Invoked command in '/home/fouadroboticist/ros2_ws/src/my_robot_controller' returned '0': CMAKE_PREFIX_PATH=/home/fouadroboticist/ros2_ws/install/my_robot_interfaces:/home/fouadroboticist/ros2_ws/install/robot_description:/home/fouadroboticist/ros2_ws/install/my_robot_control:/home/fouadroboticist/ros2_ws/install/my_robot_bringup:/home/fouadroboticist/ros2_ws/install/my_custom_pkg PYTHONPATH=/home/fouadroboticist/ros2_ws/build/my_robot_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/fouadroboticist/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/my_robot_controller build --build-base /home/fouadroboticist/ros2_ws/build/my_robot_controller/build install --record /home/fouadroboticist/ros2_ws/build/my_robot_controller/install.log --single-version-externally-managed install_data

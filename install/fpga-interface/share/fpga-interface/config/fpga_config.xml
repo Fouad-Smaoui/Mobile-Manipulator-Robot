@@ -1,0 +1,5 @@
+<configuration>
+  <parameter name="fpga_ip_address" value="192.168.1.100" />
+  <parameter name="ros_port" value="9090" />
+  <!-- Add other parameters here -->
+</configuration>

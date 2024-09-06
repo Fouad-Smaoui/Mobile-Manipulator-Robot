@@ -1,0 +1,8 @@
+source;share/fpga-interface/hook/cmake_prefix_path.ps1
+source;share/fpga-interface/hook/cmake_prefix_path.dsv
+source;share/fpga-interface/hook/cmake_prefix_path.sh
+source;share/fpga-interface/local_setup.bash
+source;share/fpga-interface/local_setup.dsv
+source;share/fpga-interface/local_setup.ps1
+source;share/fpga-interface/local_setup.sh
+source;share/fpga-interface/local_setup.zsh

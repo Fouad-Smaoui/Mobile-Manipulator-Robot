@@ -16,6 +16,7 @@
 /home/fouadroboticist/ros2_ws/install/robot_description/share/robot_description/meshes/elbow.stl
 /home/fouadroboticist/ros2_ws/install/robot_description/share/robot_description/meshes/wheel.stl
 /home/fouadroboticist/ros2_ws/install/robot_description/share/robot_description/meshes/arm_base.stl
+/home/fouadroboticist/ros2_ws/install/robot_description/share/robot_description//launch/__pycache__/base_gazebo_control_xacro.launch.cpython-310.pyc
 /home/fouadroboticist/ros2_ws/install/robot_description/share/robot_description//launch/base_gazebo_control_xacro.launch.py
 /home/fouadroboticist/ros2_ws/install/robot_description/share/robot_description//launch/base_gazebo_control_xacro.launch.xml
 /home/fouadroboticist/ros2_ws/install/robot_description/share/ament_index/resource_index/package_run_dependencies/robot_description

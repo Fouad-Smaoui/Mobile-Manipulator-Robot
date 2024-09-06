@@ -1,0 +1,13 @@
+[0.109s] Invoking command in '/home/fouadroboticist/ros2_ws/build/fpga-interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fouadroboticist/ros2_ws/install/tutorials_py:/home/fouadroboticist/ros2_ws/install/my_robot_controller:/home/fouadroboticist/ros2_ws/install/actions_py:/opt/ros/humble /usr/bin/cmake --build /home/fouadroboticist/ros2_ws/build/fpga-interface -- -j4 -l4
+[1.454s] Invoked command in '/home/fouadroboticist/ros2_ws/build/fpga-interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fouadroboticist/ros2_ws/install/tutorials_py:/home/fouadroboticist/ros2_ws/install/my_robot_controller:/home/fouadroboticist/ros2_ws/install/actions_py:/opt/ros/humble /usr/bin/cmake --build /home/fouadroboticist/ros2_ws/build/fpga-interface -- -j4 -l4
+[2.554s] Invoking command in '/home/fouadroboticist/ros2_ws/build/fpga-interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fouadroboticist/ros2_ws/install/tutorials_py:/home/fouadroboticist/ros2_ws/install/my_robot_controller:/home/fouadroboticist/ros2_ws/install/actions_py:/opt/ros/humble /usr/bin/cmake --install /home/fouadroboticist/ros2_ws/build/fpga-interface
+[2.593s] -- Install configuration: ""
+[2.603s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/fpga-interface/share/fpga-interface/config
+[2.604s] -- Up-to-date: /home/fouadroboticist/ros2_ws/install/fpga-interface/share/fpga-interface/config/fpga_config.xml
+[2.606s] [31mCMake Error at cmake_install.cmake:50 (file):
+[2.606s]   file INSTALL cannot find
+[2.606s]   "/home/fouadroboticist/ros2_ws/src/fpga-interface/scripts/fpga_interface_node.py":
+[2.607s]   No such file or directory.
+[2.607s] 
+[2.607s] [0m
+[2.619s] Invoked command in '/home/fouadroboticist/ros2_ws/build/fpga-interface' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fouadroboticist/ros2_ws/install/tutorials_py:/home/fouadroboticist/ros2_ws/install/my_robot_controller:/home/fouadroboticist/ros2_ws/install/actions_py:/opt/ros/humble /usr/bin/cmake --install /home/fouadroboticist/ros2_ws/build/fpga-interface

@@ -1,0 +1,13 @@
+[0.107s] Invoking command in '/home/fouadroboticist/ros2_ws/build/my_custom_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fouadroboticist/ros2_ws/install/tutorials_py:/home/fouadroboticist/ros2_ws/install/my_robot_controller:/home/fouadroboticist/ros2_ws/install/actions_py:/opt/ros/humble /usr/bin/cmake --build /home/fouadroboticist/ros2_ws/build/my_custom_pkg -- -j4 -l4
+[2.291s] [35m[1mConsolidate compiler generated dependencies of target motor_controller_component[0m
+[2.299s] [35m[1mConsolidate compiler generated dependencies of target cpp_exe[0m
+[2.400s] [  0%] Built target ament_cmake_python_copy_my_custom_pkg
+[2.444s] [ 50%] Built target cpp_exe
+[2.471s] [100%] Built target motor_controller_component
+[3.527s] running egg_info
+[3.530s] writing my_custom_pkg.egg-info/PKG-INFO
+[3.531s] writing dependency_links to my_custom_pkg.egg-info/dependency_links.txt
+[3.532s] writing top-level names to my_custom_pkg.egg-info/top_level.txt
+[3.540s] reading manifest file 'my_custom_pkg.egg-info/SOURCES.txt'
+[3.542s] writing manifest file 'my_custom_pkg.egg-info/SOURCES.txt'
+[3.600s] [100%] Built target ament_cmake_python_build_my_custom_pkg_egg

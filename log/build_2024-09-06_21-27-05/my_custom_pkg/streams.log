@@ -1,0 +1,32 @@
+[0.135s] Invoking command in '/home/fouadroboticist/ros2_ws/build/my_custom_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fouadroboticist/ros2_ws/install/tutorials_py:/home/fouadroboticist/ros2_ws/install/my_robot_controller:/home/fouadroboticist/ros2_ws/install/actions_py:/opt/ros/humble /usr/bin/cmake --build /home/fouadroboticist/ros2_ws/build/my_custom_pkg -- -j4 -l4
+[0.923s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.984s] -- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)
+[5.938s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[5.977s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[6.057s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[6.169s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[6.281s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[6.660s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[6.713s] -- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)
+[7.145s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[7.591s] -- Found rclpy: 3.3.14 (/opt/ros/humble/share/rclpy/cmake)
+[7.595s] -- Found rclcpp_components: 16.0.10 (/opt/ros/humble/share/rclcpp_components/cmake)
+[8.654s] -- Configuring done
+[8.857s] -- Generating done
+[8.869s] -- Build files have been written to: /home/fouadroboticist/ros2_ws/build/my_custom_pkg
+[9.004s] [35m[1mConsolidate compiler generated dependencies of target motor_controller_component[0m
+[9.025s] [35m[1mConsolidate compiler generated dependencies of target cpp_exe[0m
+[9.098s] [  0%] Built target ament_cmake_python_copy_my_custom_pkg
+[9.130s] [ 25%] [32mBuilding CXX object CMakeFiles/motor_controller_component.dir/src/component_test.cpp.o[0m
+[9.150s] [ 50%] [32mBuilding CXX object CMakeFiles/cpp_exe.dir/src/cpp_node.cpp.o[0m
+[11.352s] running egg_info
+[11.354s] writing my_custom_pkg.egg-info/PKG-INFO
+[11.355s] writing dependency_links to my_custom_pkg.egg-info/dependency_links.txt
+[11.357s] writing top-level names to my_custom_pkg.egg-info/top_level.txt
+[11.383s] reading manifest file 'my_custom_pkg.egg-info/SOURCES.txt'
+[11.390s] writing manifest file 'my_custom_pkg.egg-info/SOURCES.txt'
+[11.559s] [ 50%] Built target ament_cmake_python_build_my_custom_pkg_egg
+[46.602s] [ 75%] [32m[1mLinking CXX shared library libmotor_controller_component.so[0m
+[48.668s] [100%] [32m[1mLinking CXX executable cpp_exe[0m
+[49.314s] [100%] Built target motor_controller_component
+[49.842s] [100%] Built target cpp_exe

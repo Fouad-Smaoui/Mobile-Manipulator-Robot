@@ -1,0 +1,32 @@
+[0.140s] Invoking command in '/home/fouadroboticist/ros2_ws/build/fpga-interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fouadroboticist/ros2_ws/install/tutorials_py:/home/fouadroboticist/ros2_ws/install/my_robot_controller:/home/fouadroboticist/ros2_ws/install/actions_py:/opt/ros/humble /usr/bin/cmake /home/fouadroboticist/ros2_ws/src/fpga-interface -DCMAKE_INSTALL_PREFIX=/home/fouadroboticist/ros2_ws/install/fpga-interface
+[2.397s] -- The C compiler identification is GNU 11.4.0
+[8.750s] -- The CXX compiler identification is GNU 11.4.0
+[11.162s] -- Detecting C compiler ABI info
+[12.604s] -- Detecting C compiler ABI info - done
+[12.679s] -- Check for working C compiler: /usr/bin/cc - skipped
+[12.683s] -- Detecting C compile features
+[12.693s] -- Detecting C compile features - done
+[12.757s] -- Detecting CXX compiler ABI info
+[14.660s] -- Detecting CXX compiler ABI info - done
+[14.734s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[14.735s] -- Detecting CXX compile features
+[14.736s] -- Detecting CXX compile features - done
+[14.823s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[16.686s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[19.196s] -- Configuring done
+[19.272s] -- Generating done
+[19.287s] -- Build files have been written to: /home/fouadroboticist/ros2_ws/build/fpga-interface
+[19.350s] Invoked command in '/home/fouadroboticist/ros2_ws/build/fpga-interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fouadroboticist/ros2_ws/install/tutorials_py:/home/fouadroboticist/ros2_ws/install/my_robot_controller:/home/fouadroboticist/ros2_ws/install/actions_py:/opt/ros/humble /usr/bin/cmake /home/fouadroboticist/ros2_ws/src/fpga-interface -DCMAKE_INSTALL_PREFIX=/home/fouadroboticist/ros2_ws/install/fpga-interface
+[19.352s] Invoking command in '/home/fouadroboticist/ros2_ws/build/fpga-interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fouadroboticist/ros2_ws/install/tutorials_py:/home/fouadroboticist/ros2_ws/install/my_robot_controller:/home/fouadroboticist/ros2_ws/install/actions_py:/opt/ros/humble /usr/bin/cmake --build /home/fouadroboticist/ros2_ws/build/fpga-interface -- -j4 -l4
+[19.642s] Invoked command in '/home/fouadroboticist/ros2_ws/build/fpga-interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fouadroboticist/ros2_ws/install/tutorials_py:/home/fouadroboticist/ros2_ws/install/my_robot_controller:/home/fouadroboticist/ros2_ws/install/actions_py:/opt/ros/humble /usr/bin/cmake --build /home/fouadroboticist/ros2_ws/build/fpga-interface -- -j4 -l4
+[19.977s] Invoking command in '/home/fouadroboticist/ros2_ws/build/fpga-interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fouadroboticist/ros2_ws/install/tutorials_py:/home/fouadroboticist/ros2_ws/install/my_robot_controller:/home/fouadroboticist/ros2_ws/install/actions_py:/opt/ros/humble /usr/bin/cmake --install /home/fouadroboticist/ros2_ws/build/fpga-interface
+[20.033s] -- Install configuration: ""
+[20.033s] -- Installing: /home/fouadroboticist/ros2_ws/install/fpga-interface/share/fpga-interface/config
+[20.045s] -- Installing: /home/fouadroboticist/ros2_ws/install/fpga-interface/share/fpga-interface/config/fpga_config.xml
+[20.049s] [31mCMake Error at cmake_install.cmake:50 (file):
+[20.049s]   file INSTALL cannot find
+[20.049s]   "/home/fouadroboticist/ros2_ws/src/fpga-interface/scripts/fpga_interface_node.py":
+[20.049s]   No such file or directory.
+[20.049s] 
+[20.050s] [0m
+[20.065s] Invoked command in '/home/fouadroboticist/ros2_ws/build/fpga-interface' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fouadroboticist/ros2_ws/install/tutorials_py:/home/fouadroboticist/ros2_ws/install/my_robot_controller:/home/fouadroboticist/ros2_ws/install/actions_py:/opt/ros/humble /usr/bin/cmake --install /home/fouadroboticist/ros2_ws/build/fpga-interface
