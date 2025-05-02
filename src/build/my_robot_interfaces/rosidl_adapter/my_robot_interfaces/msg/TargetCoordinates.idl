@@ -1,0 +1,15 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from my_robot_interfaces/msg/TargetCoordinates.msg
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Point.idl"
+
+module my_robot_interfaces {
+  module msg {
+    struct TargetCoordinates {
+      string name;
+
+      geometry_msgs::msg::Point coordinates;
+    };
+  };
+};

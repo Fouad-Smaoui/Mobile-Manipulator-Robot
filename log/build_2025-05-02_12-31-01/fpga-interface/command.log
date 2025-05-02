@@ -1,0 +1,2 @@
+Invoking command in '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/build/fpga-interface': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/build/fpga-interface -- -j8 -l8
+Invoked command in '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/build/fpga-interface' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/build/fpga-interface -- -j8 -l8

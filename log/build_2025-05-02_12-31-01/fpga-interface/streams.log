@@ -1,0 +1,6 @@
+[0.053s] Invoking command in '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/build/fpga-interface': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/build/fpga-interface -- -j8 -l8
+[0.434s] [0mCMake Error: The current CMakeCache.txt directory /home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/build/fpga-interface/CMakeCache.txt is different than the directory /home/fouadroboticist/ros2_ws/build/fpga-interface where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt[0m
+[0.434s] [0mCMake Error: The source directory "/home/fouadroboticist/ros2_ws/src/fpga-interface" does not exist.
+[0.434s] Specify --help for usage, or press the help button on the CMake GUI.[0m
+[0.435s] gmake: *** [Makefile:226: cmake_check_build_system] Error 1
+[0.442s] Invoked command in '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/build/fpga-interface' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/build/fpga-interface -- -j8 -l8

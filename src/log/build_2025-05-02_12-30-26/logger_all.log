@@ -1,0 +1,302 @@
+[0.714s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.715s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7f4d26d1cac0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f4d26d1c5b0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f4d26d1c5b0>>, mixin_verb=('build',))
+[1.366s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.367s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.367s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.367s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.367s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[1.368s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.368s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src'
+[1.368s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[1.368s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[1.368s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[1.368s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[1.368s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[1.368s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[1.368s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[1.368s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[1.368s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[1.414s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[1.414s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[1.414s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[1.414s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[1.414s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[1.415s] Level 1:colcon.colcon_core.package_identification:_identify(actions_py) by extensions ['ignore', 'ignore_ament_install']
+[1.415s] Level 1:colcon.colcon_core.package_identification:_identify(actions_py) by extension 'ignore'
+[1.415s] Level 1:colcon.colcon_core.package_identification:_identify(actions_py) by extension 'ignore_ament_install'
+[1.415s] Level 1:colcon.colcon_core.package_identification:_identify(actions_py) by extensions ['colcon_pkg']
+[1.416s] Level 1:colcon.colcon_core.package_identification:_identify(actions_py) by extension 'colcon_pkg'
+[1.416s] Level 1:colcon.colcon_core.package_identification:_identify(actions_py) by extensions ['colcon_meta']
+[1.416s] Level 1:colcon.colcon_core.package_identification:_identify(actions_py) by extension 'colcon_meta'
+[1.416s] Level 1:colcon.colcon_core.package_identification:_identify(actions_py) by extensions ['ros']
+[1.416s] Level 1:colcon.colcon_core.package_identification:_identify(actions_py) by extension 'ros'
+[1.424s] DEBUG:colcon.colcon_core.package_identification:Package 'actions_py' with type 'ros.ament_python' and name 'actions_py'
+[1.425s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[1.425s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[1.425s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[1.426s] Level 1:colcon.colcon_core.package_identification:_identify(fpga-interface) by extensions ['ignore', 'ignore_ament_install']
+[1.426s] Level 1:colcon.colcon_core.package_identification:_identify(fpga-interface) by extension 'ignore'
+[1.427s] Level 1:colcon.colcon_core.package_identification:_identify(fpga-interface) by extension 'ignore_ament_install'
+[1.427s] Level 1:colcon.colcon_core.package_identification:_identify(fpga-interface) by extensions ['colcon_pkg']
+[1.427s] Level 1:colcon.colcon_core.package_identification:_identify(fpga-interface) by extension 'colcon_pkg'
+[1.427s] Level 1:colcon.colcon_core.package_identification:_identify(fpga-interface) by extensions ['colcon_meta']
+[1.427s] Level 1:colcon.colcon_core.package_identification:_identify(fpga-interface) by extension 'colcon_meta'
+[1.427s] Level 1:colcon.colcon_core.package_identification:_identify(fpga-interface) by extensions ['ros']
+[1.427s] Level 1:colcon.colcon_core.package_identification:_identify(fpga-interface) by extension 'ros'
+[1.429s] DEBUG:colcon.colcon_core.package_identification:Package 'fpga-interface' with type 'ros.ament_cmake' and name 'fpga-interface'
+[1.430s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[1.430s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[1.430s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[1.430s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[1.430s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[1.430s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[1.431s] Level 1:colcon.colcon_core.package_identification:_identify(my_custom_pkg) by extensions ['ignore', 'ignore_ament_install']
+[1.431s] Level 1:colcon.colcon_core.package_identification:_identify(my_custom_pkg) by extension 'ignore'
+[1.431s] Level 1:colcon.colcon_core.package_identification:_identify(my_custom_pkg) by extension 'ignore_ament_install'
+[1.431s] Level 1:colcon.colcon_core.package_identification:_identify(my_custom_pkg) by extensions ['colcon_pkg']
+[1.431s] Level 1:colcon.colcon_core.package_identification:_identify(my_custom_pkg) by extension 'colcon_pkg'
+[1.431s] Level 1:colcon.colcon_core.package_identification:_identify(my_custom_pkg) by extensions ['colcon_meta']
+[1.431s] Level 1:colcon.colcon_core.package_identification:_identify(my_custom_pkg) by extension 'colcon_meta'
+[1.431s] Level 1:colcon.colcon_core.package_identification:_identify(my_custom_pkg) by extensions ['ros']
+[1.431s] Level 1:colcon.colcon_core.package_identification:_identify(my_custom_pkg) by extension 'ros'
+[1.433s] DEBUG:colcon.colcon_core.package_identification:Package 'my_custom_pkg' with type 'ros.ament_cmake' and name 'my_custom_pkg'
+[1.434s] Level 1:colcon.colcon_core.package_identification:_identify(my_robot_bringup) by extensions ['ignore', 'ignore_ament_install']
+[1.434s] Level 1:colcon.colcon_core.package_identification:_identify(my_robot_bringup) by extension 'ignore'
+[1.434s] Level 1:colcon.colcon_core.package_identification:_identify(my_robot_bringup) by extension 'ignore_ament_install'
+[1.434s] Level 1:colcon.colcon_core.package_identification:_identify(my_robot_bringup) by extensions ['colcon_pkg']
+[1.435s] Level 1:colcon.colcon_core.package_identification:_identify(my_robot_bringup) by extension 'colcon_pkg'
+[1.435s] Level 1:colcon.colcon_core.package_identification:_identify(my_robot_bringup) by extensions ['colcon_meta']
+[1.435s] Level 1:colcon.colcon_core.package_identification:_identify(my_robot_bringup) by extension 'colcon_meta'
+[1.435s] Level 1:colcon.colcon_core.package_identification:_identify(my_robot_bringup) by extensions ['ros']
+[1.435s] Level 1:colcon.colcon_core.package_identification:_identify(my_robot_bringup) by extension 'ros'
+[1.437s] DEBUG:colcon.colcon_core.package_identification:Package 'my_robot_bringup' with type 'ros.ament_cmake' and name 'my_robot_bringup'
+[1.438s] Level 1:colcon.colcon_core.package_identification:_identify(my_robot_control) by extensions ['ignore', 'ignore_ament_install']
+[1.438s] Level 1:colcon.colcon_core.package_identification:_identify(my_robot_control) by extension 'ignore'
+[1.438s] Level 1:colcon.colcon_core.package_identification:_identify(my_robot_control) by extension 'ignore_ament_install'
+[1.438s] Level 1:colcon.colcon_core.package_identification:_identify(my_robot_control) by extensions ['colcon_pkg']
+[1.438s] Level 1:colcon.colcon_core.package_identification:_identify(my_robot_control) by extension 'colcon_pkg'
+[1.438s] Level 1:colcon.colcon_core.package_identification:_identify(my_robot_control) by extensions ['colcon_meta']
+[1.438s] Level 1:colcon.colcon_core.package_identification:_identify(my_robot_control) by extension 'colcon_meta'
+[1.438s] Level 1:colcon.colcon_core.package_identification:_identify(my_robot_control) by extensions ['ros']
+[1.438s] Level 1:colcon.colcon_core.package_identification:_identify(my_robot_control) by extension 'ros'
+[1.440s] DEBUG:colcon.colcon_core.package_identification:Package 'my_robot_control' with type 'ros.ament_cmake' and name 'my_robot_control'
+[1.441s] Level 1:colcon.colcon_core.package_identification:_identify(my_robot_controller) by extensions ['ignore', 'ignore_ament_install']
+[1.442s] Level 1:colcon.colcon_core.package_identification:_identify(my_robot_controller) by extension 'ignore'
+[1.442s] Level 1:colcon.colcon_core.package_identification:_identify(my_robot_controller) by extension 'ignore_ament_install'
+[1.442s] Level 1:colcon.colcon_core.package_identification:_identify(my_robot_controller) by extensions ['colcon_pkg']
+[1.442s] Level 1:colcon.colcon_core.package_identification:_identify(my_robot_controller) by extension 'colcon_pkg'
+[1.442s] Level 1:colcon.colcon_core.package_identification:_identify(my_robot_controller) by extensions ['colcon_meta']
+[1.442s] Level 1:colcon.colcon_core.package_identification:_identify(my_robot_controller) by extension 'colcon_meta'
+[1.442s] Level 1:colcon.colcon_core.package_identification:_identify(my_robot_controller) by extensions ['ros']
+[1.442s] Level 1:colcon.colcon_core.package_identification:_identify(my_robot_controller) by extension 'ros'
+[1.451s] DEBUG:colcon.colcon_core.package_identification:Package 'my_robot_controller' with type 'ros.ament_python' and name 'my_robot_controller'
+[1.452s] Level 1:colcon.colcon_core.package_identification:_identify(my_robot_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[1.452s] Level 1:colcon.colcon_core.package_identification:_identify(my_robot_interfaces) by extension 'ignore'
+[1.452s] Level 1:colcon.colcon_core.package_identification:_identify(my_robot_interfaces) by extension 'ignore_ament_install'
+[1.452s] Level 1:colcon.colcon_core.package_identification:_identify(my_robot_interfaces) by extensions ['colcon_pkg']
+[1.452s] Level 1:colcon.colcon_core.package_identification:_identify(my_robot_interfaces) by extension 'colcon_pkg'
+[1.452s] Level 1:colcon.colcon_core.package_identification:_identify(my_robot_interfaces) by extensions ['colcon_meta']
+[1.452s] Level 1:colcon.colcon_core.package_identification:_identify(my_robot_interfaces) by extension 'colcon_meta'
+[1.452s] Level 1:colcon.colcon_core.package_identification:_identify(my_robot_interfaces) by extensions ['ros']
+[1.452s] Level 1:colcon.colcon_core.package_identification:_identify(my_robot_interfaces) by extension 'ros'
+[1.454s] DEBUG:colcon.colcon_core.package_identification:Package 'my_robot_interfaces' with type 'ros.ament_cmake' and name 'my_robot_interfaces'
+[1.455s] Level 1:colcon.colcon_core.package_identification:_identify(robot_description) by extensions ['ignore', 'ignore_ament_install']
+[1.455s] Level 1:colcon.colcon_core.package_identification:_identify(robot_description) by extension 'ignore'
+[1.455s] Level 1:colcon.colcon_core.package_identification:_identify(robot_description) by extension 'ignore_ament_install'
+[1.455s] Level 1:colcon.colcon_core.package_identification:_identify(robot_description) by extensions ['colcon_pkg']
+[1.455s] Level 1:colcon.colcon_core.package_identification:_identify(robot_description) by extension 'colcon_pkg'
+[1.455s] Level 1:colcon.colcon_core.package_identification:_identify(robot_description) by extensions ['colcon_meta']
+[1.456s] Level 1:colcon.colcon_core.package_identification:_identify(robot_description) by extension 'colcon_meta'
+[1.456s] Level 1:colcon.colcon_core.package_identification:_identify(robot_description) by extensions ['ros']
+[1.456s] Level 1:colcon.colcon_core.package_identification:_identify(robot_description) by extension 'ros'
+[1.457s] DEBUG:colcon.colcon_core.package_identification:Package 'robot_description' with type 'ros.ament_cmake' and name 'robot_description'
+[1.458s] Level 1:colcon.colcon_core.package_identification:_identify(tutorials_py) by extensions ['ignore', 'ignore_ament_install']
+[1.458s] Level 1:colcon.colcon_core.package_identification:_identify(tutorials_py) by extension 'ignore'
+[1.458s] Level 1:colcon.colcon_core.package_identification:_identify(tutorials_py) by extension 'ignore_ament_install'
+[1.458s] Level 1:colcon.colcon_core.package_identification:_identify(tutorials_py) by extensions ['colcon_pkg']
+[1.458s] Level 1:colcon.colcon_core.package_identification:_identify(tutorials_py) by extension 'colcon_pkg'
+[1.458s] Level 1:colcon.colcon_core.package_identification:_identify(tutorials_py) by extensions ['colcon_meta']
+[1.458s] Level 1:colcon.colcon_core.package_identification:_identify(tutorials_py) by extension 'colcon_meta'
+[1.458s] Level 1:colcon.colcon_core.package_identification:_identify(tutorials_py) by extensions ['ros']
+[1.458s] Level 1:colcon.colcon_core.package_identification:_identify(tutorials_py) by extension 'ros'
+[1.460s] DEBUG:colcon.colcon_core.package_identification:Package 'tutorials_py' with type 'ros.ament_python' and name 'tutorials_py'
+[1.460s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[1.460s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[1.460s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[1.460s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[1.460s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[1.568s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[1.568s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[1.580s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 271 installed packages in /opt/ros/humble
+[1.585s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[1.779s] Level 5:colcon.colcon_core.verb:set package 'fpga-interface' build argument 'cmake_args' from command line to 'None'
+[1.779s] Level 5:colcon.colcon_core.verb:set package 'fpga-interface' build argument 'cmake_target' from command line to 'None'
+[1.779s] Level 5:colcon.colcon_core.verb:set package 'fpga-interface' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.779s] Level 5:colcon.colcon_core.verb:set package 'fpga-interface' build argument 'cmake_clean_cache' from command line to 'False'
+[1.779s] Level 5:colcon.colcon_core.verb:set package 'fpga-interface' build argument 'cmake_clean_first' from command line to 'False'
+[1.779s] Level 5:colcon.colcon_core.verb:set package 'fpga-interface' build argument 'cmake_force_configure' from command line to 'False'
+[1.779s] Level 5:colcon.colcon_core.verb:set package 'fpga-interface' build argument 'ament_cmake_args' from command line to 'None'
+[1.779s] Level 5:colcon.colcon_core.verb:set package 'fpga-interface' build argument 'catkin_cmake_args' from command line to 'None'
+[1.779s] Level 5:colcon.colcon_core.verb:set package 'fpga-interface' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.779s] DEBUG:colcon.colcon_core.verb:Building package 'fpga-interface' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/build/fpga-interface', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/install/fpga-interface', 'merge_install': False, 'path': '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/fpga-interface', 'symlink_install': False, 'test_result_base': None}
+[1.780s] Level 5:colcon.colcon_core.verb:set package 'my_custom_pkg' build argument 'cmake_args' from command line to 'None'
+[1.780s] Level 5:colcon.colcon_core.verb:set package 'my_custom_pkg' build argument 'cmake_target' from command line to 'None'
+[1.780s] Level 5:colcon.colcon_core.verb:set package 'my_custom_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.780s] Level 5:colcon.colcon_core.verb:set package 'my_custom_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[1.780s] Level 5:colcon.colcon_core.verb:set package 'my_custom_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[1.780s] Level 5:colcon.colcon_core.verb:set package 'my_custom_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[1.780s] Level 5:colcon.colcon_core.verb:set package 'my_custom_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[1.780s] Level 5:colcon.colcon_core.verb:set package 'my_custom_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[1.780s] Level 5:colcon.colcon_core.verb:set package 'my_custom_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.780s] DEBUG:colcon.colcon_core.verb:Building package 'my_custom_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/build/my_custom_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/install/my_custom_pkg', 'merge_install': False, 'path': '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/my_custom_pkg', 'symlink_install': False, 'test_result_base': None}
+[1.780s] Level 5:colcon.colcon_core.verb:set package 'my_robot_bringup' build argument 'cmake_args' from command line to 'None'
+[1.780s] Level 5:colcon.colcon_core.verb:set package 'my_robot_bringup' build argument 'cmake_target' from command line to 'None'
+[1.780s] Level 5:colcon.colcon_core.verb:set package 'my_robot_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.780s] Level 5:colcon.colcon_core.verb:set package 'my_robot_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[1.781s] Level 5:colcon.colcon_core.verb:set package 'my_robot_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[1.781s] Level 5:colcon.colcon_core.verb:set package 'my_robot_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[1.781s] Level 5:colcon.colcon_core.verb:set package 'my_robot_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[1.781s] Level 5:colcon.colcon_core.verb:set package 'my_robot_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[1.781s] Level 5:colcon.colcon_core.verb:set package 'my_robot_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.781s] DEBUG:colcon.colcon_core.verb:Building package 'my_robot_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/build/my_robot_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/install/my_robot_bringup', 'merge_install': False, 'path': '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/my_robot_bringup', 'symlink_install': False, 'test_result_base': None}
+[1.781s] Level 5:colcon.colcon_core.verb:set package 'my_robot_control' build argument 'cmake_args' from command line to 'None'
+[1.781s] Level 5:colcon.colcon_core.verb:set package 'my_robot_control' build argument 'cmake_target' from command line to 'None'
+[1.781s] Level 5:colcon.colcon_core.verb:set package 'my_robot_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.781s] Level 5:colcon.colcon_core.verb:set package 'my_robot_control' build argument 'cmake_clean_cache' from command line to 'False'
+[1.781s] Level 5:colcon.colcon_core.verb:set package 'my_robot_control' build argument 'cmake_clean_first' from command line to 'False'
+[1.781s] Level 5:colcon.colcon_core.verb:set package 'my_robot_control' build argument 'cmake_force_configure' from command line to 'False'
+[1.781s] Level 5:colcon.colcon_core.verb:set package 'my_robot_control' build argument 'ament_cmake_args' from command line to 'None'
+[1.781s] Level 5:colcon.colcon_core.verb:set package 'my_robot_control' build argument 'catkin_cmake_args' from command line to 'None'
+[1.781s] Level 5:colcon.colcon_core.verb:set package 'my_robot_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.781s] DEBUG:colcon.colcon_core.verb:Building package 'my_robot_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/build/my_robot_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/install/my_robot_control', 'merge_install': False, 'path': '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/my_robot_control', 'symlink_install': False, 'test_result_base': None}
+[1.782s] Level 5:colcon.colcon_core.verb:set package 'my_robot_interfaces' build argument 'cmake_args' from command line to 'None'
+[1.782s] Level 5:colcon.colcon_core.verb:set package 'my_robot_interfaces' build argument 'cmake_target' from command line to 'None'
+[1.782s] Level 5:colcon.colcon_core.verb:set package 'my_robot_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.782s] Level 5:colcon.colcon_core.verb:set package 'my_robot_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[1.782s] Level 5:colcon.colcon_core.verb:set package 'my_robot_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[1.782s] Level 5:colcon.colcon_core.verb:set package 'my_robot_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[1.782s] Level 5:colcon.colcon_core.verb:set package 'my_robot_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[1.782s] Level 5:colcon.colcon_core.verb:set package 'my_robot_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[1.782s] Level 5:colcon.colcon_core.verb:set package 'my_robot_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.782s] DEBUG:colcon.colcon_core.verb:Building package 'my_robot_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/build/my_robot_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/install/my_robot_interfaces', 'merge_install': False, 'path': '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/my_robot_interfaces', 'symlink_install': False, 'test_result_base': None}
+[1.782s] Level 5:colcon.colcon_core.verb:set package 'robot_description' build argument 'cmake_args' from command line to 'None'
+[1.782s] Level 5:colcon.colcon_core.verb:set package 'robot_description' build argument 'cmake_target' from command line to 'None'
+[1.782s] Level 5:colcon.colcon_core.verb:set package 'robot_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.782s] Level 5:colcon.colcon_core.verb:set package 'robot_description' build argument 'cmake_clean_cache' from command line to 'False'
+[1.782s] Level 5:colcon.colcon_core.verb:set package 'robot_description' build argument 'cmake_clean_first' from command line to 'False'
+[1.783s] Level 5:colcon.colcon_core.verb:set package 'robot_description' build argument 'cmake_force_configure' from command line to 'False'
+[1.783s] Level 5:colcon.colcon_core.verb:set package 'robot_description' build argument 'ament_cmake_args' from command line to 'None'
+[1.783s] Level 5:colcon.colcon_core.verb:set package 'robot_description' build argument 'catkin_cmake_args' from command line to 'None'
+[1.783s] Level 5:colcon.colcon_core.verb:set package 'robot_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.783s] DEBUG:colcon.colcon_core.verb:Building package 'robot_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/build/robot_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/install/robot_description', 'merge_install': False, 'path': '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/robot_description', 'symlink_install': False, 'test_result_base': None}
+[1.783s] Level 5:colcon.colcon_core.verb:set package 'tutorials_py' build argument 'cmake_args' from command line to 'None'
+[1.783s] Level 5:colcon.colcon_core.verb:set package 'tutorials_py' build argument 'cmake_target' from command line to 'None'
+[1.783s] Level 5:colcon.colcon_core.verb:set package 'tutorials_py' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.783s] Level 5:colcon.colcon_core.verb:set package 'tutorials_py' build argument 'cmake_clean_cache' from command line to 'False'
+[1.783s] Level 5:colcon.colcon_core.verb:set package 'tutorials_py' build argument 'cmake_clean_first' from command line to 'False'
+[1.783s] Level 5:colcon.colcon_core.verb:set package 'tutorials_py' build argument 'cmake_force_configure' from command line to 'False'
+[1.783s] Level 5:colcon.colcon_core.verb:set package 'tutorials_py' build argument 'ament_cmake_args' from command line to 'None'
+[1.783s] Level 5:colcon.colcon_core.verb:set package 'tutorials_py' build argument 'catkin_cmake_args' from command line to 'None'
+[1.783s] Level 5:colcon.colcon_core.verb:set package 'tutorials_py' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.783s] DEBUG:colcon.colcon_core.verb:Building package 'tutorials_py' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/build/tutorials_py', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/install/tutorials_py', 'merge_install': False, 'path': '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/tutorials_py', 'symlink_install': False, 'test_result_base': None}
+[1.784s] Level 5:colcon.colcon_core.verb:set package 'actions_py' build argument 'cmake_args' from command line to 'None'
+[1.784s] Level 5:colcon.colcon_core.verb:set package 'actions_py' build argument 'cmake_target' from command line to 'None'
+[1.784s] Level 5:colcon.colcon_core.verb:set package 'actions_py' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.784s] Level 5:colcon.colcon_core.verb:set package 'actions_py' build argument 'cmake_clean_cache' from command line to 'False'
+[1.784s] Level 5:colcon.colcon_core.verb:set package 'actions_py' build argument 'cmake_clean_first' from command line to 'False'
+[1.784s] Level 5:colcon.colcon_core.verb:set package 'actions_py' build argument 'cmake_force_configure' from command line to 'False'
+[1.784s] Level 5:colcon.colcon_core.verb:set package 'actions_py' build argument 'ament_cmake_args' from command line to 'None'
+[1.784s] Level 5:colcon.colcon_core.verb:set package 'actions_py' build argument 'catkin_cmake_args' from command line to 'None'
+[1.784s] Level 5:colcon.colcon_core.verb:set package 'actions_py' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.784s] DEBUG:colcon.colcon_core.verb:Building package 'actions_py' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/build/actions_py', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/install/actions_py', 'merge_install': False, 'path': '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/actions_py', 'symlink_install': False, 'test_result_base': None}
+[1.784s] Level 5:colcon.colcon_core.verb:set package 'my_robot_controller' build argument 'cmake_args' from command line to 'None'
+[1.784s] Level 5:colcon.colcon_core.verb:set package 'my_robot_controller' build argument 'cmake_target' from command line to 'None'
+[1.784s] Level 5:colcon.colcon_core.verb:set package 'my_robot_controller' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.784s] Level 5:colcon.colcon_core.verb:set package 'my_robot_controller' build argument 'cmake_clean_cache' from command line to 'False'
+[1.785s] Level 5:colcon.colcon_core.verb:set package 'my_robot_controller' build argument 'cmake_clean_first' from command line to 'False'
+[1.785s] Level 5:colcon.colcon_core.verb:set package 'my_robot_controller' build argument 'cmake_force_configure' from command line to 'False'
+[1.785s] Level 5:colcon.colcon_core.verb:set package 'my_robot_controller' build argument 'ament_cmake_args' from command line to 'None'
+[1.785s] Level 5:colcon.colcon_core.verb:set package 'my_robot_controller' build argument 'catkin_cmake_args' from command line to 'None'
+[1.785s] Level 5:colcon.colcon_core.verb:set package 'my_robot_controller' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.785s] DEBUG:colcon.colcon_core.verb:Building package 'my_robot_controller' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/build/my_robot_controller', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/install/my_robot_controller', 'merge_install': False, 'path': '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/my_robot_controller', 'symlink_install': False, 'test_result_base': None}
+[1.785s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.787s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.788s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/my_robot_interfaces' with build type 'ament_cmake'
+[1.788s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/my_robot_interfaces'
+[1.800s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.800s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.800s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.809s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/fpga-interface' with build type 'ament_cmake'
+[1.809s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/fpga-interface'
+[1.810s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.810s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.816s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/my_custom_pkg' with build type 'ament_cmake'
+[1.817s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/my_custom_pkg'
+[1.817s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.817s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.822s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/my_robot_bringup' with build type 'ament_cmake'
+[1.822s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/my_robot_bringup'
+[1.823s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.823s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.830s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/my_robot_control' with build type 'ament_cmake'
+[1.831s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/my_robot_control'
+[1.831s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.831s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.835s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/robot_description' with build type 'ament_cmake'
+[1.836s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/robot_description'
+[1.836s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.836s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.844s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/tutorials_py' with build type 'ament_python'
+[1.844s] Level 1:colcon.colcon_core.shell:create_environment_hook('tutorials_py', 'ament_prefix_path')
+[1.845s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/install/tutorials_py/share/tutorials_py/hook/ament_prefix_path.ps1'
+[1.848s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/install/tutorials_py/share/tutorials_py/hook/ament_prefix_path.dsv'
+[1.849s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/install/tutorials_py/share/tutorials_py/hook/ament_prefix_path.sh'
+[1.851s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.851s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.880s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/build/my_robot_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/my_robot_interfaces -DCMAKE_INSTALL_PREFIX=/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/install/my_robot_interfaces
+[1.888s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/build/fpga-interface': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/fpga-interface -DCMAKE_INSTALL_PREFIX=/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/install/fpga-interface
+[1.898s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/build/my_custom_pkg': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/my_custom_pkg -DCMAKE_INSTALL_PREFIX=/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/install/my_custom_pkg
+[1.910s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/build/my_robot_bringup': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/build/my_robot_bringup -- -j8 -l8
+[1.920s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/build/my_robot_control': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/my_robot_control -DCMAKE_INSTALL_PREFIX=/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/install/my_robot_control
+[1.940s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/build/robot_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/robot_description -DCMAKE_INSTALL_PREFIX=/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/install/robot_description
+[2.508s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/tutorials_py'
+[2.508s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.508s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.537s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/build/my_robot_bringup' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/build/my_robot_bringup -- -j8 -l8
+[2.571s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(my_robot_bringup)
+[2.582s] Level 1:colcon.colcon_core.environment:checking '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/install/my_robot_bringup' for CMake module files
+[2.587s] Level 1:colcon.colcon_core.environment:checking '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/install/my_robot_bringup' for CMake config files
+[2.587s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_robot_bringup', 'cmake_prefix_path')
+[2.588s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/install/my_robot_bringup/share/my_robot_bringup/hook/cmake_prefix_path.ps1'
+[2.589s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/install/my_robot_bringup/share/my_robot_bringup/hook/cmake_prefix_path.dsv'
+[2.590s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/install/my_robot_bringup/share/my_robot_bringup/hook/cmake_prefix_path.sh'
+[2.591s] Level 1:colcon.colcon_core.environment:checking '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/install/my_robot_bringup/bin'
+[2.591s] Level 1:colcon.colcon_core.environment:checking '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/install/my_robot_bringup/lib/pkgconfig/my_robot_bringup.pc'
+[2.592s] Level 1:colcon.colcon_core.environment:checking '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/install/my_robot_bringup/lib/python3.10/site-packages'
+[2.592s] Level 1:colcon.colcon_core.environment:checking '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/install/my_robot_bringup/bin'
+[2.593s] INFO:colcon.colcon_core.shell:Creating package script '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/install/my_robot_bringup/share/my_robot_bringup/package.ps1'
+[2.596s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/install/my_robot_bringup/share/my_robot_bringup/package.dsv'
+[2.598s] INFO:colcon.colcon_core.shell:Creating package script '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/install/my_robot_bringup/share/my_robot_bringup/package.sh'
+[2.599s] INFO:colcon.colcon_core.shell:Creating package script '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/install/my_robot_bringup/share/my_robot_bringup/package.bash'
+[2.602s] INFO:colcon.colcon_core.shell:Creating package script '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/install/my_robot_bringup/share/my_robot_bringup/package.zsh'
+[2.604s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/install/my_robot_bringup/share/colcon-core/packages/my_robot_bringup)
+[10.893s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[10.893s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[10.893s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '2'
+[10.893s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[10.975s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[10.975s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[10.975s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[10.975s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[10.976s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.FileNotFound: Failed to connect to socket /run/user/1000/bus: No such file or directory
+[10.977s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[10.977s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/install/local_setup.ps1'
+[10.979s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/install/_local_setup_util_ps1.py'
+[10.981s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/install/setup.ps1'
+[10.983s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/install/local_setup.sh'
+[10.984s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/install/_local_setup_util_sh.py'
+[10.985s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/install/setup.sh'
+[10.987s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/install/local_setup.bash'
+[10.988s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/install/setup.bash'
+[10.989s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/install/local_setup.zsh'
+[10.990s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/install/setup.zsh'

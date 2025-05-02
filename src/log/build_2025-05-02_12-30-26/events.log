@@ -1,0 +1,291 @@
+[0.000000] (-) TimerEvent: {}
+[0.003748] (fpga-interface) JobQueued: {'identifier': 'fpga-interface', 'dependencies': OrderedDict()}
+[0.003970] (my_custom_pkg) JobQueued: {'identifier': 'my_custom_pkg', 'dependencies': OrderedDict()}
+[0.004066] (my_robot_bringup) JobQueued: {'identifier': 'my_robot_bringup', 'dependencies': OrderedDict()}
+[0.004145] (my_robot_control) JobQueued: {'identifier': 'my_robot_control', 'dependencies': OrderedDict()}
+[0.004229] (my_robot_interfaces) JobQueued: {'identifier': 'my_robot_interfaces', 'dependencies': OrderedDict()}
+[0.004299] (robot_description) JobQueued: {'identifier': 'robot_description', 'dependencies': OrderedDict()}
+[0.004350] (tutorials_py) JobQueued: {'identifier': 'tutorials_py', 'dependencies': OrderedDict()}
+[0.004371] (actions_py) JobQueued: {'identifier': 'actions_py', 'dependencies': OrderedDict([('my_robot_interfaces', '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/install/my_robot_interfaces')])}
+[0.004668] (my_robot_controller) JobQueued: {'identifier': 'my_robot_controller', 'dependencies': OrderedDict([('my_robot_interfaces', '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/install/my_robot_interfaces')])}
+[0.004714] (my_robot_interfaces) JobStarted: {'identifier': 'my_robot_interfaces'}
+[0.022301] (fpga-interface) JobStarted: {'identifier': 'fpga-interface'}
+[0.029685] (my_custom_pkg) JobStarted: {'identifier': 'my_custom_pkg'}
+[0.036433] (my_robot_bringup) JobStarted: {'identifier': 'my_robot_bringup'}
+[0.044363] (my_robot_control) JobStarted: {'identifier': 'my_robot_control'}
+[0.049790] (robot_description) JobStarted: {'identifier': 'robot_description'}
+[0.058651] (tutorials_py) JobStarted: {'identifier': 'tutorials_py'}
+[0.077544] (my_robot_interfaces) JobProgress: {'identifier': 'my_robot_interfaces', 'progress': 'cmake'}
+[0.079678] (my_robot_interfaces) Command: {'cmd': ['/usr/bin/cmake', '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/my_robot_interfaces', '-DCMAKE_INSTALL_PREFIX=/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/install/my_robot_interfaces'], 'cwd': '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/build/my_robot_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'fouadroboticist'), ('SSH_AGENT_PID', '742'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{4ff56d04-d9cf-57ea-bae2-ad396374e7e3}'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/fouadroboticist'), ('OLDPWD', '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fouadroboticist'), ('NAME', 'WIN11-37ZVL13'), ('WSL_INTEROP', '/run/WSL/305_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/dotnet/:/mnt/c/Users/Utilisateur/AppData/Local/nvm:/mnt/c/nvm4w/nodejs:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/VSCodium/bin:/mnt/c/Program Files/PostgreSQL/17/bin:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Users/Utilisateur/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Utilisateur/AppData/Local/nvm:/mnt/c/nvm4w/nodejs:/mnt/c/Users/Utilisateur/AppData/Local/Programs/Ollama:/mnt/c/Users/Utilisateur/AppData/Local/Programs/cursor/resources/app/bin:/mnt/c/Users/Utilisateur/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin'), ('WT_SESSION', 'dc0f545e-8a9f-4b4d-8879-0bdb52419764'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/tmp/ssh-XXXXXXBJ5ibY/agent.741'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/build/my_robot_interfaces'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.094100] (fpga-interface) JobProgress: {'identifier': 'fpga-interface', 'progress': 'cmake'}
+[0.098083] (fpga-interface) Command: {'cmd': ['/usr/bin/cmake', '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/fpga-interface', '-DCMAKE_INSTALL_PREFIX=/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/install/fpga-interface'], 'cwd': '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/build/fpga-interface', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'fouadroboticist'), ('SSH_AGENT_PID', '742'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{4ff56d04-d9cf-57ea-bae2-ad396374e7e3}'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/fouadroboticist'), ('OLDPWD', '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fouadroboticist'), ('NAME', 'WIN11-37ZVL13'), ('WSL_INTEROP', '/run/WSL/305_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/dotnet/:/mnt/c/Users/Utilisateur/AppData/Local/nvm:/mnt/c/nvm4w/nodejs:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/VSCodium/bin:/mnt/c/Program Files/PostgreSQL/17/bin:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Users/Utilisateur/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Utilisateur/AppData/Local/nvm:/mnt/c/nvm4w/nodejs:/mnt/c/Users/Utilisateur/AppData/Local/Programs/Ollama:/mnt/c/Users/Utilisateur/AppData/Local/Programs/cursor/resources/app/bin:/mnt/c/Users/Utilisateur/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin'), ('WT_SESSION', 'dc0f545e-8a9f-4b4d-8879-0bdb52419764'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/tmp/ssh-XXXXXXBJ5ibY/agent.741'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/build/fpga-interface'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.100926] (-) TimerEvent: {}
+[0.101171] (my_custom_pkg) JobProgress: {'identifier': 'my_custom_pkg', 'progress': 'cmake'}
+[0.106419] (my_custom_pkg) Command: {'cmd': ['/usr/bin/cmake', '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/my_custom_pkg', '-DCMAKE_INSTALL_PREFIX=/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/install/my_custom_pkg'], 'cwd': '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/build/my_custom_pkg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'fouadroboticist'), ('SSH_AGENT_PID', '742'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{4ff56d04-d9cf-57ea-bae2-ad396374e7e3}'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/fouadroboticist'), ('OLDPWD', '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fouadroboticist'), ('NAME', 'WIN11-37ZVL13'), ('WSL_INTEROP', '/run/WSL/305_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/dotnet/:/mnt/c/Users/Utilisateur/AppData/Local/nvm:/mnt/c/nvm4w/nodejs:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/VSCodium/bin:/mnt/c/Program Files/PostgreSQL/17/bin:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Users/Utilisateur/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Utilisateur/AppData/Local/nvm:/mnt/c/nvm4w/nodejs:/mnt/c/Users/Utilisateur/AppData/Local/Programs/Ollama:/mnt/c/Users/Utilisateur/AppData/Local/Programs/cursor/resources/app/bin:/mnt/c/Users/Utilisateur/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin'), ('WT_SESSION', 'dc0f545e-8a9f-4b4d-8879-0bdb52419764'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/tmp/ssh-XXXXXXBJ5ibY/agent.741'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/build/my_custom_pkg'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.111736] (my_robot_bringup) JobProgress: {'identifier': 'my_robot_bringup', 'progress': 'cmake'}
+[0.120503] (my_robot_bringup) JobProgress: {'identifier': 'my_robot_bringup', 'progress': 'build'}
+[0.120580] (my_robot_bringup) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/build/my_robot_bringup', '--', '-j8', '-l8'], 'cwd': '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/build/my_robot_bringup', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'fouadroboticist'), ('SSH_AGENT_PID', '742'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{4ff56d04-d9cf-57ea-bae2-ad396374e7e3}'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/fouadroboticist'), ('OLDPWD', '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fouadroboticist'), ('NAME', 'WIN11-37ZVL13'), ('WSL_INTEROP', '/run/WSL/305_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/dotnet/:/mnt/c/Users/Utilisateur/AppData/Local/nvm:/mnt/c/nvm4w/nodejs:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/VSCodium/bin:/mnt/c/Program Files/PostgreSQL/17/bin:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Users/Utilisateur/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Utilisateur/AppData/Local/nvm:/mnt/c/nvm4w/nodejs:/mnt/c/Users/Utilisateur/AppData/Local/Programs/Ollama:/mnt/c/Users/Utilisateur/AppData/Local/Programs/cursor/resources/app/bin:/mnt/c/Users/Utilisateur/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin'), ('WT_SESSION', 'dc0f545e-8a9f-4b4d-8879-0bdb52419764'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/tmp/ssh-XXXXXXBJ5ibY/agent.741'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/build/my_robot_bringup'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.123240] (my_robot_control) JobProgress: {'identifier': 'my_robot_control', 'progress': 'cmake'}
+[0.128106] (my_robot_control) Command: {'cmd': ['/usr/bin/cmake', '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/my_robot_control', '-DCMAKE_INSTALL_PREFIX=/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/install/my_robot_control'], 'cwd': '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/build/my_robot_control', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'fouadroboticist'), ('SSH_AGENT_PID', '742'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{4ff56d04-d9cf-57ea-bae2-ad396374e7e3}'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/fouadroboticist'), ('OLDPWD', '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fouadroboticist'), ('NAME', 'WIN11-37ZVL13'), ('WSL_INTEROP', '/run/WSL/305_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/dotnet/:/mnt/c/Users/Utilisateur/AppData/Local/nvm:/mnt/c/nvm4w/nodejs:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/VSCodium/bin:/mnt/c/Program Files/PostgreSQL/17/bin:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Users/Utilisateur/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Utilisateur/AppData/Local/nvm:/mnt/c/nvm4w/nodejs:/mnt/c/Users/Utilisateur/AppData/Local/Programs/Ollama:/mnt/c/Users/Utilisateur/AppData/Local/Programs/cursor/resources/app/bin:/mnt/c/Users/Utilisateur/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin'), ('WT_SESSION', 'dc0f545e-8a9f-4b4d-8879-0bdb52419764'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/tmp/ssh-XXXXXXBJ5ibY/agent.741'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/build/my_robot_control'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.132987] (robot_description) JobProgress: {'identifier': 'robot_description', 'progress': 'cmake'}
+[0.134329] (robot_description) Command: {'cmd': ['/usr/bin/cmake', '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/robot_description', '-DCMAKE_INSTALL_PREFIX=/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/install/robot_description'], 'cwd': '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/build/robot_description', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'fouadroboticist'), ('SSH_AGENT_PID', '742'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{4ff56d04-d9cf-57ea-bae2-ad396374e7e3}'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/fouadroboticist'), ('OLDPWD', '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fouadroboticist'), ('NAME', 'WIN11-37ZVL13'), ('WSL_INTEROP', '/run/WSL/305_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/dotnet/:/mnt/c/Users/Utilisateur/AppData/Local/nvm:/mnt/c/nvm4w/nodejs:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/VSCodium/bin:/mnt/c/Program Files/PostgreSQL/17/bin:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Users/Utilisateur/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Utilisateur/AppData/Local/nvm:/mnt/c/nvm4w/nodejs:/mnt/c/Users/Utilisateur/AppData/Local/Programs/Ollama:/mnt/c/Users/Utilisateur/AppData/Local/Programs/cursor/resources/app/bin:/mnt/c/Users/Utilisateur/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin'), ('WT_SESSION', 'dc0f545e-8a9f-4b4d-8879-0bdb52419764'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/tmp/ssh-XXXXXXBJ5ibY/agent.741'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/build/robot_description'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.201219] (-) TimerEvent: {}
+[0.301759] (-) TimerEvent: {}
+[0.402369] (-) TimerEvent: {}
+[0.502988] (-) TimerEvent: {}
+[0.603761] (-) TimerEvent: {}
+[0.704448] (-) TimerEvent: {}
+[0.730097] (my_robot_interfaces) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.737571] (my_custom_pkg) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.741802] (my_robot_control) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.743231] (fpga-interface) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.744103] (my_robot_bringup) StderrLine: {'line': b'\x1b[0mCMake Error: The current CMakeCache.txt directory /home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/build/my_robot_bringup/CMakeCache.txt is different than the directory /home/fouadroboticist/ros2_ws/src/build/my_robot_bringup where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt\x1b[0m\n'}
+[0.748186] (my_robot_bringup) StderrLine: {'line': b'\x1b[0mCMake Error: The source directory "/home/fouadroboticist/ros2_ws/src/my_robot_bringup" does not exist.\n'}
+[0.749249] (my_robot_bringup) StderrLine: {'line': b'Specify --help for usage, or press the help button on the CMake GUI.\x1b[0m\n'}
+[0.749488] (my_robot_bringup) StderrLine: {'line': b'gmake: *** [Makefile:226: cmake_check_build_system] Error 1\n'}
+[0.749694] (robot_description) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.749934] (my_robot_bringup) CommandEnded: {'returncode': 2}
+[0.806087] (-) TimerEvent: {}
+[0.818433] (my_robot_bringup) JobEnded: {'identifier': 'my_robot_bringup', 'rc': 2}
+[0.906603] (-) TimerEvent: {}
+[1.007162] (-) TimerEvent: {}
+[1.107615] (-) TimerEvent: {}
+[1.181283] (fpga-interface) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[1.181691] (my_robot_control) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[1.181854] (robot_description) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[1.182838] (my_robot_interfaces) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[1.183187] (my_custom_pkg) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[1.207758] (-) TimerEvent: {}
+[1.308221] (-) TimerEvent: {}
+[1.405977] (my_custom_pkg) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.408406] (-) TimerEvent: {}
+[1.419751] (robot_description) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.447613] (fpga-interface) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.457617] (my_robot_control) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.508597] (-) TimerEvent: {}
+[1.528334] (my_robot_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.599395] (my_custom_pkg) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.600116] (robot_description) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.608906] (-) TimerEvent: {}
+[1.612227] (my_custom_pkg) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.613317] (my_custom_pkg) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.615275] (my_custom_pkg) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.615811] (robot_description) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.616264] (robot_description) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.617117] (robot_description) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.622128] (fpga-interface) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.622649] (robot_description) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.623276] (my_custom_pkg) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.623769] (my_robot_control) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.638248] (my_robot_control) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.639139] (my_robot_control) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.639490] (fpga-interface) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.640090] (my_robot_control) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.640457] (fpga-interface) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.640805] (fpga-interface) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.647017] (my_robot_control) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.647494] (fpga-interface) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.690709] (tutorials_py) JobEnded: {'identifier': 'tutorials_py', 'rc': 'SIGINT'}
+[1.709098] (-) TimerEvent: {}
+[1.756157] (my_robot_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.765329] (my_robot_interfaces) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.766354] (my_robot_interfaces) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.767138] (my_robot_interfaces) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.771732] (my_robot_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.808521] (my_robot_control) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.808914] (robot_description) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.809111] (-) TimerEvent: {}
+[1.815176] (fpga-interface) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.817268] (my_custom_pkg) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.825194] (robot_description) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[1.825674] (robot_description) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.826244] (robot_description) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.827782] (my_custom_pkg) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[1.828429] (my_robot_control) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[1.828651] (my_robot_control) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.828746] (my_custom_pkg) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.829140] (my_robot_control) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.829260] (my_custom_pkg) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.834781] (fpga-interface) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[1.835377] (fpga-interface) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.835904] (fpga-interface) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.871951] (my_custom_pkg) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[1.872312] (my_robot_control) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[1.872416] (fpga-interface) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[1.872530] (robot_description) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[1.909354] (-) TimerEvent: {}
+[1.993497] (my_robot_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[2.006835] (my_robot_interfaces) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[2.007364] (my_robot_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[2.008441] (my_robot_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[2.009551] (-) TimerEvent: {}
+[2.011854] (my_robot_interfaces) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[2.109859] (-) TimerEvent: {}
+[2.134948] (fpga-interface) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[2.136767] (my_robot_control) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[2.138635] (my_custom_pkg) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[2.143010] (robot_description) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[2.210116] (-) TimerEvent: {}
+[2.255601] (my_robot_interfaces) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[2.310388] (-) TimerEvent: {}
+[2.411397] (-) TimerEvent: {}
+[2.452958] (my_robot_interfaces) StdoutLine: {'line': b'-- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[2.455241] (robot_description) StdoutLine: {'line': b'-- Found rclcpp: 16.0.11 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[2.455589] (my_robot_control) StdoutLine: {'line': b'-- Found rclcpp: 16.0.11 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[2.455752] (my_custom_pkg) StdoutLine: {'line': b'-- Found rclcpp: 16.0.11 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[2.511799] (-) TimerEvent: {}
+[2.545438] (fpga-interface) StdoutLine: {'line': b'-- Configuring done\n'}
+[2.550431] (fpga-interface) StdoutLine: {'line': b'-- Generating done\n'}
+[2.553818] (fpga-interface) StdoutLine: {'line': b'-- Build files have been written to: /home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/build/fpga-interface\n'}
+[2.560812] (fpga-interface) JobEnded: {'identifier': 'fpga-interface', 'rc': 'SIGINT'}
+[2.612192] (-) TimerEvent: {}
+[2.714418] (-) TimerEvent: {}
+[2.819036] (-) TimerEvent: {}
+[2.921833] (-) TimerEvent: {}
+[3.026337] (-) TimerEvent: {}
+[3.131009] (-) TimerEvent: {}
+[3.232588] (-) TimerEvent: {}
+[3.337387] (-) TimerEvent: {}
+[3.441996] (-) TimerEvent: {}
+[3.542822] (-) TimerEvent: {}
+[3.643513] (-) TimerEvent: {}
+[3.649205] (my_custom_pkg) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[3.649474] (my_robot_control) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[3.649656] (my_robot_interfaces) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[3.649968] (robot_description) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[3.658812] (robot_description) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[3.659211] (my_robot_control) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[3.659307] (my_custom_pkg) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[3.659375] (my_robot_interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[3.676572] (robot_description) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[3.677201] (my_robot_control) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[3.677352] (my_custom_pkg) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[3.677438] (my_robot_interfaces) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[3.711866] (robot_description) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[3.712123] (my_robot_control) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[3.712245] (my_robot_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[3.712355] (my_custom_pkg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[3.744265] (-) TimerEvent: {}
+[3.746290] (my_robot_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[3.746896] (my_custom_pkg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[3.747192] (my_robot_control) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[3.747585] (robot_description) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[3.835755] (my_robot_interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[3.844671] (-) TimerEvent: {}
+[3.845893] (my_custom_pkg) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[3.846184] (my_robot_control) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[3.846346] (robot_description) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[3.851315] (my_custom_pkg) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[3.851684] (robot_description) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[3.851768] (my_robot_control) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[3.945128] (-) TimerEvent: {}
+[4.047039] (-) TimerEvent: {}
+[4.147508] (-) TimerEvent: {}
+[4.247926] (-) TimerEvent: {}
+[4.347442] (my_robot_interfaces) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[4.348033] (-) TimerEvent: {}
+[4.448616] (-) TimerEvent: {}
+[4.549100] (-) TimerEvent: {}
+[4.649654] (-) TimerEvent: {}
+[4.665644] (robot_description) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[4.665846] (my_robot_control) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[4.749900] (-) TimerEvent: {}
+[4.850531] (-) TimerEvent: {}
+[4.954694] (-) TimerEvent: {}
+[4.981585] (my_robot_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[5.057542] (-) TimerEvent: {}
+[5.161683] (-) TimerEvent: {}
+[5.189583] (my_custom_pkg) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[5.203640] (my_robot_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[5.262064] (-) TimerEvent: {}
+[5.336436] (my_robot_interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[5.339264] (my_robot_interfaces) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[5.362402] (-) TimerEvent: {}
+[5.364344] (robot_description) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[5.365577] (my_robot_control) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[5.462857] (-) TimerEvent: {}
+[5.566971] (-) TimerEvent: {}
+[5.671171] (-) TimerEvent: {}
+[5.735035] (my_robot_interfaces) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[5.735445] (my_robot_interfaces) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[5.735593] (my_robot_interfaces) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[5.735707] (my_robot_interfaces) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[5.761808] (my_robot_interfaces) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[5.771437] (-) TimerEvent: {}
+[5.872048] (-) TimerEvent: {}
+[5.897785] (my_robot_interfaces) StdoutLine: {'line': b'-- Configuring done\n'}
+[5.972382] (-) TimerEvent: {}
+[5.986099] (my_robot_interfaces) StdoutLine: {'line': b'-- Generating done\n'}
+[6.007397] (my_robot_interfaces) StdoutLine: {'line': b'-- Build files have been written to: /home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/build/my_robot_interfaces\n'}
+[6.022657] (my_robot_interfaces) JobEnded: {'identifier': 'my_robot_interfaces', 'rc': 'SIGINT'}
+[6.072732] (-) TimerEvent: {}
+[6.124678] (my_custom_pkg) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[6.174654] (-) TimerEvent: {}
+[6.275767] (-) TimerEvent: {}
+[6.380004] (-) TimerEvent: {}
+[6.484172] (-) TimerEvent: {}
+[6.585299] (-) TimerEvent: {}
+[6.686252] (-) TimerEvent: {}
+[6.787369] (-) TimerEvent: {}
+[6.887805] (-) TimerEvent: {}
+[6.988264] (-) TimerEvent: {}
+[7.078039] (robot_description) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[7.088460] (-) TimerEvent: {}
+[7.099899] (robot_description) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[7.188654] (-) TimerEvent: {}
+[7.289278] (-) TimerEvent: {}
+[7.292795] (robot_description) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[7.293813] (robot_description) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[7.389520] (-) TimerEvent: {}
+[7.446475] (robot_description) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[7.447756] (robot_description) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[7.489778] (-) TimerEvent: {}
+[7.590339] (-) TimerEvent: {}
+[7.603826] (robot_description) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[7.693692] (-) TimerEvent: {}
+[7.733860] (robot_description) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[7.735372] (robot_description) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[7.736594] (robot_description) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[7.739176] (robot_description) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[7.740860] (robot_description) StdoutLine: {'line': b'-- Configuring done\n'}
+[7.748537] (robot_description) StdoutLine: {'line': b'-- Generating done\n'}
+[7.752539] (robot_description) StdoutLine: {'line': b'-- Build files have been written to: /home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/build/robot_description\n'}
+[7.764573] (robot_description) JobEnded: {'identifier': 'robot_description', 'rc': 'SIGINT'}
+[7.794269] (-) TimerEvent: {}
+[7.838446] (my_robot_control) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[7.845596] (my_robot_control) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[7.894629] (-) TimerEvent: {}
+[7.992179] (my_robot_control) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[7.992587] (my_robot_control) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[7.994805] (-) TimerEvent: {}
+[8.095467] (-) TimerEvent: {}
+[8.117746] (my_robot_control) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[8.118815] (my_robot_control) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[8.195899] (-) TimerEvent: {}
+[8.248960] (my_robot_control) StdoutLine: {'line': b'-- Configuring done\n'}
+[8.258066] (my_robot_control) StdoutLine: {'line': b'-- Generating done\n'}
+[8.262675] (my_robot_control) StdoutLine: {'line': b'-- Build files have been written to: /home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/build/my_robot_control\n'}
+[8.272861] (my_robot_control) JobEnded: {'identifier': 'my_robot_control', 'rc': 'SIGINT'}
+[8.296436] (-) TimerEvent: {}
+[8.400204] (-) TimerEvent: {}
+[8.418425] (my_custom_pkg) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[8.425423] (my_custom_pkg) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[8.500485] (-) TimerEvent: {}
+[8.581175] (my_custom_pkg) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[8.581461] (my_custom_pkg) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[8.600774] (-) TimerEvent: {}
+[8.702828] (-) TimerEvent: {}
+[8.755064] (my_custom_pkg) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[8.756198] (my_custom_pkg) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[8.803283] (-) TimerEvent: {}
+[8.821282] (my_custom_pkg) StdoutLine: {'line': b'-- Found rclpy: 3.3.15 (/opt/ros/humble/share/rclpy/cmake)\n'}
+[8.824998] (my_custom_pkg) StdoutLine: {'line': b'-- Found rclcpp_components: 16.0.11 (/opt/ros/humble/share/rclcpp_components/cmake)\n'}
+[8.904864] (-) TimerEvent: {}
+[9.009100] (-) TimerEvent: {}
+[9.062239] (my_custom_pkg) StdoutLine: {'line': b'-- Configuring done\n'}
+[9.078057] (my_custom_pkg) StdoutLine: {'line': b'-- Generating done\n'}
+[9.083791] (my_custom_pkg) StdoutLine: {'line': b'-- Build files have been written to: /home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/build/my_custom_pkg\n'}
+[9.095205] (my_custom_pkg) JobEnded: {'identifier': 'my_custom_pkg', 'rc': 'SIGINT'}
+[9.106583] (actions_py) JobSkipped: {'identifier': 'actions_py'}
+[9.106680] (my_robot_controller) JobSkipped: {'identifier': 'my_robot_controller'}
+[9.106746] (-) EventReactorShutdown: {}

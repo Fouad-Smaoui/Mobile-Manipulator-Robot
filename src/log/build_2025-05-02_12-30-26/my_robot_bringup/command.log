@@ -1,0 +1,2 @@
+Invoking command in '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/build/my_robot_bringup': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/build/my_robot_bringup -- -j8 -l8
+Invoked command in '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/build/my_robot_bringup' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/build/my_robot_bringup -- -j8 -l8

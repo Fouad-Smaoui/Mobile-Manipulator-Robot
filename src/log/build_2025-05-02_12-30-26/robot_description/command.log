@@ -1,0 +1,1 @@
+Invoking command in '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/build/robot_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/robot_description -DCMAKE_INSTALL_PREFIX=/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/install/robot_description

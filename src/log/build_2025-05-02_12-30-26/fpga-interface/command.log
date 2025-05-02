@@ -1,0 +1,1 @@
+Invoking command in '/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/build/fpga-interface': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/fpga-interface -DCMAKE_INSTALL_PREFIX=/home/fouadroboticist/ros2_ws/src/Mobile-Manipulator-Robot/src/install/fpga-interface
