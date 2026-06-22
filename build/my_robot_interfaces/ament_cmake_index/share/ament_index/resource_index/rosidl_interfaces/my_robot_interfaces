@@ -1,8 +1,0 @@
-action/CountUntil.action
-action/CountUntil.idl
-msg/TargetCoordinates.idl
-msg/TargetCoordinates.msg
-srv/SetLed.idl
-srv/SetLed.srv
-srv/SetLed_Request.msg
-srv/SetLed_Response.msg

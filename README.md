@@ -1,66 +1,144 @@
-# ROS 2 Mobile Manipulator
+# Mobile Manipulator — ROS 2 Humble
 
-<img src="/images/mobile_manipulator_urdf_rviz.png"/>
+<img src="images/mobile_manipulator_urdf_rviz.png" width="700"/>
 
-## Overview
+A 4-wheel differential-drive mobile base carrying a 5-DOF arm, built as a
+modern `ros2_control` system: **the same hardware-interface contract
+drives both Gazebo simulation and a documented real-hardware deployment
+path**, so moving from sim to a physical robot is a plugin swap, not a
+redesign.
 
-Welcome to the ROS 2 Mobile Manipulator project! This repository provides a comprehensive set of tools and configurations to operate and control a mobile manipulator robot using ROS 2. The mobile manipulator integrates a mobile base with an articulated robotic arm, making it suitable for various tasks such as object manipulation, navigation, and automated tasks in dynamic environments.
+This repository was forensically audited and restructured from a mixed
+ROS2-learning sandbox into a single-purpose project. The audit findings
+and what was removed are in [`docs/`](docs/) — nothing here is hidden,
+including what doesn't work yet.
 
-### Features
+## Architecture
 
-- **Mobile Base Integration**: Interface with a mobile base for autonomous navigation.
-- **Articulated Arm Control**: Manipulate objects with a robotic arm using inverse kinematics and trajectory planning.
-- **Sensor Integration**: Utilize sensors like cameras and LIDAR for perception and environment mapping.
-- **Simulation Support**: Test and develop algorithms in a simulated environment using Gazebo.
-- **Navigation Stack**: Leverage the Nav2 stack for autonomous navigation and path planning.
-- **Visualization**: Use RViz for visualization of robot states, sensor data, and planning.
+```mermaid
+graph TD
+    subgraph "Description"
+        DESC[mobile_manipulator_description<br/>URDF/xacro, meshes, RViz config]
+    end
 
-## Dependencies
+    subgraph "Simulation"
+        GZ[mobile_manipulator_gazebo<br/>world, gazebo_ros2_control bridge]
+    end
 
-Before you begin, ensure you have the following dependencies installed:
+    subgraph "Control (shared by sim + hardware)"
+        CTRL[mobile_manipulator_control<br/>joint_state_broadcaster<br/>diff_drive_controller<br/>joint_trajectory_controller]
+    end
 
-- **ROS 2 Humble Hawksbill**: [Installation instructions](https://docs.ros.org/en/humble/Installation.html).
-- **Colcon**: Build tool for ROS 2 workspaces. [Installation instructions](https://colcon.readthedocs.io/en/released/user/quick-start.html).
-- **Python 3**: Required for various ROS 2 tools and scripts.
-- **Gazebo**: For simulation purposes. [Installation instructions](https://gazebosim.org/tutorials?tut=install_ubuntu).
-- **C++**: Required for building C++ nodes and libraries. Ensure you have a compatible compiler installed (e.g., GCC for Linux).
-- **CMake**: Build system for configuring and generating build files. [Installation instructions](https://cmake.org/install/).
-- **RViz**: Visualization tool for ROS. [Installation instructions](https://docs.ros.org/en/humble/Installation.html#rviz).
-- **Nav2**: Navigation stack for autonomous robots. [Installation instructions](https://navigation.ros.org/).
+    subgraph "Hardware deployment path"
+        HW[mobile_manipulator_hardware<br/>motor + FPGA bridge nodes<br/>SystemInterface plugin design]
+    end
 
-## Installation
+    subgraph "Bringup"
+        BR[mobile_manipulator_bringup<br/>display + 3 scenarios]
+    end
 
-## Create a ROS 2 Workspace
-```bash
-mkdir -p ~/ros2_ws/src
-cd ~/ros2_ws/src
+    subgraph "Interfaces"
+        IF[mobile_manipulator_interfaces<br/>HardwareStatus.msg]
+    end
+
+    DESC -->|ros2_control xacro, sim_mode arg| GZ
+    DESC -->|ros2_control xacro, sim_mode arg| HW
+    GZ --> CTRL
+    HW --> CTRL
+    HW --> IF
+    BR --> GZ
+    BR --> CTRL
 ```
 
-### Clone the Repository into the Workspace
-```bash
-git clone https://github.com/fouad-smaoui/ros2-mobile-manipulator.git
+**The load-bearing design decision:** `mobile_manipulator.ros2_control.xacro`
+declares one `<ros2_control>` block with a `sim_mode` argument that swaps
+only the `<hardware><plugin>` line between `gazebo_ros2_control/GazeboSystem`
+and `mobile_manipulator_hardware/MobileManipulatorSystem`. Every
+controller, every YAML config, every launch file above that line is
+identical for simulation and real hardware.
+
+## Repository structure
+
+```
+src/
+  mobile_manipulator_description/   # URDF/xacro, STL meshes, RViz config
+  mobile_manipulator_gazebo/        # Gazebo Classic world + ros2_control bridge
+  mobile_manipulator_control/       # controller_manager YAML, controller launch
+  mobile_manipulator_hardware/      # motor/FPGA bridge nodes, hardware plugin design
+  mobile_manipulator_interfaces/    # HardwareStatus.msg
+  mobile_manipulator_bringup/       # display + 3 demonstration scenarios
+docs/
+  PHYSICAL_AI_ROADMAP.md            # vision/grasping/RL/swarm attachment points
+  RECRUITER_ASSESSMENT.md           # role-by-role honest self-review
+images/                             # README screenshots
 ```
 
-### Build the Workspace
+## Quick start
+
 ```bash
-colcon build
+mkdir -p ~/ros2_ws/src && cd ~/ros2_ws/src
+git clone https://github.com/Fouad-Smaoui/Mobile-Manipulator-Robot.git .
+cd ~/ros2_ws && colcon build && source install/setup.bash
+
+# fastest sanity check -- RViz only, no physics
+ros2 launch mobile_manipulator_bringup display.launch.py
+
+# full Gazebo simulation with ros2_control active
+ros2 launch mobile_manipulator_gazebo gazebo_sim.launch.py
 ```
 
-### Source the Workspace
-```bash
-source ~/ros2_ws/install/setup.bash
+Requires ROS 2 Humble, Gazebo Classic 11, and `ros2_control` /
+`gazebo_ros2_control` / `nav2_bringup` / `slam_toolbox` (`apt install
+ros-humble-{ros2-control,ros2-controllers,gazebo-ros2-control,nav2-bringup,slam-toolbox}`).
+
+## Demonstration scenarios
+
+| Scenario | Command | Demonstrates |
+|---|---|---|
+| A — Teleoperation | `ros2 launch mobile_manipulator_bringup scenario_a_teleop.launch.py` | URDF + ros2_control velocity interface + diff-drive kinematics, end-to-end |
+| B — Autonomous Navigation | `ros2 launch mobile_manipulator_bringup scenario_b_navigation.launch.py` | Nav2 + slam_toolbox wired against this robot's footprint and TF tree |
+| C — Mobile Manipulation | `ros2 launch mobile_manipulator_bringup scenario_c_manipulation.launch.py` | `FollowJointTrajectory` goal → `joint_trajectory_controller` → simulated arm motion |
+
+Full expected output and known limitations for each scenario:
+[`mobile_manipulator_bringup/doc/SCENARIOS.md`](src/mobile_manipulator_bringup/doc/SCENARIOS.md).
+
+## Hardware deployment
+
+```mermaid
+graph LR
+    CM[controller_manager] --> HW[MobileManipulatorSystem<br/>SystemInterface plugin<br/>design-only, see HARDWARE.md]
+    HW --> MDB[motor_driver_bridge_node<br/>stub: parameter+lifecycle real,<br/>serial I/O not yet wired]
+    HW --> FPB[fpga_bridge_node<br/>stub: config parsing real,<br/>link not yet wired]
+    MDB -.future serial.-> MCU[Motor controller MCU]
+    FPB -.future TCP/mailbox.-> FPGA[FPGA fabric]
 ```
 
-## Usage
+Full signal path, what's real vs. placeholder today, and the exact steps
+to make it real: [`mobile_manipulator_hardware/doc/HARDWARE.md`](src/mobile_manipulator_hardware/doc/HARDWARE.md).
 
-### Launching the Robot
-To start the mobile manipulator and display the URDF model, use the following command:
-```bash
-ros2 launch urdf_tutorial display.launch.py model:=/ros2_ws/src/robot_description/urdf/mobile_m
-```
+## Roadmap
+
+Ranked by impact, not implemented yet:
+1. Record and embed a Gazebo run of Scenario A — turns "should work" into proof.
+2. CI running `colcon build` + `colcon test` on every push.
+3. LiDAR mount + Gazebo ray sensor (hooks already commented in `mobile_manipulator_gazebo`'s xacro) to make Scenario B obstacle-aware.
+4. MoveIt config for the 5-DOF arm, replacing Scenario C's scripted joint goal with real IK.
+5. Implement the `MobileManipulatorSystem` pluginlib plugin against a real motor driver board.
+6. Gripper + `tool0` end-effector for an actual pick-and-place, not just a reach gesture.
+7. Camera mount + a perception package (hook documented in `docs/PHYSICAL_AI_ROADMAP.md`).
+8. Static map for Scenario B once a real or simulated LiDAR exists, removing the slam_toolbox dependency for repeatable nav benchmarks.
+9. Swarm namespacing demo (multi-robot launch) — the launch files already avoid hardcoded global topics.
+10. Reinforcement-learning environment wrapping `gazebo_sim.launch.py` (hook documented in `docs/PHYSICAL_AI_ROADMAP.md`).
+
+Physical-AI specific attachment points (vision, grasping, RL, swarm):
+[`docs/PHYSICAL_AI_ROADMAP.md`](docs/PHYSICAL_AI_ROADMAP.md).
+
+## Honest assessment
+
+A role-by-role review (ROS2 engineer, robotics engineer, controls
+engineer, systems integration engineer, technical recruiter) — strengths,
+weaknesses, and exactly what evidence is still missing:
+[`docs/RECRUITER_ASSESSMENT.md`](docs/RECRUITER_ASSESSMENT.md).
 
 ## License
-This project is licensed under the Creative Commons CC0 1.0 Universal (CC0 1.0) Public Domain Dedication. See the [LICENSE](https://github.com/Fouad-Smaoui/Mobile-Manipulator-Robot/blob/main/LICENSE) file for details.
-
-## Contact
-For any questions or support, please open an issue on the GitHub repository.
+CC0 1.0 Universal — see [LICENSE](LICENSE).

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>mobile_manipulator_control</name>
+  <version>1.0.0</version>
+  <description>ros2_control controller configuration: joint_state_broadcaster, diff_drive_controller for the base, joint_trajectory_controller for the arm. Shared between simulation and real hardware.</description>
+  <maintainer email="fouad.smaoui@outlook.com">fouad-smaoui</maintainer>
+  <license>CC0-1.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <exec_depend>controller_manager</exec_depend>
+  <exec_depend>joint_state_broadcaster</exec_depend>
+  <exec_depend>diff_drive_controller</exec_depend>
+  <exec_depend>joint_trajectory_controller</exec_depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

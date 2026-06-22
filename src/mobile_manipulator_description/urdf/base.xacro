@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="mobile_manipulator_base">
+
+  <!-- ###################################################################
+       Differential-drive base: base_link + 4 wheels.
+       Wheel joints stay `continuous` (correct for a rotating wheel — no
+       angle limit), but now declare explicit velocity/effort limits so
+       ros2_control and any planner reading this URDF has real numbers
+       instead of silently assuming unbounded motion.
+       ################################################################### -->
+
+  <link name="base_link">
+    <inertial>
+      <origin xyz="0.0030946 4.78250032638821E-11 0.053305" rpy="0 0 0"/>
+      <mass value="47.873"/>
+      <inertia
+        ixx="0.774276574699151" ixy="-1.03781944357671E-10" ixz="0.00763014265820928"
+        iyy="1.64933255189991" iyz="1.09578155845563E-12" izz="2.1239326987473"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="1.5707963267949 0 3.14"/>
+      <geometry>
+        <mesh filename="package://mobile_manipulator_description/meshes/robot_base.stl"/>
+      </geometry>
+      <material name="chassis_grey"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="1.5707963267949 0 3.14"/>
+      <geometry>
+        <mesh filename="package://mobile_manipulator_description/meshes/robot_base.stl"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- footprint frame at ground level, required by nav2 costmaps -->
+  <link name="base_footprint"/>
+  <joint name="base_footprint_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="base_footprint"/>
+    <origin xyz="0 0 -0.16" rpy="0 0 0"/>
+  </joint>
+
+  <xacro:macro name="wheel" params="prefix x_reflect y_reflect">
+    <link name="${prefix}_wheel">
+      <inertial>
+        <origin xyz="-4.1867E-18 0.0068085 -1.65658661799998E-18" rpy="0 0 0"/>
+        <mass value="2.6578"/>
+        <inertia
+          ixx="0.00856502765719703" ixy="1.5074118157338E-19" ixz="-4.78150098725052E-19"
+          iyy="0.013670640432096" iyz="-2.68136447099727E-19" izz="0.00856502765719703"/>
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="1.5707963267949 0 0"/>
+        <geometry>
+          <mesh filename="package://mobile_manipulator_description/meshes/wheel.stl"/>
+        </geometry>
+        <material name="chassis_grey"/>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="1.5707963267949 0 0"/>
+        <geometry>
+          <mesh filename="package://mobile_manipulator_description/meshes/wheel.stl"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <joint name="${prefix}_wheel_joint" type="continuous">
+      <axis xyz="0 1 0"/>
+      <parent link="base_link"/>
+      <child link="${prefix}_wheel"/>
+      <origin xyz="${x_reflect*0.220} ${y_reflect*0.250} 0" rpy="0 0 0"/>
+      <limit effort="20.0" velocity="10.0"/>
+      <dynamics damping="0.2" friction="0.1"/>
+    </joint>
+
+    <gazebo reference="${prefix}_wheel">
+      <mu1>1.0</mu1>
+      <mu2>1.0</mu2>
+      <kp>10000000.0</kp>
+      <kd>1.0</kd>
+      <fdir1>1 0 0</fdir1>
+    </gazebo>
+  </xacro:macro>
+
+  <xacro:wheel prefix="front_left"  x_reflect="1"  y_reflect="1"/>
+  <xacro:wheel prefix="front_right" x_reflect="1"  y_reflect="-1"/>
+  <xacro:wheel prefix="rear_left"   x_reflect="-1" y_reflect="1"/>
+  <xacro:wheel prefix="rear_right"  x_reflect="-1" y_reflect="-1"/>
+
+</robot>

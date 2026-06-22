@@ -1,0 +1,9 @@
+motor_driver_bridge:
+  ros__parameters:
+    motor_device_port: /dev/ttyUSB0
+    motor_baud_rate: 1000000
+    control_loop_frequency_hz: 100
+
+fpga_bridge:
+  ros__parameters:
+    fpga_config_file: "" # path to an fpga_config.xml; empty = stub mode, no link attempted

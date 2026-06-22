@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="mobile_manipulator_gazebo">
+
+  <!-- ###################################################################
+       AUDIT FIX: the original repo used `libgazebo_ros_control.so` +
+       `libgazebo_ros_diff_drive.so` + `libgazebo_ros_joint_state_publisher.so`
+       This is the ROS1-era Gazebo plugin set. Combined with a controller_manager
+       spawner call in the launch file expecting ROS2 controllers, the two
+       control paths fought each other and the sim did not come up clean.
+
+       Fixed here: a single bridge plugin, `gazebo_ros2_control`, which
+       exposes the <ros2_control> hardware interfaces declared in
+       mobile_manipulator_description to the real ros2_control stack
+       (controller_manager, joint_state_broadcaster, diff_drive_controller,
+       joint_trajectory_controller). Gazebo no longer runs its own
+       competing diff-drive plugin.
+       ################################################################### -->
+
+  <gazebo>
+    <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
+      <parameters>$(find mobile_manipulator_control)/config/controllers.yaml</parameters>
+      <robot_param>robot_description</robot_param>
+      <robot_param_node>robot_state_publisher</robot_param_node>
+    </plugin>
+  </gazebo>
+
+  <!-- #################### Perception roadmap hooks ####################
+       No sensors exist on the robot yet (confirmed in the forensic audit:
+       README claimed cameras/LiDAR, code had none). These are commented
+       placeholders showing exactly where perception attaches once a
+       sensor mount is added to base.xacro. Not enabled by default, so
+       this package keeps building/launching cleanly without sensor
+       plugins that have no corresponding link.
+
+  <gazebo reference="camera_link">
+    <sensor type="camera" name="rgb_camera">
+      <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+        <ros><namespace>/perception</namespace></ros>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+  <gazebo reference="lidar_link">
+    <sensor type="ray" name="lidar">
+      <plugin name="lidar_controller" filename="libgazebo_ros_ray_sensor.so">
+        <ros><namespace>/perception</namespace></ros>
+        <output_type>sensor_msgs/LaserScan</output_type>
+      </plugin>
+    </sensor>
+  </gazebo>
+  ##################################################################### -->
+
+</robot>
