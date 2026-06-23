@@ -2,25 +2,33 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro" name="mobile_manipulator_gazebo">
 
   <!-- ###################################################################
-       AUDIT FIX: the original repo used `libgazebo_ros_control.so` +
-       `libgazebo_ros_diff_drive.so` + `libgazebo_ros_joint_state_publisher.so`
-       This is the ROS1-era Gazebo plugin set. Combined with a controller_manager
-       spawner call in the launch file expecting ROS2 controllers, the two
-       control paths fought each other and the sim did not come up clean.
+       AUDIT FIX (round 1): the original repo used `libgazebo_ros_control.so`
+       + `libgazebo_ros_diff_drive.so` + `libgazebo_ros_joint_state_publisher.so`,
+       the ROS1-era Gazebo Classic plugin set. Combined with a
+       controller_manager spawner call in the launch file expecting ROS2
+       controllers, the two control paths fought each other.
 
-       Fixed here: a single bridge plugin, `gazebo_ros2_control`, which
-       exposes the <ros2_control> hardware interfaces declared in
-       mobile_manipulator_description to the real ros2_control stack
-       (controller_manager, joint_state_broadcaster, diff_drive_controller,
-       joint_trajectory_controller). Gazebo no longer runs its own
-       competing diff-drive plugin.
+       AUDIT FIX (round 2): the first fix replaced those with
+       `gazebo_ros2_control` (the Gazebo *Classic* ROS2 bridge). That
+       does not run on this project's actual test environments (ROS2
+       Jazzy on WSL + Docker), which ship the new Gazebo Sim (Harmonic+)
+       stack: `gazebo_ros`/`gazebo_ros2_control` are not packaged for
+       Jazzy at all, only `ros_gz_sim`/`gz_ros2_control` are. Verified
+       against the actually-installed ros-jazzy-gz-ros2-control package
+       (plugin filename `gz_ros2_control-system`, class
+       `gz_ros2_control::GazeboSimROS2ControlPlugin`; hardware interface
+       plugin `gz_ros2_control/GazeboSimSystem`) rather than assumed.
+
+       This single bridge plugin exposes the <ros2_control> hardware
+       interfaces declared in mobile_manipulator_description to the real
+       ros2_control stack (controller_manager, joint_state_broadcaster,
+       diff_drive_controller, joint_trajectory_controller). Gazebo Sim
+       runs no competing native diff-drive plugin.
        ################################################################### -->
 
   <gazebo>
-    <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
+    <plugin filename="gz_ros2_control-system" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
       <parameters>$(find mobile_manipulator_control)/config/controllers.yaml</parameters>
-      <robot_param>robot_description</robot_param>
-      <robot_param_node>robot_state_publisher</robot_param_node>
     </plugin>
   </gazebo>
 
@@ -30,22 +38,19 @@
        placeholders showing exactly where perception attaches once a
        sensor mount is added to base.xacro. Not enabled by default, so
        this package keeps building/launching cleanly without sensor
-       plugins that have no corresponding link.
+       plugins that have no corresponding link. Plugin names below use
+       the Gazebo Sim (gz-sim) sensor system, not Gazebo Classic.
 
   <gazebo reference="camera_link">
     <sensor type="camera" name="rgb_camera">
-      <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
-        <ros><namespace>/perception</namespace></ros>
-      </plugin>
+      <plugin filename="gz-sim-sensors-system" name="gz::sim::systems::Sensors"/>
     </sensor>
   </gazebo>
 
   <gazebo reference="lidar_link">
-    <sensor type="ray" name="lidar">
-      <plugin name="lidar_controller" filename="libgazebo_ros_ray_sensor.so">
-        <ros><namespace>/perception</namespace></ros>
-        <output_type>sensor_msgs/LaserScan</output_type>
-      </plugin>
+    <sensor type="gpu_lidar" name="lidar">
+      <topic>/perception/scan</topic>
+      <update_rate>10</update_rate>
     </sensor>
   </gazebo>
   ##################################################################### -->

@@ -8,7 +8,7 @@
   <xacro:include filename="$(find mobile_manipulator_description)/urdf/arm.xacro"/>
   <xacro:include filename="$(find mobile_manipulator_description)/urdf/mobile_manipulator.ros2_control.xacro"/>
 
-  <!-- Gazebo-only plugins (sensors, gazebo_ros2_control bridge) live in the
+  <!-- Gazebo-only plugins (sensors, gz_ros2_control bridge) live in the
        mobile_manipulator_gazebo package, kept out of this xacro so the
        same robot description can be loaded for real-hardware bringup
        without dragging in a Gazebo dependency. -->

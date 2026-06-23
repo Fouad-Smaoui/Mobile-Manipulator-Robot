@@ -1,12 +1,12 @@
-# Mobile Manipulator — ROS 2 Humble
+# Mobile Manipulator — ROS 2 Jazzy
 
 <img src="images/mobile_manipulator_urdf_rviz.png" width="700"/>
 
 A 4-wheel differential-drive mobile base carrying a 5-DOF arm, built as a
 modern `ros2_control` system: **the same hardware-interface contract
-drives both Gazebo simulation and a documented real-hardware deployment
-path**, so moving from sim to a physical robot is a plugin swap, not a
-redesign.
+drives both Gazebo Sim simulation and a documented real-hardware
+deployment path**, so moving from sim to a physical robot is a plugin
+swap, not a redesign.
 
 This repository was forensically audited and restructured from a mixed
 ROS2-learning sandbox into a single-purpose project. The audit findings
@@ -22,7 +22,7 @@ graph TD
     end
 
     subgraph "Simulation"
-        GZ[mobile_manipulator_gazebo<br/>world, gazebo_ros2_control bridge]
+        GZ[mobile_manipulator_gazebo<br/>world, gz_ros2_control bridge]
     end
 
     subgraph "Control (shared by sim + hardware)"
@@ -52,7 +52,7 @@ graph TD
 
 **The load-bearing design decision:** `mobile_manipulator.ros2_control.xacro`
 declares one `<ros2_control>` block with a `sim_mode` argument that swaps
-only the `<hardware><plugin>` line between `gazebo_ros2_control/GazeboSystem`
+only the `<hardware><plugin>` line between `gz_ros2_control/GazeboSimSystem`
 and `mobile_manipulator_hardware/MobileManipulatorSystem`. Every
 controller, every YAML config, every launch file above that line is
 identical for simulation and real hardware.
@@ -62,7 +62,7 @@ identical for simulation and real hardware.
 ```
 src/
   mobile_manipulator_description/   # URDF/xacro, STL meshes, RViz config
-  mobile_manipulator_gazebo/        # Gazebo Classic world + ros2_control bridge
+  mobile_manipulator_gazebo/        # Gazebo Sim (Harmonic+) world + ros2_control bridge
   mobile_manipulator_control/       # controller_manager YAML, controller launch
   mobile_manipulator_hardware/      # motor/FPGA bridge nodes, hardware plugin design
   mobile_manipulator_interfaces/    # HardwareStatus.msg
@@ -87,9 +87,21 @@ ros2 launch mobile_manipulator_bringup display.launch.py
 ros2 launch mobile_manipulator_gazebo gazebo_sim.launch.py
 ```
 
-Requires ROS 2 Humble, Gazebo Classic 11, and `ros2_control` /
-`gazebo_ros2_control` / `nav2_bringup` / `slam_toolbox` (`apt install
-ros-humble-{ros2-control,ros2-controllers,gazebo-ros2-control,nav2-bringup,slam-toolbox}`).
+Requires ROS 2 Jazzy + Gazebo Sim (Harmonic+), and `ros2_control` /
+`gz_ros2_control` / `ros_gz_sim` / `nav2_bringup` / `slam_toolbox`:
+
+```bash
+sudo apt install ros-jazzy-controller-manager ros-jazzy-joint-state-broadcaster \
+  ros-jazzy-diff-drive-controller ros-jazzy-joint-trajectory-controller \
+  ros-jazzy-gz-ros2-control ros-jazzy-ros-gz-sim ros-jazzy-ros-gz-bridge \
+  ros-jazzy-nav2-bringup ros-jazzy-slam-toolbox ros-jazzy-xacro \
+  ros-jazzy-joint-state-publisher-gui ros-jazzy-teleop-twist-keyboard
+```
+
+Actually run (not just statically reviewed) in a headless ROS 2 Jazzy
+Docker image — see [`docs/TESTING.md`](docs/TESTING.md) for the exact
+commands, real log output, and which scenarios are fully vs. partially
+verified.
 
 ## Demonstration scenarios
 
@@ -121,7 +133,7 @@ to make it real: [`mobile_manipulator_hardware/doc/HARDWARE.md`](src/mobile_mani
 Ranked by impact, not implemented yet:
 1. Record and embed a Gazebo run of Scenario A — turns "should work" into proof.
 2. CI running `colcon build` + `colcon test` on every push.
-3. LiDAR mount + Gazebo ray sensor (hooks already commented in `mobile_manipulator_gazebo`'s xacro) to make Scenario B obstacle-aware.
+3. LiDAR mount + Gazebo Sim `gpu_lidar` sensor (hooks already commented in `mobile_manipulator_gazebo`'s xacro) to make Scenario B obstacle-aware.
 4. MoveIt config for the 5-DOF arm, replacing Scenario C's scripted joint goal with real IK.
 5. Implement the `MobileManipulatorSystem` pluginlib plugin against a real motor driver board.
 6. Gripper + `tool0` end-effector for an actual pick-and-place, not just a reach gesture.

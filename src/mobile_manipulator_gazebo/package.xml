@@ -3,7 +3,7 @@
 <package format="3">
   <name>mobile_manipulator_gazebo</name>
   <version>1.0.0</version>
-  <description>Gazebo Classic simulation bringup: world, gazebo_ros2_control bridge plugin, spawn launch.</description>
+  <description>Gazebo Sim (Harmonic+, ROS2 Jazzy) simulation bringup: world, gz_ros2_control bridge plugin, spawn launch.</description>
   <maintainer email="fouad.smaoui@outlook.com">fouad-smaoui</maintainer>
   <license>CC0-1.0</license>
 
@@ -11,8 +11,9 @@
 
   <exec_depend>mobile_manipulator_description</exec_depend>
   <exec_depend>mobile_manipulator_control</exec_depend>
-  <exec_depend>gazebo_ros</exec_depend>
-  <exec_depend>gazebo_ros2_control</exec_depend>
+  <exec_depend>ros_gz_sim</exec_depend>
+  <exec_depend>ros_gz_bridge</exec_depend>
+  <exec_depend>gz_ros2_control</exec_depend>
   <exec_depend>robot_state_publisher</exec_depend>
   <exec_depend>xacro</exec_depend>
 

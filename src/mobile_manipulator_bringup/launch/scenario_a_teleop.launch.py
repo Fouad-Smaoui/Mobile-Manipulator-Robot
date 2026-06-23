@@ -25,12 +25,19 @@ def generate_launch_description():
         )
     )
 
+    # Verified against an actual headless run: this Jazzy diff_drive_controller
+    # build (4.45.2) has dropped `use_stamped_vel`/`cmd_vel_unstamped` --
+    # `ros2 param get /mobile_base_controller use_stamped_vel` reports
+    # "Parameter not set", and `/mobile_base_controller/cmd_vel` is
+    # geometry_msgs/msg/TwistStamped unconditionally. teleop_twist_keyboard
+    # supports stamped output via its own `stamped`/`frame_id` parameters.
     teleop = Node(
         package='teleop_twist_keyboard',
         executable='teleop_twist_keyboard',
         prefix='xterm -e',
         output='screen',
-        remappings=[('/cmd_vel', '/mobile_base_controller/cmd_vel_unstamped')],
+        parameters=[{'stamped': True, 'frame_id': 'base_link'}],
+        remappings=[('/cmd_vel', '/mobile_base_controller/cmd_vel')],
     )
 
     return LaunchDescription([sim, teleop])

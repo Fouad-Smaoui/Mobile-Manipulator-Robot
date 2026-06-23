@@ -1,8 +1,16 @@
 # Demonstration Scenarios
 
 All three scenarios assume `colcon build && source install/setup.bash` has
-been run from the workspace root, and ROS 2 Humble + Gazebo Classic 11 are
-installed.
+been run from the workspace root, and ROS 2 Jazzy + Gazebo Sim (Harmonic+)
+are installed (`ros-jazzy-ros-gz-sim`, `ros-jazzy-gz-ros2-control`).
+
+Scenarios A and C below have been run end-to-end in a headless ROS 2
+Jazzy Docker container with real evidence (odometry actually advancing,
+joint states actually matching the commanded goal) — see
+[`docs/TESTING.md`](../../../docs/TESTING.md) for the exact log output.
+Scenario B's Nav2 stack loads and partially activates but full
+end-to-end navigation has not yet been confirmed; see that doc for
+specifics before relying on it.
 
 ## Scenario A — Teleoperation
 
@@ -10,15 +18,18 @@ installed.
 ros2 launch mobile_manipulator_bringup scenario_a_teleop.launch.py
 ```
 
-**What it demonstrates:** working URDF, `gazebo_ros2_control` bridge,
+**What it demonstrates:** working URDF, `gz_ros2_control` bridge,
 `diff_drive_controller` velocity interface end-to-end.
 
 **Expected output:**
 - Gazebo opens with the robot spawned on the ground plane next to the
   `pick_table` model.
-- An `xterm` opens running `teleop_twist_keyboard`; arrow keys drive the
-  base.
-- `ros2 topic hz /mobile_base_controller/odom` shows ~50 Hz odometry.
+- An `xterm` opens running `teleop_twist_keyboard` (with `stamped:=true`
+  so it matches `/mobile_base_controller/cmd_vel`'s `TwistStamped` type —
+  verified live that this controller no longer accepts a plain
+  `Twist`/`cmd_vel_unstamped`, unlike Humble-era `diff_drive_controller`);
+  arrow keys drive the base.
+- `ros2 topic hz /mobile_base_controller/odom` shows odometry publishing.
 - `ros2 run tf2_tools view_frames` shows an unbroken `odom -> base_link`
   chain (and `base_link -> base_footprint`, `base_link -> arm_mount -> …`).
 
@@ -33,11 +44,26 @@ and costmap config, `slam_toolbox` building a map online (no static map
 is checked in — see roadmap below), TF tree satisfying Nav2's `map ->
 odom -> base_link` requirement.
 
+Uses this package's own `navigation.launch.py` (4 lifecycle nodes:
+`controller_server`, `planner_server`, `behavior_server`, `bt_navigator`)
+rather than `nav2_bringup`'s `navigation_launch.py` directly — verified
+live that the latter unconditionally brings up `collision_monitor` and
+`docking_server` with no disable flag, and `lifecycle_manager` aborts the
+*entire* bringup when `collision_monitor` can't get an
+`observation_sources` sensor this robot doesn't have yet.
+
 **Expected output:**
-- Gazebo + `slam_toolbox` + `nav2_bringup`'s `navigation_launch.py` come up.
-- `ros2 topic list` shows `/map`, `/plan`, `/cmd_vel`.
-- Sending a `2D Nav Goal` from RViz (add `rviz2` separately, or use
-  `nav2_bringup`'s own RViz config) drives the base toward the goal.
+- Gazebo + `slam_toolbox` + the trimmed Nav2 launch come up.
+- `ros2 topic list` shows `/map`, `/plan`, `/mobile_base_controller/cmd_vel`.
+- Sending a `2D Nav Goal` from RViz (add `rviz2` separately) drives the
+  base toward the goal.
+
+**Verification status:** partial — see [`docs/TESTING.md`](../../../docs/TESTING.md).
+The parameter file loads cleanly and `controller_server` activates and
+bonds; `planner_server`/`behavior_server`/`bt_navigator` were still
+completing their lifecycle bond handshake when testing stopped in a
+CPU-constrained headless container. Re-verify on a less constrained host
+before relying on this scenario as proof of working navigation.
 
 **Known limitation (honest, not hidden):** there is no LiDAR on the robot
 yet (confirmed absent in the forensic audit), so `local_costmap`/

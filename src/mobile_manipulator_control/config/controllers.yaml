@@ -11,10 +11,6 @@ controller_manager:
     arm_controller:
       type: joint_trajectory_controller/JointTrajectoryController
 
-joint_state_broadcaster:
-  ros__parameters:
-    extra_joints: []
-
 mobile_base_controller:
   ros__parameters:
     left_wheel_names: ['front_left_wheel_joint', 'rear_left_wheel_joint']
@@ -34,7 +30,10 @@ mobile_base_controller:
     publish_rate: 50.0
 
     cmd_vel_timeout: 0.5
-    use_stamped_vel: false
+    # No use_stamped_vel param on this ros2_controllers version (Jazzy,
+    # 4.45.2) -- verified via `ros2 param get`, it doesn't exist.
+    # /mobile_base_controller/cmd_vel is unconditionally
+    # geometry_msgs/msg/TwistStamped here.
 
     linear.x.max_velocity: 2.0
     linear.x.max_acceleration: 3.0

@@ -9,7 +9,7 @@
        used for simulation and for real hardware: only the <hardware>
        plugin name changes, selected by the `sim_mode` argument:
 
-         sim_mode=true  -> gazebo_ros2_control/GazeboSystem   (Gazebo Classic)
+         sim_mode=true  -> gz_ros2_control/GazeboSimSystem   (Gazebo Sim / Harmonic+, ROS2 Jazzy)
          sim_mode=false -> mobile_manipulator_hardware/MobileManipulatorSystem
                             (real hardware, see mobile_manipulator_hardware
                             package; not yet implemented, see HARDWARE.md)
@@ -43,7 +43,7 @@
     <ros2_control name="MobileManipulatorSystem" type="system">
       <hardware>
         <xacro:if value="${sim_mode}">
-          <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+          <plugin>gz_ros2_control/GazeboSimSystem</plugin>
         </xacro:if>
         <xacro:unless value="${sim_mode}">
           <plugin>mobile_manipulator_hardware/MobileManipulatorSystem</plugin>
