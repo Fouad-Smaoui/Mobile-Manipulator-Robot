@@ -254,6 +254,90 @@ scenario fully works.
     polls the status topic instead of blocking on `get_result_async()`
     to avoid this.
 
+## RViz re-verification (2026-06-23, via the `ros2-skill` Claude Code skill)
+
+Re-ran the `display.launch.py` check using the installed `ros2-skill`
+(`~/.claude/skills/ros2-skill/scripts/ros2_cli.py`) instead of raw `ros2`
+commands, per the same "don't trust a screenshot" standard applied to
+Scenario C. Confirmed independently, not just by looking at the window:
+
+- `ros2_cli.py profile scan` correctly detected this workspace's real
+  controllers (`arm_controller`, `joint_state_broadcaster`,
+  `mobile_base_controller`) once scoped to `~/mobile_manipulator_ws` —
+  the skill ships a bundled example profile (`lekiwi`) that is **not**
+  this robot; loading it blindly would have been a real mistake. It also
+  initially auto-classified this robot as `humanoid` (false positive
+  from `shoulder_joint`/`elbow_joint` name patterns matching its
+  humanoid heuristic); corrected with `--robot-type mobile_manipulator`.
+- `ros2_cli.py node info /rviz` confirmed RViz's actual ROS graph
+  subscriptions: `/robot_description` directly, and `/tf` + `/tf_static`
+  via its internal `transform_listener_impl_*` node — i.e. RViz is
+  genuinely wired to live state, not a cached/static view.
+- Raw `ros2 run tf2_ros tf2_echo base_link tool0` (ground truth,
+  independent of any tooling) resolved the full kinematic chain
+  end-to-end: `[0.200, 0.000, 1.112]`, 90° yaw — proving every
+  intermediate transform in the 5-joint arm chain exists and is correct.
+
+### Three real bugs found in the `ros2-skill` itself
+
+12. **`topics publish` durability/QoS mismatch.** The skill's publisher
+    for `/joint_states` used `TRANSIENT_LOCAL` durability;
+    `robot_state_publisher`'s subscription is `BEST_EFFORT`/`VOLATILE`.
+    Confirmed directly with the skill's own `topics qos-check` command,
+    which reported `"compatible": false`. Messages were never received
+    by `robot_state_publisher` regardless of publish duration (tested up
+    to 25s continuous, both endpoints visible in the ROS graph the whole
+    time) — this is a real, reproducible defect in the skill's publish
+    path for this case, not a discovery-timing artifact. Worked around
+    by writing a 20-line one-off `rclpy` publisher with explicit
+    `RELIABLE`/`VOLATILE` QoS instead.
+13. **`tf list` / `tf echo` under-report frames.** Even immediately after
+    a fresh, known-good launch (confirmed via raw `tf2_echo` in the same
+    breath), the skill's `tf list` only ever returned the 3 frames backed
+    by `/tf_static` (`arm_mount`, `base_footprint`, `tool0`) and never
+    the 9 frames published dynamically via `/tf` — across many retries,
+    durations, and timing offsets. Raw `tf2_echo`/`tf2_ros` tooling
+    resolved the full tree correctly every time on the same live system.
+    Treat this skill's `tf` subcommands as unreliable for completeness
+    checks; use raw `tf2_echo` for ground truth.
+14. **`run new` / `launch new` source the wrong workspace.** Both
+    commands reported `workspace_sourced:
+    "/home/fouadroboticist/ros2_ws/install/local_setup.bash"` — an
+    unrelated, older workspace from a different project on this machine
+    — regardless of which workspace was actually sourced in the calling
+    shell before invoking `ros2_cli.py`, and with no documented flag to
+    override it. `launch new mobile_manipulator_bringup display.launch.py`
+    failed outright with `"Package 'mobile_manipulator_bringup' not
+    found"` as a direct consequence. Worked around by launching via plain
+    `ros2 launch`/`ros2 run` for this project's own packages, while still
+    using the skill for all introspection/diagnosis (profile, node info,
+    qos-check, tf ground-truth cross-checks), which worked correctly
+    throughout.
+
+### Screenshot technique, generalized beyond Gazebo
+
+Gazebo Sim's own `/gui/screenshot` gz-transport service was the fix for
+Scenario C's black-screenshot problem (see above) because it reads the
+renderer's framebuffer directly. RViz2 has no equivalent built-in
+mechanism, and forcing `LIBGL_ALWAYS_SOFTWARE=1` before launching it did
+**not** fix the black-capture problem (`scrot` still produced an
+identical-byte-count solid-black PNG).
+
+The actual fix: WSLg renders each Linux GUI app into a **real native
+Windows window** (visible in `Get-Process | Where-Object
+MainWindowTitle`, hosted under an `msrdc` process) — that's how the
+window is visible to a human looking at the screen at all. Capturing
+from the **Windows side**, via PowerShell + `System.Drawing` /
+`CopyFromScreen` against that window's `GetWindowRect` bounds, bypasses
+the WSL-internal X11/Wayland GPU-surface compositing problem entirely
+and produces a correct image. This generalizes to any WSLg GUI app, not
+just RViz — and is simpler than per-app workarounds like Gazebo's
+screenshot service when one isn't available.
+
+Screenshot saved: `images/rviz_display.png` — RobotModel + TF displays
+both enabled, `Global Status: Ok`, TF axis markers visible at every
+joint, confirming a fully-populated, live-updating kinematic tree.
+
 ## Known-not-yet-tested
 
 - Scenario B's full Nav2 + slam_toolbox path with an actual `2D Nav Goal`
