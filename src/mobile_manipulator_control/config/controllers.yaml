@@ -20,8 +20,13 @@ mobile_base_controller:
     left_wheel_names: ['front_left_wheel_joint', 'rear_left_wheel_joint']
     right_wheel_names: ['front_right_wheel_joint', 'rear_right_wheel_joint']
 
+    # Derived from the actual STL meshes, not assumed: wheel centers are
+    # at base.xacro y=+-0.250 (separation 0.500); wheel.stl's bounding
+    # box after the URDF's own roll rotation gives a wheel radius of
+    # ~0.0997m, not the 0.0625m the original repo's control.yaml assumed
+    # without checking the mesh.
     wheel_separation: 0.500
-    wheel_radius: 0.0625
+    wheel_radius: 0.0997
 
     base_frame_id: base_link
     odom_frame_id: odom

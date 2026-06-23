@@ -42,7 +42,13 @@ local_costmap:
       width: 5
       height: 5
       resolution: 0.05
-      robot_radius: 0.35
+      # Rectangular footprint, not a circular robot_radius -- this base
+      # is 0.65m x 0.40m at the chassis (per robot_base.stl) with wheels
+      # protruding further in y (mounted at +-0.250 in base.xacro, plus
+      # wheel half-width), not a circular platform. A robot_radius here
+      # would be the same simplification turtlebot/kobuki-style circular
+      # bases use, which understates this robot's footprint in y.
+      footprint: "[[0.33, -0.30], [0.33, 0.30], [-0.33, 0.30], [-0.33, -0.30]]"
       plugins: ["obstacle_layer", "inflation_layer"]
       obstacle_layer:
         plugin: "nav2_costmap_2d::ObstacleLayer"
@@ -62,7 +68,7 @@ global_costmap:
       use_sim_time: true
       global_frame: map
       robot_base_frame: base_link
-      robot_radius: 0.35
+      footprint: "[[0.33, -0.30], [0.33, 0.30], [-0.33, 0.30], [-0.33, -0.30]]"
       resolution: 0.05
       plugins: ["static_layer", "obstacle_layer", "inflation_layer"]
       static_layer:

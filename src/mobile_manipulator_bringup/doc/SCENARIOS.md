@@ -47,6 +47,15 @@ it until a LiDAR is added to `base.xacro` and `mobile_manipulator.gazebo.xacro`
 scenario demonstrates the *navigation stack wiring*, not obstacle-aware
 navigation.
 
+**Verified against geometry, not assumed:** `config/nav2_params.yaml`
+defines `footprint` as a rectangular polygon derived from the actual STL
+bounding boxes (`robot_base.stl`, `wheel.stl`), not a circular
+`robot_radius` — the simplification standard in turtlebot/kobuki-style
+nav2 demos, which doesn't fit this robot's rectangular 4-wheel chassis.
+`mobile_manipulator_control/config/controllers.yaml`'s `wheel_radius` was
+likewise corrected from an unverified 0.0625m (carried over from the
+original repo) to ~0.0997m, measured from `wheel.stl`.
+
 ## Scenario C — Mobile Manipulation
 
 ```bash
