@@ -57,7 +57,7 @@ class VerifyScenarioC(Node):
             reliability=QoSReliabilityPolicy.RELIABLE,
             durability=QoSDurabilityPolicy.TRANSIENT_LOCAL,
         )
-        self._latest_status = None
+        self._latest_status_list = []
         self.create_subscription(
             GoalStatusArray,
             '/arm_controller/follow_joint_trajectory/_action/status',
@@ -75,8 +75,13 @@ class VerifyScenarioC(Node):
         self._latest_joint_states = msg
 
     def _on_status(self, msg):
-        if msg.status_list:
-            self._latest_status = msg.status_list[-1]
+        # AUDIT FIX: this used to keep only msg.status_list[-1], assuming
+        # the newest goal is always last. The status array accumulates
+        # every goal the server has seen (including the launch file's
+        # own auto-triggered demo goal sent moments earlier); the last
+        # element is not guaranteed to be the goal *this script* sent.
+        # Keep the whole list and look up by goal_id when checking.
+        self._latest_status_list = list(msg.status_list)
 
     # --- Layer 1: ROS 2 control layer -------------------------------
     def check_controller_layer(self):
@@ -131,11 +136,18 @@ class VerifyScenarioC(Node):
             return False, 'goal rejected or send timed out'
         goal_id = handle.goal_id.uuid
 
-        deadline = time.time() + 15.0
+        # 40s, not the trajectory's nominal 2s: this environment's DDS/
+        # executor scheduling under CPU-constrained Gazebo Sim has shown
+        # up to ~26s of delay between actual completion and the status
+        # update being observed (see docs/TESTING.md) -- a generous
+        # deadline here avoids a false FAIL on a slow-but-real success.
+        deadline = time.time() + 40.0
         while time.time() < deadline:
             rclpy.spin_once(self, timeout_sec=0.2)
-            if self._latest_status is not None and bytes(self._latest_status.goal_info.goal_id.uuid) == bytes(goal_id):
-                status = self._latest_status.status
+            for entry in self._latest_status_list:
+                if bytes(entry.goal_info.goal_id.uuid) != bytes(goal_id):
+                    continue
+                status = entry.status
                 if status == GoalStatus.STATUS_SUCCEEDED:
                     return True, f'action status topic reports STATUS_SUCCEEDED ({status})'
                 if status in (GoalStatus.STATUS_ABORTED, GoalStatus.STATUS_CANCELED):
