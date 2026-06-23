@@ -62,11 +62,21 @@ def generate_launch_description():
         remappings=cmd_vel_remap,
     )
 
+    # RELIABILITY FIX: stock Nav2 default BT XML's recovery RoundRobin
+    # includes a fixed 5s Wait action meant for transient dynamic
+    # obstacles (e.g. a person crossing the path) -- this scenario's
+    # world is static, so that Wait buys nothing and was measured to
+    # burn real wall-clock time across retries on hard-to-plan goals
+    # (sharp diagonal/backward paths) without ever actually erroring.
+    # Our copy is identical to the stock XML except Wait is cut to 1.0s.
+    bt_xml_path = os.path.join(
+        pkg_bringup, 'config', 'navigate_to_pose_w_replanning_and_recovery.xml'
+    )
     bt_navigator = Node(
         package='nav2_bt_navigator',
         executable='bt_navigator',
         output='screen',
-        parameters=[params_file],
+        parameters=[params_file, {'default_nav_to_pose_bt_xml': bt_xml_path}],
     )
 
     lifecycle_manager = Node(

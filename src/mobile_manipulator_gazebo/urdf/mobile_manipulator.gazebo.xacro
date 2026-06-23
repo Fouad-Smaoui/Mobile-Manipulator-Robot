@@ -32,26 +32,62 @@
     </plugin>
   </gazebo>
 
-  <!-- #################### Perception roadmap hooks ####################
-       No sensors exist on the robot yet (confirmed in the forensic audit:
-       README claimed cameras/LiDAR, code had none). These are commented
-       placeholders showing exactly where perception attaches once a
-       sensor mount is added to base.xacro. Not enabled by default, so
-       this package keeps building/launching cleanly without sensor
-       plugins that have no corresponding link. Plugin names below use
-       the Gazebo Sim (gz-sim) sensor system, not Gazebo Classic.
-
-  <gazebo reference="camera_link">
-    <sensor type="camera" name="rgb_camera">
-      <plugin filename="gz-sim-sensors-system" name="gz::sim::systems::Sensors"/>
+  <!-- ###################################################################
+       LiDAR sensor (Scenario B / Nav2 + SLAM). Real, not a placeholder:
+       a `lidar_link` now exists in base.xacro (mounted at the base
+       front), so this sensor block is enabled by default. Topic is
+       `/scan` directly (not `/perception/scan`) to match what
+       mobile_manipulator_bringup/config/nav2_params.yaml's costmaps and
+       slam_toolbox both expect out of the box: no remap needed.
+       The world-level `gz-sim-sensors-system` plugin (already loaded in
+       mobile_manipulator_world.world) is what actually runs this sensor;
+       this block only declares it on the link.
+       ################################################################### -->
+  <gazebo reference="lidar_link">
+    <sensor type="gpu_lidar" name="lidar">
+      <topic>/scan</topic>
+      <!-- AUDIT FIX: gz-sim stamps the published LaserScan with its own
+           auto-generated scoped frame ("mobile_manipulator/base_link/lidar"),
+           not "lidar_link", the frame robot_state_publisher actually
+           publishes via TF. Nav2's costmap and slam_toolbox both call tf2
+           lookupTransform() using the scan message's frame_id, so an
+           unmatched frame_id silently breaks both with no Gazebo-side
+           error. Tried fixing it here with a `<gz_frame_id>lidar_link</gz_frame_id>`
+           element (confirmed to be the right keyword by `strings` on
+           libgz-sensors8.so.8); verified by an actual run that
+           sdformat's URDF->SDF converter silently drops it before the
+           sensor ever sees it (`gz_frame_id` is not a recognized SDF
+           schema element for <sensor>, unlike <ros2_control>, which has
+           explicit pass-through support). Fixed instead with a static
+           transform publisher bridging the two frame names in
+           gazebo_sim.launch.py, since they are physically coincident. -->
+      <update_rate>10</update_rate>
+      <always_on>true</always_on>
+      <visualize>true</visualize>
+      <lidar>
+        <scan>
+          <horizontal>
+            <samples>360</samples>
+            <resolution>1</resolution>
+            <min_angle>-3.14159</min_angle>
+            <max_angle>3.14159</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.12</min>
+          <max>12.0</max>
+          <resolution>0.01</resolution>
+        </range>
+      </lidar>
     </sensor>
   </gazebo>
 
-  <gazebo reference="lidar_link">
-    <sensor type="gpu_lidar" name="lidar">
-      <topic>/perception/scan</topic>
-      <update_rate>10</update_rate>
-    </sensor>
+  <!-- #################### Perception roadmap hook (camera) ############
+       Camera still genuinely absent: no camera_link exists in
+       base.xacro/arm.xacro. Left as a placeholder; not enabled.
+
+  <gazebo reference="camera_link">
+    <sensor type="camera" name="rgb_camera"/>
   </gazebo>
   ##################################################################### -->
 

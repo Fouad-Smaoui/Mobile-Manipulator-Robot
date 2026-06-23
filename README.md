@@ -97,8 +97,25 @@ sudo apt install ros-jazzy-controller-manager ros-jazzy-joint-state-broadcaster 
 | Scenario | Command | Demonstrates |
 |---|---|---|
 | A — Teleoperation | `ros2 launch mobile_manipulator_bringup scenario_a_teleop.launch.py` | URDF + ros2_control velocity interface + diff-drive kinematics, end-to-end |
-| B — Autonomous Navigation | `ros2 launch mobile_manipulator_bringup scenario_b_navigation.launch.py` | Nav2 + slam_toolbox wired against this robot's footprint and TF tree |
+| B — Autonomous Navigation | `ros2 launch mobile_manipulator_bringup scenario_b_navigation.launch.py` | Real LiDAR → `slam_toolbox` SLAM → Nav2, verified layer-by-layer (TF, odom, costmap, navigation) against live ROS 2 state, not screenshots: `ros2 run mobile_manipulator_bringup verify_scenario_b.py` |
 | C — Mobile Manipulation | `ros2 launch mobile_manipulator_bringup scenario_c_manipulation.launch.py` | `FollowJointTrajectory` goal → `joint_trajectory_controller` → simulated arm motion, verified end-to-end with an automated check: `ros2 run mobile_manipulator_bringup verify_scenario_c.py` |
+
+<p>
+  <img src="images/scenario_b_gazebo_final.png" width="400"/>
+  <img src="images/scenario_b_rviz_final.png" width="400"/>
+</p>
+
+Scenario B side-by-side: Gazebo physics (left) and RViz showing the
+robot, the live SLAM-built map, and real LaserScan hits on the
+obstacle (right). **Verified state, not just visually working** — two
+real bugs (a `cmd_vel` message-type mismatch and a costmap
+obstacle-height misconfiguration) were found and fixed by inspecting
+live ROS 2 topics/services, and navigation reliability was pushed as
+far as is honestly possible: the one remaining class of failure is
+`RegulatedPurePursuitController` correctly refusing to rotate through
+an inflated-cost zone near clutter — a safety behavior, not a bug. Full
+investigation, evidence, and the inflation-radius/reachability
+tradeoff this surfaced: [`docs/TESTING.md`](docs/TESTING.md).
 
 Full walkthroughs, expected output, and launch options for each scenario:
 [`mobile_manipulator_bringup/doc/SCENARIOS.md`](src/mobile_manipulator_bringup/doc/SCENARIOS.md).
@@ -120,12 +137,16 @@ Full signal path and deployment steps:
 ## Roadmap
 
 1. CI running `colcon build` + `colcon test` on every push.
-2. LiDAR mount + Gazebo Sim `gpu_lidar` sensor to make Scenario B obstacle-aware.
+2. ~~LiDAR mount + Gazebo Sim `gpu_lidar` sensor to make Scenario B obstacle-aware.~~
+   **Done** — `gpu_lidar` on `lidar_link`, live `slam_toolbox` SLAM, Nav2
+   costmaps verified to actually mark real obstacles. See `docs/TESTING.md`.
 3. MoveIt config for the 5-DOF arm, replacing Scenario C's scripted joint goal with real IK.
 4. Implement the `MobileManipulatorSystem` pluginlib plugin against a real motor driver board.
 5. Gripper + `tool0` end-effector for an actual pick-and-place, not just a reach gesture.
 6. Camera mount + a perception package (hook documented in `docs/PHYSICAL_AI_ROADMAP.md`).
-7. Static map for Scenario B once a real or simulated LiDAR exists.
+7. Tune `inflation_radius`/footprint padding for Scenario B to widen the
+   goal-reachability envelope near clutter without losing real collision
+   safety margin — a measured tradeoff, not yet attempted (`docs/TESTING.md`).
 8. Swarm namespacing demo (multi-robot launch).
 9. Reinforcement-learning environment wrapping `gazebo_sim.launch.py` (hook documented in `docs/PHYSICAL_AI_ROADMAP.md`).
 

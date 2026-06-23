@@ -59,5 +59,32 @@
         </visual>
       </link>
     </model>
+
+    <!-- ###################################################################
+       Scenario B obstacle. Without this, "plan a path and avoid
+       obstacles" is untestable: a straight line from spawn to any goal
+       would succeed trivially regardless of whether the planner/costmap
+       pipeline actually works. A single wall, centered on the direct
+       spawn->goal line, forces a real detour around one end. 2.0m wide
+       with >2m of clear space beyond each end (well past the costmap
+       inflation radius of 0.55m) so a route around it is always
+       geometrically available. Positioned clear of pick_table (Scenario C).
+       ################################################################### -->
+    <model name="obstacle_wall">
+      <static>true</static>
+      <pose>1.6 0 0.4 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>0.2 2.0 0.8</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>0.2 2.0 0.8</size></box></geometry>
+          <material>
+            <ambient>0.55 0.55 0.6 1</ambient>
+            <diffuse>0.55 0.55 0.6 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
   </world>
 </sdf>

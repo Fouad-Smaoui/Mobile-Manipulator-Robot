@@ -92,10 +92,16 @@ def generate_launch_description():
     # Gazebo Sim runs its own simulated clock; bridge it to ROS so any
     # node with use_sim_time:=true (robot_state_publisher, nav2,
     # slam_toolbox) stays synchronized with it instead of the wall clock.
+    # Also bridges /scan (the lidar_link gpu_lidar sensor declared in
+    # mobile_manipulator.gazebo.xacro) gz->ros, one-directional: nothing
+    # ROS-side ever needs to command the sensor.
     clock_bridge = Node(
         package='ros_gz_bridge',
         executable='parameter_bridge',
-        arguments=['/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock'],
+        arguments=[
+            '/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock',
+            '/scan@sensor_msgs/msg/LaserScan[gz.msgs.LaserScan',
+        ],
         output='screen',
     )
 
@@ -104,6 +110,26 @@ def generate_launch_description():
         executable='create',
         arguments=['-topic', 'robot_description', '-name', 'mobile_manipulator'],
         output='screen',
+    )
+
+    # AUDIT FIX: sdformat's URDF->SDF converter silently drops the
+    # <gz_frame_id> sensor element (not a recognized standard SDF schema
+    # field, unlike <ros2_control>), so the spawned lidar always publishes
+    # /scan under gz-sim's own auto-generated frame name
+    # "mobile_manipulator/base_link/lidar" rather than "lidar_link" --
+    # confirmed via an actual run, not assumed. Both names refer to the
+    # exact same physical sensor pose, so a zero-offset static transform
+    # is the correct fix, not a hack: it makes the unmatched frame name
+    # resolvable in TF for anything (Nav2 costmaps, slam_toolbox) that
+    # calls lookupTransform() using the scan message's frame_id.
+    lidar_frame_bridge = Node(
+        package='tf2_ros',
+        executable='static_transform_publisher',
+        arguments=[
+            '--frame-id', 'lidar_link',
+            '--child-frame-id', 'mobile_manipulator/base_link/lidar',
+        ],
+        parameters=[{'use_sim_time': True}],
     )
 
     joint_state_broadcaster_spawner = Node(
@@ -143,6 +169,7 @@ def generate_launch_description():
         gz_sim,
         clock_bridge,
         robot_state_publisher,
+        lidar_frame_bridge,
         spawn_entity,
         delayed_controllers,
     ])

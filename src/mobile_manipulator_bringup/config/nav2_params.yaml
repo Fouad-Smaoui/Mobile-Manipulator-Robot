@@ -4,6 +4,9 @@ bt_navigator:
     global_frame: map
     robot_base_frame: base_link
     odom_topic: /mobile_base_controller/odom
+    # default_nav_to_pose_bt_xml is set in navigation.launch.py instead of
+    # here -- a static params YAML can't use launch-time path
+    # substitution (find-pkg-share only resolves inside launch files).
 
 controller_server:
   ros__parameters:
@@ -14,11 +17,39 @@ controller_server:
     progress_checker_plugin: "progress_checker"
     goal_checker_plugins: ["goal_checker"]
     controller_plugins: ["FollowPath"]
+    # AUDIT FIX: verified live (`ros2 topic info /mobile_base_controller/cmd_vel
+    # --verbose`) that controller_server was publishing plain geometry_msgs/Twist
+    # while mobile_base_controller (diff_drive_controller) subscribes with
+    # TwistStamped -- a DDS type mismatch, so no command from Nav2 was ever
+    # actually delivered to the robot regardless of what the action status
+    # reported. Same Twist->TwistStamped migration this project already hit
+    # with teleop_twist_keyboard; Nav2's controller_server/behavior_server
+    # default this to false for backward compat.
+    enable_stamped_cmd_vel: true
+    # AUDIT FIX: verified live (`ros2 topic info /odom --verbose`) that
+    # controller_server's odom subscription has zero matching publishers --
+    # it defaults to the bare topic name "odom", but the real odometry is
+    # published at /mobile_base_controller/odom (never remapped to plain
+    # /odom anywhere). This starves RegulatedPurePursuitController's
+    # odom_smoother of real velocity feedback used by
+    # use_velocity_scaled_lookahead_dist. bt_navigator already had this
+    # set correctly; controller_server did not.
+    odom_topic: /mobile_base_controller/odom
 
+    # RELIABILITY FIX: SimpleProgressChecker only measures translational
+    # displacement. RegulatedPurePursuitController rotates in place to
+    # face the path's initial heading before it starts driving (normal,
+    # correct behavior, not a bug) -- with the old 10s/0.5m budget, a
+    # goal requiring a sharp turn could exhaust the whole allowance just
+    # rotating, get flagged "stalled", and abort before ever moving
+    # forward. Confirmed via controller_server log: several real aborts
+    # showed "Failed to make progress" while the robot was actively
+    # mid-rotation, not actually stuck. Widened the time budget and
+    # loosened the radius so small/slow real movement still counts.
     progress_checker:
       plugin: "nav2_controller::SimpleProgressChecker"
-      required_movement_radius: 0.5
-      movement_time_allowance: 10.0
+      required_movement_radius: 0.3
+      movement_time_allowance: 20.0
 
     goal_checker:
       plugin: "nav2_controller::SimpleGoalChecker"
@@ -31,6 +62,21 @@ controller_server:
       max_angular_accel: 3.2
       min_turning_radius: 0.0
       use_velocity_scaled_lookahead_dist: true
+      # RELIABILITY FIX: faster in-place rotation shortens the window
+      # where the robot makes zero translational progress (by design,
+      # while turning to face the path) before the progress_checker
+      # above sees real forward motion. Complements the progress_checker
+      # widening: this shrinks the stall risk, the other widens the
+      # budget for it.
+      rotate_to_heading_angular_vel: 2.5
+      # AUDIT FIX: verified live (controller_server log) that slam_toolbox's
+      # map->odom TF publish timing is irregular enough under this
+      # CPU-constrained WSL test environment that RPPPathHandler's
+      # transformPose lookups intermittently land ~50ms before the TF
+      # buffer's earliest retained sample ("Lookup would require
+      # extrapolation into the past"), aborting the goal with TF_ERROR.
+      # The default tolerance did not absorb this; widened explicitly.
+      transform_tolerance: 0.5
 
 local_costmap:
   local_costmap:
@@ -58,6 +104,15 @@ local_costmap:
           data_type: "LaserScan"
           marking: true
           clearing: true
+          # AUDIT FIX: verified live via `ros2 param get
+          # /local_costmap/local_costmap obstacle_layer.scan.max_obstacle_height`
+          # that this per-source override defaults to 0.0m (distinct from the
+          # layer-level max_obstacle_height: 2.0 default), silently rejecting
+          # every LiDAR point as "too high" since lidar_link is mounted at
+          # z=0.20m -- the obstacle_layer marked zero cells despite real,
+          # confirmed scan hits and valid TF. Not previously set in this file.
+          min_obstacle_height: 0.0
+          max_obstacle_height: 2.0
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
         inflation_radius: 0.55
@@ -80,6 +135,9 @@ global_costmap:
         scan:
           topic: /scan
           data_type: "LaserScan"
+          # Same fix as local_costmap's obstacle_layer above.
+          min_obstacle_height: 0.0
+          max_obstacle_height: 2.0
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
         inflation_radius: 0.55
@@ -95,6 +153,10 @@ planner_server:
 behavior_server:
   ros__parameters:
     use_sim_time: true
+    # AUDIT FIX: same Twist->TwistStamped DDS type mismatch as
+    # controller_server above -- behavior_server publishes its own cmd_vel
+    # for recovery behaviors (spin/backup) independently.
+    enable_stamped_cmd_vel: true
     behavior_plugins: ["spin", "backup", "wait"]
     spin:
       plugin: "nav2_behaviors::Spin"

@@ -14,7 +14,7 @@ install(
 )
 
 install(
-  PROGRAMS scripts/pick_place_demo.py scripts/verify_scenario_c.py
+  PROGRAMS scripts/pick_place_demo.py scripts/verify_scenario_c.py scripts/verify_scenario_b.py
   DESTINATION lib/${PROJECT_NAME}
 )
 
