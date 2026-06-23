@@ -6,9 +6,24 @@ entries are dated and tied to a commit.
 
 ## Environment
 
-- Docker image `ros2-jazzy-ros2-jazzy:latest` (ROS 2 Jazzy, Ubuntu 24.04 Noble), repo bind-mounted as a colcon workspace.
-- Headless (no X server) — `gz sim ... -s` server-only mode throughout.
-- Container had no GPU and was running under Docker Desktop on Windows (WSL2 backend), which is meaningfully more CPU-constrained than a native Linux host. This matters for the Scenario B result below.
+Two environments were used:
+
+1. Docker image `ros2-jazzy-ros2-jazzy:latest` (ROS 2 Jazzy, Ubuntu 24.04 Noble), repo bind-mounted as a colcon workspace. Headless (no X server) — `gz sim ... -s` server-only mode throughout. No GPU, running under Docker Desktop on Windows (WSL2 backend) — meaningfully more CPU-constrained than a native Linux host. This matters for the Scenario B result below.
+2. WSL Ubuntu 24.04 directly (not Docker), with the repo's `src/` copied into a native-filesystem workspace (`~/mobile_manipulator_ws`) rather than building on `/mnt/c/...` (DrvFS doesn't reliably support the symlinks `colcon build --symlink-install` needs). Windows 11's WSLg gives this instance a real GUI compositor, so `rviz2` and `gz sim`'s GUI render as native windows on the Windows desktop — used to **visually** confirm RViz and Gazebo Sim, not just check logs/topics.
+
+## Visual verification (WSL + WSLg)
+
+With packages installed (`ros-jazzy-gz-ros2-control`, `ros-jazzy-nav2-bringup`, `ros-jazzy-slam-toolbox`, `ros-jazzy-joint-state-publisher-gui`, `ros-jazzy-rviz2`, etc.) and the workspace built fresh in `~/mobile_manipulator_ws`:
+
+- `ros2 launch mobile_manipulator_bringup display.launch.py` — RViz and the joint-slider GUI both appeared as native windows; user confirmed the robot model (base + 5-DOF arm) rendered correctly, no missing meshes.
+- `ros2 launch mobile_manipulator_gazebo gazebo_sim.launch.py` — Gazebo Sim's GUI appeared with the robot spawned next to the `pick_table` model; user confirmed visually.
+- Drove the robot live: published `TwistStamped{linear.x: 0.3, angular.z: 0.2}` to `/mobile_base_controller/cmd_vel` for ~4s. `/mobile_base_controller/odom` advanced to `x: 0.280, y: 0.023` with yaw rotation — robot visibly moved forward and curved in the Gazebo window.
+- Ran `pick_place_demo.py` against the same live sim: goal accepted, `/joint_states` afterward showed `bottom_wrist_joint = 0.300`, `elbow_joint = 1.200` — arm visibly swung toward the table.
+
+### Real bugs found only in this environment (not in Docker)
+
+9. **Stale `ros-jazzy-fastcdr` package** (dated April 2025) installed alongside newer FastRTPS/typesupport packages (Aug–Oct 2025) caused `undefined symbol: _ZN8eprosima7fastcdr3Cdr9serializeERKh` crashes in `controller_manager` spawners and `gz sim` itself. Fixed with `apt-get install --only-upgrade ros-jazzy-fastcdr && apt-get upgrade`. This is an environment-consistency issue, not a repo bug, but it fully blocked Gazebo from starting until fixed — worth checking `dpkg -l | grep -i fastcdr` for matching dates if `gz sim`/`controller_manager` crash with symbol-lookup errors on any machine.
+10. **Cross-launch `/robot_description` collision**: running `display.launch.py` (which launches its own `robot_state_publisher` with `sim_mode:=false`) at the same time as `gazebo_sim.launch.py` (`sim_mode:=true`) caused `gz_ros_control`'s embedded `controller_manager` to load the **wrong** hardware plugin (`mobile_manipulator_hardware/MobileManipulatorSystem` instead of `gz_ros2_control/GazeboSimSystem`), because neither launch file namespaces its nodes and both publish to the same global `/robot_description` topic with `transient_local` durability — a late subscriber can pick up either publisher's retained message non-deterministically. Confirmed by inspecting both `robot_state_publisher` processes' actual resolved `--params-file` content directly. **Not a code bug** — each launch file is correct in isolation — but a real gotcha: don't run two of this repo's launch files that both bring up `robot_state_publisher` at the same time without namespacing.
 
 ## Why this exists
 
@@ -110,7 +125,5 @@ scenario fully works.
 
 - Scenario B's full Nav2 + slam_toolbox path with an actual `2D Nav Goal`
   sent and a path executed.
-- Any GUI/RViz visual verification (this environment was headless
-  throughout).
 - Real hardware deployment path (`mobile_manipulator_hardware`) — still
   stub-only by design, see `HARDWARE.md`.
