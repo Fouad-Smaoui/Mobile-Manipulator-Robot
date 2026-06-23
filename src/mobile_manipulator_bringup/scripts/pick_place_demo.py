@@ -57,6 +57,31 @@ class PickPlaceDemo(Node):
             self.get_logger().error('Goal rejected by arm_controller')
             return
         self.get_logger().info('Goal accepted, arm should now be moving in Gazebo')
+        # AUDIT FIX: this used to stop here. Acceptance only means the
+        # controller queued the trajectory -- it says nothing about
+        # whether the motion actually completed. A real verification
+        # pass (see docs/TESTING.md) found this script reported "success"
+        # purely on acceptance while never checking the action's terminal
+        # result, which is exactly the kind of gap that can hide a
+        # trajectory that was accepted but aborted partway through.
+        self._get_result_future = handle.get_result_async()
+        self._get_result_future.add_done_callback(self._on_result)
+
+    def _on_result(self, future):
+        result = future.result()
+        status = result.status
+        error_code = result.result.error_code
+        if status == 4 and error_code == 0:  # GoalStatus.STATUS_SUCCEEDED
+            self.get_logger().info(
+                f'Trajectory SUCCEEDED (status={status}, error_code={error_code}) '
+                '-- arm reached the commanded pose.'
+            )
+        else:
+            self.get_logger().error(
+                f'Trajectory did NOT succeed: status={status}, '
+                f'error_code={error_code}, error_string="{result.result.error_string}". '
+                'Acceptance is not success -- see docs/TESTING.md.'
+            )
 
 
 def main(args=None):

@@ -56,23 +56,30 @@ explicit "known limitations" sections signal engineering maturity rather
 than overclaiming (a stronger signal than a polished README with no
 caveats).
 **Weaknesses:** no demo video/GIF embedded in the README yet (text +
-diagrams only, even though the underlying motion has now been run and
-visually confirmed — see `docs/TESTING.md`); no physical hardware photos
-— this remains a simulation-and-architecture portfolio piece, not proof
-of a deployed robot.
-**Missing evidence:** a recording. The motion itself is no longer
-missing evidence — it happened, live, in Gazebo's GUI — but it isn't
-captured anywhere a recruiter skimming the README would see it.
+diagrams only); no physical hardware photos — this remains a
+simulation-and-architecture portfolio piece, not proof of a deployed
+robot.
+**Missing evidence:** a recording. The motion itself is independently
+verified (see below — and verified the hard way, after a prior pass in
+this same assessment over-trusted a screenshot) — but it isn't captured
+anywhere a recruiter skimming the README would see it.
 
 ## Net assessment
 This repository now demonstrates *systems architecture competence* —
 clean package boundaries, an honest sim/hardware seam, documented
-limitations — convincingly. It also now demonstrates a *working
-simulated robot*: Scenarios A and C have been executed live (headless in
-Docker, and visually via WSLg) with real evidence — odometry advancing,
-joint states matching commanded poses, the robot visibly driving and the
-arm visibly moving in Gazebo's own GUI. See `docs/TESTING.md` for exactly
-what was run and what was found. The single highest-leverage next step
-for credibility is now narrower: capture that already-working run as a
-recording and embed it in the README — turning "this works (per a log
-file)" into "this works (watch it)."
+limitations — convincingly. It also demonstrates a *working simulated
+robot*, established the way a controls engineer would actually trust:
+Scenario A's odometry advanced under a published velocity command, and
+Scenario C was independently re-audited across four evidence streams
+(`/controller_manager/list_controllers`, the action's own
+`GoalStatusArray`, Gazebo's raw physics topic read independent of the
+ROS bridge, and a TF↔physics cross-check) — not a screenshot, which an
+earlier pass here wrongly treated as sufficient and which `docs/TESTING.md`
+now explicitly documents as having been corrected. That re-audit also
+caught two real defects (an incomplete result-check in the demo script,
+and an action-result latency characteristic of the test environment),
+both fixed or documented. See `docs/TESTING.md` for exactly what was run
+and found. The single highest-leverage next step for credibility is now
+narrower: capture an already-verified run as a recording and embed it in
+the README — turning "this works (per independently-checked state)" into
+"this works (watch it)."

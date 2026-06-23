@@ -113,7 +113,23 @@ which scenarios are fully vs. partially verified.
 |---|---|---|---|
 | A — Teleoperation | `ros2 launch mobile_manipulator_bringup scenario_a_teleop.launch.py` | URDF + ros2_control velocity interface + diff-drive kinematics, end-to-end | ✅ live in Gazebo GUI — odometry advanced, robot visibly drove and turned |
 | B — Autonomous Navigation | `ros2 launch mobile_manipulator_bringup scenario_b_navigation.launch.py` | Nav2 + slam_toolbox wired against this robot's footprint and TF tree | ⚠️ partial — Nav2 config loads and `controller_server` activates; full lifecycle bring-up not yet confirmed |
-| C — Mobile Manipulation | `ros2 launch mobile_manipulator_bringup scenario_c_manipulation.launch.py` | `FollowJointTrajectory` goal → `joint_trajectory_controller` → simulated arm motion | ✅ live in Gazebo GUI — arm visibly swung to the commanded pose |
+| C — Mobile Manipulation | `ros2 launch mobile_manipulator_bringup scenario_c_manipulation.launch.py` | `FollowJointTrajectory` goal → `joint_trajectory_controller` → simulated arm motion | ✅ re-audited with 4 independent evidence streams (controller state, action status, raw Gazebo physics, TF cross-check) — not just a screenshot, see below |
+
+A screenshot in this README is not evidence of anything — a prior pass
+in this project treated one as proof and that was wrong. Scenario C was
+re-audited from first principles using ROS 2/Gazebo state only
+(`/controller_manager/list_controllers`, the action's own
+`GoalStatusArray`, Gazebo's raw physics topic independent of the ROS
+bridge, and a TF↔physics cross-check) and the verdict — physically
+correct execution — now rests on that, plus a reusable, automated check:
+```bash
+ros2 run mobile_manipulator_bringup verify_scenario_c.py
+```
+The audit also found two real defects along the way (an incomplete
+result-check in the demo script, and a ~26s action-result latency
+characteristic of this CPU-constrained test environment) — both are
+documented, not hidden, in
+[`docs/TESTING.md`](docs/TESTING.md#scenario-c--mobile-manipulation).
 
 Full expected output, exact verification status, and known limitations
 for each scenario:

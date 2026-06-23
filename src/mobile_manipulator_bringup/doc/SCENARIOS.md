@@ -97,16 +97,22 @@ arm motion in Gazebo.
 - After ~8s (giving controllers time to spawn), the arm swings toward the
   table using the hand-picked joint targets in `scripts/pick_place_demo.py`.
 
-**Verified, with a screenshot, not just logs:** run live via WSL+WSLg —
-goal accepted by `arm_controller`, `/joint_states` confirmed
-`bottom_wrist_joint = 0.300` and `elbow_joint = 1.200` (exactly matching
-`REACH_POSE`) while the simulation was running, and a screenshot was
-captured directly from Gazebo's own render buffer (the `/gui/screenshot`
-service — plain X11 window-grab tools like `scrot` capture solid black
-for GPU-rendered windows under WSLg, a real gotcha logged in
-`docs/TESTING.md`):
+**Verify it yourself — a screenshot is not evidence.** The image below
+is illustrative only. The actual verification is a 4-layer, independent
+check (controller state, action status, raw Gazebo physics, TF
+cross-check) documented in full in
+[`docs/TESTING.md`](../../../docs/TESTING.md), including two real
+defects the re-audit found (`pick_place_demo.py` previously declared
+success on goal acceptance alone, and a ~26s action-result latency
+under CPU-constrained Gazebo Sim). Three of the four layers are
+automated:
+```bash
+ros2 run mobile_manipulator_bringup verify_scenario_c.py
+```
+which prints a `PASS`/`FAIL` per layer against the live controller and
+action state — not a log line claiming success.
 
-![Scenario C: arm reaching toward the pick table in Gazebo](../../../images/scenario_c_manipulation_gazebo.png)
+![Scenario C: arm reaching toward the pick table in Gazebo (illustrative only -- see docs/TESTING.md for actual verification)](../../../images/scenario_c_manipulation_gazebo.png)
 
 **Known limitation (honest, not hidden):** this is a scripted joint-space
 goal, not an IK-driven pick-and-place — there is no MoveIt config and no

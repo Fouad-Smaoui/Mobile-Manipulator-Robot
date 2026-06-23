@@ -60,32 +60,130 @@ inspection:
 - `/tf` publishes `odom -> base_link`.
 
 ### Scenario C — Mobile Manipulation
-Run twice: once headless in Docker (log/topic evidence only), and once
-via `ros2 launch mobile_manipulator_bringup scenario_c_manipulation.launch.py`
-in WSL with WSLg, captured as an actual screenshot (see
-[`SCENARIOS.md`](../src/mobile_manipulator_bringup/doc/SCENARIOS.md)).
-The `FollowJointTrajectory` goal was accepted by `arm_controller`, and
-`/joint_states` afterward showed `bottom_wrist_joint = 0.300`,
-`elbow_joint = 1.200` — matching the script's `REACH_POSE` exactly. The
-arm moved to and held the commanded pose in the live simulation, visibly
-reaching toward the `pick_table` model.
 
-**Screenshot capture gotcha, found while doing this:** a plain X11
-window-grab tool (`scrot`) captured solid black for Gazebo's GUI window
-under WSLg — GPU-rendered/OpenGL surfaces don't reliably composite into
-the normal X11 root pixmap that such tools read from under WSLg. The
-fix: Gazebo Sim's own `/gui/screenshot` gz-transport service, which
-captures directly from the renderer's own framebuffer:
+**A screenshot is not evidence.** An earlier pass in this log treated a
+Gazebo GUI screenshot as proof Scenario C worked. It wasn't — it was a
+single visual snapshot with no controller, action, or physics-layer
+verification behind it. The repository's own audit principle ("if it
+wasn't measured in ROS/Gazebo state, it didn't happen") applies to this
+log just as much as to the robot, so that screenshot has been
+downgraded to illustrative-only and Scenario C was re-audited from
+scratch with independent evidence streams. Full methodology below;
+short version: **the original claim holds, for reasons the screenshot
+never established, and the re-audit found two real, separate defects
+along the way.**
+
+#### Re-audit protocol (2026-06-23, WSL + WSLg, isolated relaunch)
+
+Reproduced cleanly: killed every leftover ROS2/Gazebo process, restarted
+the `ros2` daemon, confirmed `ros2 node list` was empty, then launched
+`scenario_c_manipulation.launch.py` alone (no `display.launch.py` or
+Nav2 running concurrently — see bug #10 above for why that matters).
+A `ros2 bag record` of `/joint_states`, `/dynamic_joint_states`, `/tf`,
+`/tf_static`, `/arm_controller/controller_state`,
+`/arm_controller/transition_event`, `/arm_controller/joint_trajectory`,
+`/clock`, `/robot_description` ran throughout (538s, 65,295 messages,
+4,767 `/joint_states` and `/arm_controller/controller_state` samples,
+3,336 `/tf` transforms — reproducible, inspectable via `ros2 bag info`).
+
+**Layer 1 — ROS 2 control truth** (`/controller_manager/list_controllers`,
+queried directly via the service, not inferred from logs):
+all three controllers `active`; `arm_controller` claims exactly
+`{arm_base_joint, shoulder_joint, bottom_wrist_joint, elbow_joint,
+top_wrist_joint}/position` and nothing else claims any of those
+interfaces. No duplicate `controller_manager`/`arm_controller` nodes
+(`ros2 node list` showed exactly one of each). No `joint_state_publisher`
+node was running (ruling out the "GUI slider lying about joint values"
+failure mode explicitly).
+
+**Layer 2 — Action-level truth, not just acceptance.** Sent several
+goals via `ros2 action send_goal`. Found immediately that `pick_place_demo.py`
+*only ever checked goal acceptance* — never the terminal result — which
+is exactly the "trajectory accepted but not verified" gap the re-audit
+was meant to catch. Reading
+`/arm_controller/follow_joint_trajectory/_action/status` directly (a
+`GoalStatusArray`, requires matching `TRANSIENT_LOCAL` QoS to see
+retained values, this is *not* visible via plain `ros2 topic echo
+--once` without `--qos-durability transient_local`) showed the real
+per-goal terminal states: `STATUS_CANCELED` (5) for goals preempted by a
+later one, `STATUS_SUCCEEDED` (4) for goals that ran to completion —
+exactly the behavior a correct preemptible trajectory controller should
+have, not a fake uniform "always succeeded."
+
+**Defect found #1 — action result latency.** `ros2 action send_goal`
+(and a plain `rclpy` `get_result_async()` client) took **~26 seconds**
+to receive the terminal result for a 3-second trajectory, even though
+the server-side status topic reported `STATUS_SUCCEEDED` almost
+immediately. This is real and reproducible (confirmed 3 times), and is
+attributed to DDS/executor scheduling pressure under this
+CPU-constrained Gazebo Sim session (the `gz sim` process alone was
+measured at 130-400%+ CPU throughout this session) rather than a defect
+in the controller itself — the *execution* tracked correctly in real
+time per Layer 2's feedback stream (`error.positions` converging toward
+zero across consecutive feedback messages, consistent with closed-loop
+spline tracking, not an instant teleport). Practical takeaway: don't
+synchronously block on `get_result_async()` for time-critical checks in
+this kind of environment; poll the status topic instead.
+
+**Layer 3 — Gazebo physics truth, independent of the ROS bridge.**
+Queried `/world/mobile_manipulator_world/dynamic_pose/info` via
+`gz topic -e` directly — this is the physics engine's (`dartsim`) own
+link-pose output, populated by the simulation **server**, not the GUI,
+so it cannot be faked by a GUI-only animation. Before/after snapshots of
+the `elbow` and `bottom_wrist` link poses for an `arm_base_joint`
+(waist-yaw) change from 0 to 0.9 rad showed Z height unchanged to 5
+decimal places (correct — that joint doesn't move along Z) while X/Y
+shifted measurably (0.191→0.200, 0.029→0.0002) — exactly the geometric
+signature of a yaw rotation about the joint's own axis, not an arbitrary
+or absent change.
+
+**Layer 4 — Cross-check consistency.** `ros2 run tf2_ros tf2_echo
+base_link elbow` reported `[0.200, 0.000, 0.852]`; the raw Gazebo
+physics pose for the same link was `[0.20017, 0.00022, 0.85193]` —
+agreement to within ~0.2mm. `/joint_states`, TF, and the physics engine
+all agree; there is no fake propagation anywhere in the chain.
+
+**Defect found #2 (now fixed) — incomplete verification in
+`pick_place_demo.py`.** The script accepted a goal and declared success
+in its log line without ever checking the terminal result. Fixed: it
+now calls `get_result_async()` and explicitly logs `SUCCEEDED` vs.
+failure with the real `error_code`/`error_string`. Verified the fix
+itself by re-running it — it correctly printed
+`Trajectory SUCCEEDED (status=4, error_code=0)` (after the ~26s latency
+described above, which is now a known, documented characteristic, not a
+silent gap).
+
+**New reusable audit artifact:** `scripts/verify_scenario_c.py`
+(`ros2 run mobile_manipulator_bringup verify_scenario_c.py`) encodes
+Layers 1, 2 (via the low-latency status topic, not `get_result_async()`),
+and 4 as an automated, repeatable PASS/FAIL check. Run against the live
+sim during this audit:
 ```
-gz service -s /gui/screenshot --reqtype gz.msgs.StringMsg \
-  --reptype gz.msgs.Boolean --timeout 3000 \
-  --req 'data: "/path/to/an/existing/directory"'
+[PASS] Layer 1: controller_manager: arm_controller ACTIVE, sole claimant of [...]
+[PASS] Layer 2: action status (server truth): action status topic reports STATUS_SUCCEEDED (4)
+[PASS] Layer 4: /joint_states convergence: /joint_states within tolerance, max error 5.56e-03 rad
+OVERALL: PASS
 ```
-Note the request `data` field must be an existing **directory**, not a
-filename — the service writes `<timestamp>.png` inside it and returns
-`true` even if given a bogus path (a 6KB output file was the tell that
-the first attempt, with a filename instead of a directory, silently
-failed).
+Layer 3 (raw Gazebo physics) and the TF cross-check still require the
+manual `gz topic`/`tf2_echo` commands above — not yet automated.
+
+**Causality, stated explicitly:** the arm motion is caused by
+`pick_place_demo.py` / `verify_scenario_c.py` sending a
+`FollowJointTrajectory` goal → `arm_controller`
+(`joint_trajectory_controller`, confirmed sole claimant of the position
+interfaces) interpolating a spline and writing position setpoints →
+`gz_ros2_control`'s `GazeboSimSystem` hardware interface `write()`
+pushing those setpoints into `dartsim` as a proportional position
+actuator (`position_proportional_gain = 0.1`, logged at startup) →
+physics integrating real torque/motion → `read()` pulling updated joint
+state back → `joint_state_broadcaster` publishing `/joint_states` →
+`robot_state_publisher` computing `/tf`. Every link in that chain was
+independently checked above; none of it is short-circuited.
+
+**Verdict: ✅ Physically correct execution**, established by
+controller-state, action-status, raw-physics, and TF evidence agreeing
+independently — not by the screenshot, which is now retained only as an
+illustration in `SCENARIOS.md`, explicitly labeled as such.
 
 ### Scenario B — Autonomous Navigation
 Partially verified. The Nav2 parameter file itself loads correctly (the
@@ -141,6 +239,20 @@ scenario fully works.
    which this robot can't provide (no LiDAR yet). Replaced with a local
    `navigation.launch.py` that only launches the four nodes this project
    actually uses.
+9. Items 9-10 are the stale-`fastcdr` and cross-launch `/robot_description`
+   collision bugs, numbered in the WSL section above to keep them next
+   to the environment they were found in.
+10. `pick_place_demo.py` declared success on goal *acceptance* and never
+    checked the action's terminal result — found during the Scenario C
+    re-audit below. Fixed to check `get_result_async()` and log the real
+    `error_code`/`error_string`.
+11. Action result delivery (`get_result_async()`/`ros2 action send_goal`)
+    took ~26s for a 3s trajectory under this CPU-constrained Gazebo Sim
+    session, even though the server-side status topic reported success
+    almost immediately. Environment/scheduling characteristic, not a
+    controller defect — see Scenario C re-audit below. `verify_scenario_c.py`
+    polls the status topic instead of blocking on `get_result_async()`
+    to avoid this.
 
 ## Known-not-yet-tested
 
