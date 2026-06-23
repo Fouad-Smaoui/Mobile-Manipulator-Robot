@@ -60,11 +60,32 @@ inspection:
 - `/tf` publishes `odom -> base_link`.
 
 ### Scenario C — Mobile Manipulation
-With the same sim running, executed `pick_place_demo.py`. The
-`FollowJointTrajectory` goal was accepted by `arm_controller`, and
+Run twice: once headless in Docker (log/topic evidence only), and once
+via `ros2 launch mobile_manipulator_bringup scenario_c_manipulation.launch.py`
+in WSL with WSLg, captured as an actual screenshot (see
+[`SCENARIOS.md`](../src/mobile_manipulator_bringup/doc/SCENARIOS.md)).
+The `FollowJointTrajectory` goal was accepted by `arm_controller`, and
 `/joint_states` afterward showed `bottom_wrist_joint = 0.300`,
 `elbow_joint = 1.200` — matching the script's `REACH_POSE` exactly. The
-arm moved to the commanded pose in the live simulation.
+arm moved to and held the commanded pose in the live simulation, visibly
+reaching toward the `pick_table` model.
+
+**Screenshot capture gotcha, found while doing this:** a plain X11
+window-grab tool (`scrot`) captured solid black for Gazebo's GUI window
+under WSLg — GPU-rendered/OpenGL surfaces don't reliably composite into
+the normal X11 root pixmap that such tools read from under WSLg. The
+fix: Gazebo Sim's own `/gui/screenshot` gz-transport service, which
+captures directly from the renderer's own framebuffer:
+```
+gz service -s /gui/screenshot --reqtype gz.msgs.StringMsg \
+  --reptype gz.msgs.Boolean --timeout 3000 \
+  --req 'data: "/path/to/an/existing/directory"'
+```
+Note the request `data` field must be an existing **directory**, not a
+filename — the service writes `<timestamp>.png` inside it and returns
+`true` even if given a bogus path (a 6KB output file was the tell that
+the first attempt, with a filename instead of a directory, silently
+failed).
 
 ### Scenario B — Autonomous Navigation
 Partially verified. The Nav2 parameter file itself loads correctly (the
