@@ -68,6 +68,7 @@ src/
   mobile_manipulator_interfaces/    # HardwareStatus.msg
   mobile_manipulator_bringup/       # display + 3 demonstration scenarios
 docs/
+  TESTING.md                        # what was actually run, where, real bugs found, verification status
   PHYSICAL_AI_ROADMAP.md            # vision/grasping/RL/swarm attachment points
   RECRUITER_ASSESSMENT.md           # role-by-role honest self-review
 images/                             # README screenshots
@@ -98,20 +99,24 @@ sudo apt install ros-jazzy-controller-manager ros-jazzy-joint-state-broadcaster 
   ros-jazzy-joint-state-publisher-gui ros-jazzy-teleop-twist-keyboard
 ```
 
-Actually run (not just statically reviewed) in a headless ROS 2 Jazzy
-Docker image — see [`docs/TESTING.md`](docs/TESTING.md) for the exact
-commands, real log output, and which scenarios are fully vs. partially
-verified.
+Actually run — not just statically reviewed — in two environments: a
+headless ROS 2 Jazzy Docker image, and WSL Ubuntu 24.04 with WSLg
+(RViz and Gazebo Sim's GUIs rendered as native windows and were visually
+confirmed, not just checked via logs). See
+[`docs/TESTING.md`](docs/TESTING.md) for the exact commands, real log
+output, real bugs found by running it that static review missed, and
+which scenarios are fully vs. partially verified.
 
 ## Demonstration scenarios
 
-| Scenario | Command | Demonstrates |
-|---|---|---|
-| A — Teleoperation | `ros2 launch mobile_manipulator_bringup scenario_a_teleop.launch.py` | URDF + ros2_control velocity interface + diff-drive kinematics, end-to-end |
-| B — Autonomous Navigation | `ros2 launch mobile_manipulator_bringup scenario_b_navigation.launch.py` | Nav2 + slam_toolbox wired against this robot's footprint and TF tree |
-| C — Mobile Manipulation | `ros2 launch mobile_manipulator_bringup scenario_c_manipulation.launch.py` | `FollowJointTrajectory` goal → `joint_trajectory_controller` → simulated arm motion |
+| Scenario | Command | Demonstrates | Verified |
+|---|---|---|---|
+| A — Teleoperation | `ros2 launch mobile_manipulator_bringup scenario_a_teleop.launch.py` | URDF + ros2_control velocity interface + diff-drive kinematics, end-to-end | ✅ live in Gazebo GUI — odometry advanced, robot visibly drove and turned |
+| B — Autonomous Navigation | `ros2 launch mobile_manipulator_bringup scenario_b_navigation.launch.py` | Nav2 + slam_toolbox wired against this robot's footprint and TF tree | ⚠️ partial — Nav2 config loads and `controller_server` activates; full lifecycle bring-up not yet confirmed |
+| C — Mobile Manipulation | `ros2 launch mobile_manipulator_bringup scenario_c_manipulation.launch.py` | `FollowJointTrajectory` goal → `joint_trajectory_controller` → simulated arm motion | ✅ live in Gazebo GUI — arm visibly swung to the commanded pose |
 
-Full expected output and known limitations for each scenario:
+Full expected output, exact verification status, and known limitations
+for each scenario:
 [`mobile_manipulator_bringup/doc/SCENARIOS.md`](src/mobile_manipulator_bringup/doc/SCENARIOS.md).
 
 ## Hardware deployment
@@ -131,7 +136,7 @@ to make it real: [`mobile_manipulator_hardware/doc/HARDWARE.md`](src/mobile_mani
 ## Roadmap
 
 Ranked by impact, not implemented yet:
-1. Record and embed a Gazebo run of Scenario A — turns "should work" into proof.
+1. Capture and embed a screen recording/GIF of Scenario A and C — both have now been run and visually confirmed live in Gazebo's GUI (see `docs/TESTING.md`), but that proof isn't captured as a recording in this README yet.
 2. CI running `colcon build` + `colcon test` on every push.
 3. LiDAR mount + Gazebo Sim `gpu_lidar` sensor (hooks already commented in `mobile_manipulator_gazebo`'s xacro) to make Scenario B obstacle-aware.
 4. MoveIt config for the 5-DOF arm, replacing Scenario C's scripted joint goal with real IK.

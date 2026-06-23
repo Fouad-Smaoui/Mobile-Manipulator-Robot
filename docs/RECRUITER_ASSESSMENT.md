@@ -55,17 +55,24 @@ screen; Mermaid diagrams substitute for a live demo when skimming;
 explicit "known limitations" sections signal engineering maturity rather
 than overclaiming (a stronger signal than a polished README with no
 caveats).
-**Weaknesses:** no demo video/GIF embedded (text + diagrams only); no
-physical hardware photos — this remains a simulation-and-architecture
-portfolio piece, not proof of a deployed robot.
-**Missing evidence:** anything showing the robot in motion, simulated or
-real.
+**Weaknesses:** no demo video/GIF embedded in the README yet (text +
+diagrams only, even though the underlying motion has now been run and
+visually confirmed — see `docs/TESTING.md`); no physical hardware photos
+— this remains a simulation-and-architecture portfolio piece, not proof
+of a deployed robot.
+**Missing evidence:** a recording. The motion itself is no longer
+missing evidence — it happened, live, in Gazebo's GUI — but it isn't
+captured anywhere a recruiter skimming the README would see it.
 
 ## Net assessment
 This repository now demonstrates *systems architecture competence* —
 clean package boundaries, an honest sim/hardware seam, documented
-limitations — convincingly. It does **not** yet demonstrate a *working
-robot*: no scenario has been executed and recorded as evidence in this
-pass. The single highest-leverage next step for credibility is running
-Scenario A in Gazebo once, recording it, and embedding that recording in
-the README — turning "this should work" into "this works."
+limitations — convincingly. It also now demonstrates a *working
+simulated robot*: Scenarios A and C have been executed live (headless in
+Docker, and visually via WSLg) with real evidence — odometry advancing,
+joint states matching commanded poses, the robot visibly driving and the
+arm visibly moving in Gazebo's own GUI. See `docs/TESTING.md` for exactly
+what was run and what was found. The single highest-leverage next step
+for credibility is now narrower: capture that already-working run as a
+recording and embed it in the README — turning "this works (per a log
+file)" into "this works (watch it)."
